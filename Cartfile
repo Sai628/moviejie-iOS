@@ -1,0 +1,14 @@
+github "AFNetworking/AFNetworking" ~> 3.0
+github "Alamofire/Alamofire" >= 4.0.0
+github "krzyzanowskim/CryptoSwift"
+github "danielgindi/Charts"
+github "goktugyil/EZSwiftExtensions"
+github "hackiftekhar/IQKeyboardManager"
+github "onevcat/Kingfisher"
+github "IFTTT/RazzleDazzle"
+github "SnapKit/SnapKit"
+github "rchatham/SwiftyAnimate"
+github "SwiftyJSON/SwiftyJSON"
+github "scinfu/SwiftSoup"
+github "jdg/MBProgressHUD"
+github "DaveWoodCom/XCGLogger" ~> 4.0.0

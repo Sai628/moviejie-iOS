@@ -1,0 +1,11 @@
+framework module EZSwiftExtensions {
+  umbrella header "EZSwiftExtensions.h"
+
+  export *
+  module * { export * }
+}
+
+module EZSwiftExtensions.Swift {
+    header "EZSwiftExtensions-Swift.h"
+    requires objc
+}
