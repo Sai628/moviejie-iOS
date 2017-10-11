@@ -1,6 +1,6 @@
 //
 //  BaseTests.swift
-//  moviejie-iOS
+//  基础测试类
 //
 //  Created by Sai on 10/10/17.
 //  Copyright © 2017 Sai628.com. All rights reserved.

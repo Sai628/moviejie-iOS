@@ -14,9 +14,17 @@ class NetService
     /// 获取"首页"信息
     static func getIndexInfo(onError: NetError, onFailure: NetFailure, onSuccess: @escaping NetSuccess)
     {
-        NetHelper.post(APIAddress.API_DOMAIN, values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
+        NetHelper.get(APIAddress.API_DOMAIN, values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
             
-            onSuccess(nil)
+            let news: [NewInfo] = JSONUtil.readModels(jsonObject, key: "news") ?? []
+            let hots: [NewInfo] = JSONUtil.readModels(jsonObject, key: "hots") ?? []
+            
+            let data: [String: Any] = [
+                "news": news,
+                "hots": hots
+            ]
+            
+            onSuccess(data)
         }
     }
     
@@ -26,7 +34,9 @@ class NetService
     {
         NetHelper.get(APIAddress.API_DOMAIN + movieLink, values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
             
-            onSuccess(nil)
+            let movieInfo: MovieInfo? = JSONUtil.readModel(jsonObject, key: "movie")
+            
+            onSuccess(movieInfo)
         }
     }
     
@@ -36,7 +46,9 @@ class NetService
     {
         NetHelper.get(APIAddress.API_DOMAIN + link, values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
             
-            onSuccess(nil)
+            let downloadLink = jsonObject["link"].stringValue
+            
+            onSuccess(downloadLink)
         }
     }
 }

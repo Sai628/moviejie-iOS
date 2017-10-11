@@ -11,8 +11,8 @@
 		3211A8F71F4425850024A586 /* JSONDicConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211A8F51F4425850024A586 /* JSONDicConvertible.swift */; };
 		3211A8F91F44276B0024A586 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211A8F81F44276B0024A586 /* Dictionary+Extensions.swift */; };
 		3211A8FA1F44276B0024A586 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211A8F81F44276B0024A586 /* Dictionary+Extensions.swift */; };
-		323590BA1E8B71960025E0E6 /* StageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323590B91E8B71960025E0E6 /* StageInfo.swift */; };
-		323590D01E8BC4E60025E0E6 /* StageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323590B91E8B71960025E0E6 /* StageInfo.swift */; };
+		323590BA1E8B71960025E0E6 /* ResourceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323590B91E8B71960025E0E6 /* ResourceInfo.swift */; };
+		323590D01E8BC4E60025E0E6 /* ResourceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323590B91E8B71960025E0E6 /* ResourceInfo.swift */; };
 		323B65751E6C0EC500F6764A /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12FA1CFC3D9700536E54 /* EZSwiftExtensions.framework */; };
 		323B65761E6C0EC500F6764A /* EZSwiftExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12FA1CFC3D9700536E54 /* EZSwiftExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3243A1501D00405C000699F0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32CAECEA196EB8F8004E83E6 /* Accelerate.framework */; };
@@ -40,6 +40,15 @@
 		326514F51F7B93C70048FCC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326514F31F7B93C70048FCC8 /* LaunchScreen.storyboard */; };
 		326514FA1F7BB1E80048FCC8 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326514F91F7BB1E80048FCC8 /* Display.swift */; };
 		326514FB1F7BB1E80048FCC8 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326514F91F7BB1E80048FCC8 /* Display.swift */; };
+		3274B9811F8DBDFB004561F7 /* NewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9801F8DBDFB004561F7 /* NewInfo.swift */; };
+		3274B9821F8DBDFB004561F7 /* NewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9801F8DBDFB004561F7 /* NewInfo.swift */; };
+		3274B9841F8DCEFC004561F7 /* NetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9831F8DCEFB004561F7 /* NetServiceTests.swift */; };
+		3274B9861F8DD4DD004561F7 /* LinkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9851F8DD4DD004561F7 /* LinkInfo.swift */; };
+		3274B9881F8DD63A004561F7 /* RelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9871F8DD63A004561F7 /* RelInfo.swift */; };
+		3274B98A1F8DD672004561F7 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9891F8DD672004561F7 /* MovieInfo.swift */; };
+		3274B98B1F8DD993004561F7 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9891F8DD672004561F7 /* MovieInfo.swift */; };
+		3274B98C1F8DD9AA004561F7 /* LinkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9851F8DD4DD004561F7 /* LinkInfo.swift */; };
+		3274B98D1F8DD9B0004561F7 /* RelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9871F8DD63A004561F7 /* RelInfo.swift */; };
 		32863E6A1F7CF65700A3A2D7 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32863E691F7CF65700A3A2D7 /* libresolv.tbd */; };
 		32863E6B1F7CF67500A3A2D7 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32863E691F7CF65700A3A2D7 /* libresolv.tbd */; };
 		328C12D01CFC393E00536E54 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12CF1CFC393E00536E54 /* libz.tbd */; };
@@ -247,12 +256,17 @@
 		3211A8F51F4425850024A586 /* JSONDicConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDicConvertible.swift; sourceTree = "<group>"; };
 		3211A8F81F44276B0024A586 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		3218876A1CDB4F6D003783CE /* App-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
-		323590B91E8B71960025E0E6 /* StageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StageInfo.swift; sourceTree = "<group>"; };
+		323590B91E8B71960025E0E6 /* ResourceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceInfo.swift; sourceTree = "<group>"; };
 		3236BE311CF7F1C9009CD5DC /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3245EF461F1C6A0400EEB1E4 /* LoadingMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingMenu.swift; sourceTree = "<group>"; };
 		3245EF481F1C6BA200EEB1E4 /* icon_empty_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_empty_prompt.png; sourceTree = "<group>"; };
 		326514F31F7B93C70048FCC8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		326514F91F7BB1E80048FCC8 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
+		3274B9801F8DBDFB004561F7 /* NewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfo.swift; sourceTree = "<group>"; };
+		3274B9831F8DCEFB004561F7 /* NetServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetServiceTests.swift; sourceTree = "<group>"; };
+		3274B9851F8DD4DD004561F7 /* LinkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInfo.swift; sourceTree = "<group>"; };
+		3274B9871F8DD63A004561F7 /* RelInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelInfo.swift; sourceTree = "<group>"; };
+		3274B9891F8DD672004561F7 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
 		32863E691F7CF65700A3A2D7 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		328C12CF1CFC393E00536E54 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		328C12D11CFC396B00536E54 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -554,7 +568,11 @@
 		32A407521E6EF5100004DBAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				323590B91E8B71960025E0E6 /* StageInfo.swift */,
+				3274B9851F8DD4DD004561F7 /* LinkInfo.swift */,
+				3274B9801F8DBDFB004561F7 /* NewInfo.swift */,
+				3274B9871F8DD63A004561F7 /* RelInfo.swift */,
+				323590B91E8B71960025E0E6 /* ResourceInfo.swift */,
+				3274B9891F8DD672004561F7 /* MovieInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -654,6 +672,7 @@
 				32A4098E1E6EF5360004DBAC /* AppTests-Info.plist */,
 				32A4098D1E6EF5360004DBAC /* BaseTests.swift */,
 				32A4098F1E6EF5360004DBAC /* NetBaseTests.swift */,
+				3274B9831F8DCEFB004561F7 /* NetServiceTests.swift */,
 				32A409901E6EF5360004DBAC /* TestData.swift */,
 			);
 			path = AppTests;
@@ -886,6 +905,7 @@
 				32CBB7C81E9CE8860076D35B /* UILabel+Extensions.swift in Sources */,
 				32B95AB11EA5EC2D0096EE83 /* CosmosTouchTarget.swift in Sources */,
 				32A408661E6EF5100004DBAC /* ErrorInfo.swift in Sources */,
+				3274B9881F8DD63A004561F7 /* RelInfo.swift in Sources */,
 				32B95AAF1EA5EC2D0096EE83 /* CosmosView.swift in Sources */,
 				32B95AB31EA5EC2D0096EE83 /* RightToLeft.swift in Sources */,
 				32A4097B1E6EF5110004DBAC /* FileUtil.swift in Sources */,
@@ -896,14 +916,16 @@
 				32B95AAD1EA5EC2D0096EE83 /* CosmosTouch.swift in Sources */,
 				32A408681E6EF5100004DBAC /* R.swift in Sources */,
 				32A408821E6EF5100004DBAC /* UIImageView+Extensions.swift in Sources */,
+				3274B9861F8DD4DD004561F7 /* LinkInfo.swift in Sources */,
 				32A409781E6EF5110004DBAC /* BannerUtil.swift in Sources */,
 				3245EF471F1C6A0400EEB1E4 /* LoadingMenu.swift in Sources */,
+				3274B98A1F8DD672004561F7 /* MovieInfo.swift in Sources */,
 				32A408581E6EF5100004DBAC /* Global.swift in Sources */,
 				32A408801E6EF5100004DBAC /* String+Extensions.swift in Sources */,
 				32B95AA31EA5EC2D0096EE83 /* CosmosLocalizedRating.swift in Sources */,
 				32B95AB51EA5EC2D0096EE83 /* StarFillMode.swift in Sources */,
 				32B95AB71EA5EC2D0096EE83 /* StarLayer.swift in Sources */,
-				323590BA1E8B71960025E0E6 /* StageInfo.swift in Sources */,
+				323590BA1E8B71960025E0E6 /* ResourceInfo.swift in Sources */,
 				32CBB7C91E9CE8860076D35B /* UITextField+Extensions.swift in Sources */,
 				32A408851E6EF5100004DBAC /* UIViewController+Extensions.swift in Sources */,
 				32A408731E6EF5100004DBAC /* AppNavigationController.swift in Sources */,
@@ -933,6 +955,7 @@
 				32B95AA91EA5EC2D0096EE83 /* CosmosSize.swift in Sources */,
 				32A409771E6EF5110004DBAC /* ArrayUtil.swift in Sources */,
 				32A4097C1E6EF5110004DBAC /* ImageUtil.swift in Sources */,
+				3274B9811F8DBDFB004561F7 /* NewInfo.swift in Sources */,
 				32A408831E6EF5100004DBAC /* UITableView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -944,18 +967,20 @@
 				3245EF4A1F1C6CC900EEB1E4 /* LoadingMenu.swift in Sources */,
 				32B95AAA1EA5EC2D0096EE83 /* CosmosSize.swift in Sources */,
 				32B95AAC1EA5EC2D0096EE83 /* CosmosText.swift in Sources */,
+				3274B98D1F8DD9B0004561F7 /* RelInfo.swift in Sources */,
 				32CBB7CE1E9D042A0076D35B /* UILabel+Extensions.swift in Sources */,
 				32CBB7CF1E9D042A0076D35B /* UITextField+Extensions.swift in Sources */,
 				32B95AA01EA5EC2D0096EE83 /* CosmosLayerHelper.swift in Sources */,
 				32B95AB41EA5EC2D0096EE83 /* RightToLeft.swift in Sources */,
 				32B95A9C1EA5EC2D0096EE83 /* CosmosAccessibility.swift in Sources */,
-				323590D01E8BC4E60025E0E6 /* StageInfo.swift in Sources */,
+				323590D01E8BC4E60025E0E6 /* ResourceInfo.swift in Sources */,
 				3211A8F71F4425850024A586 /* JSONDicConvertible.swift in Sources */,
 				32B95AB21EA5EC2D0096EE83 /* CosmosTouchTarget.swift in Sources */,
 				32A409F61E6EFA8B0004DBAC /* MainVC.swift in Sources */,
 				32A40A001E6EFA8B0004DBAC /* Int64+Extensions.swift in Sources */,
 				32A40A011E6EFA8B0004DBAC /* Date+Extensions.swift in Sources */,
 				32B95A9E1EA5EC2D0096EE83 /* CosmosDefaultSettings.swift in Sources */,
+				3274B9841F8DCEFC004561F7 /* NetServiceTests.swift in Sources */,
 				32A40A021E6EFA8B0004DBAC /* String+Extensions.swift in Sources */,
 				32A40A031E6EFA8B0004DBAC /* UIButton+Extensions.swift in Sources */,
 				32A40A041E6EFA8B0004DBAC /* UIImageView+Extensions.swift in Sources */,
@@ -986,6 +1011,7 @@
 				32A409C51E6EF9770004DBAC /* FileUtil.swift in Sources */,
 				32B95AB61EA5EC2D0096EE83 /* StarFillMode.swift in Sources */,
 				32B95AA41EA5EC2D0096EE83 /* CosmosLocalizedRating.swift in Sources */,
+				3274B98B1F8DD993004561F7 /* MovieInfo.swift in Sources */,
 				32A409C61E6EF9770004DBAC /* ImageUtil.swift in Sources */,
 				32A409C71E6EF9770004DBAC /* JSONUtil.swift in Sources */,
 				326514FB1F7BB1E80048FCC8 /* Display.swift in Sources */,
@@ -995,8 +1021,10 @@
 				32A409A91E6EF9340004DBAC /* AppDelegate.swift in Sources */,
 				32A409AA1E6EF9350004DBAC /* Global.swift in Sources */,
 				32A409A51E6EF7F10004DBAC /* BaseTests.swift in Sources */,
+				3274B98C1F8DD9AA004561F7 /* LinkInfo.swift in Sources */,
 				32A409A61E6EF7F10004DBAC /* NetBaseTests.swift in Sources */,
 				32A409A71E6EF7F10004DBAC /* TestData.swift in Sources */,
+				3274B9821F8DBDFB004561F7 /* NewInfo.swift in Sources */,
 				32B95AB01EA5EC2D0096EE83 /* CosmosView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
