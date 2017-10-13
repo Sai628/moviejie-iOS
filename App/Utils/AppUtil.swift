@@ -17,4 +17,12 @@ struct AppUtil
     {
         return (UIApplication.shared.delegate as! AppDelegate)
     }
+    
+    
+    static func readMovieInfo(_ viewController: UIViewController, _ resourceInfo: ResourceInfo)
+    {
+        let movieInfoVC = MovieInfoVC()
+        movieInfoVC.resourceInfo = resourceInfo
+        viewController.pushVC(movieInfoVC)
+    }
 }

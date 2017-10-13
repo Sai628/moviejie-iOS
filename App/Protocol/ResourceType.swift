@@ -11,4 +11,6 @@ import Foundation
 
 protocol ResourceType
 {
+    var category: String {get set}  // 类别名称
+    var resources: [ResourceInfo] {get set}  // 资源列表
 }

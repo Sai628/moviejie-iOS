@@ -33,7 +33,6 @@ class MainVC: UIViewController
     }
     
     
-    
     //MARK:- INIT
     func initView()
     {
@@ -113,7 +112,7 @@ class MainVC: UIViewController
 }
 
 
-//MARK:-
+//MARK:- LoadingMenuDelegate
 extension MainVC: LoadingMenuDelegate
 {
     func onRetryClicked(_ view: LoadingMenu)
@@ -129,6 +128,9 @@ extension MainVC: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let resourceInfo = dataItems[indexPath.section].resources[indexPath.row]
+        AppUtil.readMovieInfo(self, resourceInfo)
     }
     
     
@@ -139,8 +141,10 @@ extension MainVC: UITableViewDelegate
         {
         case is NewInfo:
             return NewResourceCell.cellHeight
+            
         case is HotInfo:
             return HotResourceCell.cellHeight
+        
         default:
             return 0
         }
@@ -164,14 +168,7 @@ extension MainVC: UITableViewDelegate
         headerView.addSubview(label)
         
         let dataItem = dataItems[section]
-        if let newInfo = dataItem as? NewInfo
-        {
-            label.text = newInfo.category
-        }
-        else if let hotInfo = dataItem as? HotInfo
-        {
-            label.text = hotInfo.category
-        }
+        label.text = dataItem.category
         
         return headerView
     }
@@ -189,40 +186,43 @@ extension MainVC: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        let dataItem = dataItems[section]
-        switch dataItem
-        {
-        case is NewInfo:
-            return (dataItem as! NewInfo).resources.count
-        case is HotInfo:
-            return (dataItem as! HotInfo).resources.count
-        default:
-            return 0
-        }
+        return dataItems[section].resources.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let dataItem = dataItems[indexPath.section]
-        switch dataItem
+        var cell: UITableViewCell!
+        
+        switch dataItems[indexPath.section]
         {
         case is NewInfo:
-            let newInfo = dataItem as! NewInfo
-            let cell = tableView.dequeueReusableCell(withIdentifier: NewResourceCell.className, for: indexPath) as! NewResourceCell
-            tableView.addLineForCell(cell: cell, at: indexPath, leftSpace: 0, rightSpace: 0, hasSectionLine: true)
-            cell.setModel(newInfo.resources[indexPath.row])
-            return cell
+            cell = getNewResourceCell(tableView, cellForRowAt: indexPath)
             
         case is HotInfo:
-            let hotInfo = dataItem as! HotInfo
-            let cell = tableView.dequeueReusableCell(withIdentifier: HotResourceCell.className, for: indexPath) as! HotResourceCell
-            cell.setModel(hotInfo.resources[indexPath.row])
-            tableView.addLineForCell(cell: cell, at: indexPath, leftSpace: 0, rightSpace: 0, hasSectionLine: true)
-            return cell
+            cell = getHotResourceCell(tableView, cellForRowAt: indexPath)
             
         default:
-            return UITableViewCell()
+            fatalError("type invalid")
         }
+        
+        tableView.addLineForCell(cell: cell, at: indexPath, leftSpace: 0, rightSpace: 0, hasSectionLine: true)
+        return cell
+    }
+    
+    
+    func getNewResourceCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewResourceCell.className, for: indexPath) as! NewResourceCell
+        cell.setModel(dataItems[indexPath.section].resources[indexPath.row])
+        return cell
+    }
+    
+    
+    func getHotResourceCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: HotResourceCell.className, for: indexPath) as! HotResourceCell
+        cell.setModel(dataItems[indexPath.section].resources[indexPath.row])
+        return cell
     }
 }

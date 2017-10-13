@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320FBAC61F911E1E0099811F /* MovieBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FBAC51F911E1E0099811F /* MovieBannerCell.swift */; };
+		320FBAC71F911E1E0099811F /* MovieBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FBAC51F911E1E0099811F /* MovieBannerCell.swift */; };
 		32115EE61F8DFA320023475F /* HotInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32115EE51F8DFA320023475F /* HotInfo.swift */; };
 		32115EE71F8DFA810023475F /* HotInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32115EE51F8DFA320023475F /* HotInfo.swift */; };
 		32115EE91F8DFA950023475F /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32115EE81F8DFA950023475F /* ResourceType.swift */; };
@@ -50,15 +52,23 @@
 		326514FB1F7BB1E80048FCC8 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326514F91F7BB1E80048FCC8 /* Display.swift */; };
 		326ABF321F90A0B60097F2A0 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF311F90A0B60097F2A0 /* ODRefreshControl.m */; };
 		326ABF331F90A0B60097F2A0 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF311F90A0B60097F2A0 /* ODRefreshControl.m */; };
+		326ABF361F90C23C0097F2A0 /* MovieInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF351F90C23C0097F2A0 /* MovieInfoVC.swift */; };
+		326ABF371F90C23C0097F2A0 /* MovieInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF351F90C23C0097F2A0 /* MovieInfoVC.swift */; };
+		326ABF391F90DFB50097F2A0 /* MovieBaseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF381F90DFB50097F2A0 /* MovieBaseInfoCell.swift */; };
+		326ABF3A1F90DFB50097F2A0 /* MovieBaseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF381F90DFB50097F2A0 /* MovieBaseInfoCell.swift */; };
+		326ABF3C1F90DFE20097F2A0 /* MovieLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF3B1F90DFE20097F2A0 /* MovieLinkCell.swift */; };
+		326ABF3D1F90DFE20097F2A0 /* MovieLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF3B1F90DFE20097F2A0 /* MovieLinkCell.swift */; };
+		326ABF3F1F90DFF20097F2A0 /* MovieRelatedInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF3E1F90DFF20097F2A0 /* MovieRelatedInfoCell.swift */; };
+		326ABF401F90DFF20097F2A0 /* MovieRelatedInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF3E1F90DFF20097F2A0 /* MovieRelatedInfoCell.swift */; };
+		326ABF421F90E0000097F2A0 /* MovieStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF411F90E0000097F2A0 /* MovieStoryCell.swift */; };
+		326ABF431F90E0000097F2A0 /* MovieStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF411F90E0000097F2A0 /* MovieStoryCell.swift */; };
 		3274B9811F8DBDFB004561F7 /* NewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9801F8DBDFB004561F7 /* NewInfo.swift */; };
 		3274B9821F8DBDFB004561F7 /* NewInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9801F8DBDFB004561F7 /* NewInfo.swift */; };
 		3274B9841F8DCEFC004561F7 /* NetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9831F8DCEFB004561F7 /* NetServiceTests.swift */; };
 		3274B9861F8DD4DD004561F7 /* LinkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9851F8DD4DD004561F7 /* LinkInfo.swift */; };
-		3274B9881F8DD63A004561F7 /* RelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9871F8DD63A004561F7 /* RelInfo.swift */; };
 		3274B98A1F8DD672004561F7 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9891F8DD672004561F7 /* MovieInfo.swift */; };
 		3274B98B1F8DD993004561F7 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9891F8DD672004561F7 /* MovieInfo.swift */; };
 		3274B98C1F8DD9AA004561F7 /* LinkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9851F8DD4DD004561F7 /* LinkInfo.swift */; };
-		3274B98D1F8DD9B0004561F7 /* RelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9871F8DD63A004561F7 /* RelInfo.swift */; };
 		32863E6A1F7CF65700A3A2D7 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32863E691F7CF65700A3A2D7 /* libresolv.tbd */; };
 		32863E6B1F7CF67500A3A2D7 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 32863E691F7CF65700A3A2D7 /* libresolv.tbd */; };
 		328C12D01CFC393E00536E54 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12CF1CFC393E00536E54 /* libz.tbd */; };
@@ -263,6 +273,7 @@
 		1846F1CF1812542000B6EB3A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		1846F1D11812543200B6EB3A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1846F1D31812546200B6EB3A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		320FBAC51F911E1E0099811F /* MovieBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBannerCell.swift; sourceTree = "<group>"; };
 		32115EE51F8DFA320023475F /* HotInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotInfo.swift; sourceTree = "<group>"; };
 		32115EE81F8DFA950023475F /* ResourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceType.swift; sourceTree = "<group>"; };
 		32115EEB1F8DFAFA0023475F /* NewResourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResourceCell.swift; sourceTree = "<group>"; };
@@ -278,10 +289,14 @@
 		326514F91F7BB1E80048FCC8 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		326ABF301F90A0B60097F2A0 /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
 		326ABF311F90A0B60097F2A0 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
+		326ABF351F90C23C0097F2A0 /* MovieInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoVC.swift; sourceTree = "<group>"; };
+		326ABF381F90DFB50097F2A0 /* MovieBaseInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBaseInfoCell.swift; sourceTree = "<group>"; };
+		326ABF3B1F90DFE20097F2A0 /* MovieLinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLinkCell.swift; sourceTree = "<group>"; };
+		326ABF3E1F90DFF20097F2A0 /* MovieRelatedInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRelatedInfoCell.swift; sourceTree = "<group>"; };
+		326ABF411F90E0000097F2A0 /* MovieStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStoryCell.swift; sourceTree = "<group>"; };
 		3274B9801F8DBDFB004561F7 /* NewInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInfo.swift; sourceTree = "<group>"; };
 		3274B9831F8DCEFB004561F7 /* NetServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetServiceTests.swift; sourceTree = "<group>"; };
 		3274B9851F8DD4DD004561F7 /* LinkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInfo.swift; sourceTree = "<group>"; };
-		3274B9871F8DD63A004561F7 /* RelInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelInfo.swift; sourceTree = "<group>"; };
 		3274B9891F8DD672004561F7 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
 		32863E691F7CF65700A3A2D7 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		328C12CF1CFC393E00536E54 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -462,6 +477,11 @@
 			isa = PBXGroup;
 			children = (
 				32115EEE1F8DFF460023475F /* HotResourceCell.swift */,
+				320FBAC51F911E1E0099811F /* MovieBannerCell.swift */,
+				326ABF381F90DFB50097F2A0 /* MovieBaseInfoCell.swift */,
+				326ABF3B1F90DFE20097F2A0 /* MovieLinkCell.swift */,
+				326ABF3E1F90DFF20097F2A0 /* MovieRelatedInfoCell.swift */,
+				326ABF411F90E0000097F2A0 /* MovieStoryCell.swift */,
 				32115EEB1F8DFAFA0023475F /* NewResourceCell.swift */,
 			);
 			path = Cell;
@@ -490,6 +510,14 @@
 				326ABF311F90A0B60097F2A0 /* ODRefreshControl.m */,
 			);
 			path = ODRefreshControl;
+			sourceTree = "<group>";
+		};
+		326ABF341F90C20A0097F2A0 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				326ABF351F90C23C0097F2A0 /* MovieInfoVC.swift */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 		328C12F51CFC3D9700536E54 /* 3rdParty */ = {
@@ -563,6 +591,7 @@
 			children = (
 				32A4071F1E6EF5100004DBAC /* Base */,
 				32A407211E6EF5100004DBAC /* Main */,
+				326ABF341F90C20A0097F2A0 /* Movie */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -616,7 +645,6 @@
 				3274B9851F8DD4DD004561F7 /* LinkInfo.swift */,
 				3274B9891F8DD672004561F7 /* MovieInfo.swift */,
 				3274B9801F8DBDFB004561F7 /* NewInfo.swift */,
-				3274B9871F8DD63A004561F7 /* RelInfo.swift */,
 				323590B91E8B71960025E0E6 /* ResourceInfo.swift */,
 			);
 			path = Models;
@@ -951,8 +979,9 @@
 				32CBB7C81E9CE8860076D35B /* UILabel+Extensions.swift in Sources */,
 				32B95AB11EA5EC2D0096EE83 /* CosmosTouchTarget.swift in Sources */,
 				32A408661E6EF5100004DBAC /* ErrorInfo.swift in Sources */,
+				326ABF391F90DFB50097F2A0 /* MovieBaseInfoCell.swift in Sources */,
 				32115EE61F8DFA320023475F /* HotInfo.swift in Sources */,
-				3274B9881F8DD63A004561F7 /* RelInfo.swift in Sources */,
+				326ABF361F90C23C0097F2A0 /* MovieInfoVC.swift in Sources */,
 				32B95AAF1EA5EC2D0096EE83 /* CosmosView.swift in Sources */,
 				32B95AB31EA5EC2D0096EE83 /* RightToLeft.swift in Sources */,
 				32A4097B1E6EF5110004DBAC /* FileUtil.swift in Sources */,
@@ -963,6 +992,7 @@
 				32B95AAD1EA5EC2D0096EE83 /* CosmosTouch.swift in Sources */,
 				32A408681E6EF5100004DBAC /* R.swift in Sources */,
 				32A408821E6EF5100004DBAC /* UIImageView+Extensions.swift in Sources */,
+				326ABF421F90E0000097F2A0 /* MovieStoryCell.swift in Sources */,
 				3274B9861F8DD4DD004561F7 /* LinkInfo.swift in Sources */,
 				32A409781E6EF5110004DBAC /* BannerUtil.swift in Sources */,
 				3245EF471F1C6A0400EEB1E4 /* LoadingMenu.swift in Sources */,
@@ -981,6 +1011,7 @@
 				32A408631E6EF5100004DBAC /* Dimens.swift in Sources */,
 				3211A8F61F4425850024A586 /* JSONDicConvertible.swift in Sources */,
 				32A408741E6EF5100004DBAC /* MainVC.swift in Sources */,
+				320FBAC61F911E1E0099811F /* MovieBannerCell.swift in Sources */,
 				32B95AA51EA5EC2D0096EE83 /* CosmosRating.swift in Sources */,
 				32A408651E6EF5100004DBAC /* APIAddress.swift in Sources */,
 				32A409761E6EF5110004DBAC /* AppUtil.swift in Sources */,
@@ -994,9 +1025,11 @@
 				32A409861E6EF5110004DBAC /* EZAlertController.swift in Sources */,
 				326ABF321F90A0B60097F2A0 /* ODRefreshControl.m in Sources */,
 				32A4087E1E6EF5100004DBAC /* Int64+Extensions.swift in Sources */,
+				326ABF3F1F90DFF20097F2A0 /* MovieRelatedInfoCell.swift in Sources */,
 				32A408811E6EF5100004DBAC /* UIButton+Extensions.swift in Sources */,
 				32A4089F1E6EF5100004DBAC /* ModelType.swift in Sources */,
 				32115EEC1F8DFAFA0023475F /* NewResourceCell.swift in Sources */,
+				326ABF3C1F90DFE20097F2A0 /* MovieLinkCell.swift in Sources */,
 				32A4097D1E6EF5110004DBAC /* JSONUtil.swift in Sources */,
 				326514FA1F7BB1E80048FCC8 /* Display.swift in Sources */,
 				32115EE91F8DFA950023475F /* ResourceType.swift in Sources */,
@@ -1018,18 +1051,20 @@
 				3245EF4A1F1C6CC900EEB1E4 /* LoadingMenu.swift in Sources */,
 				32B95AAA1EA5EC2D0096EE83 /* CosmosSize.swift in Sources */,
 				32B95AAC1EA5EC2D0096EE83 /* CosmosText.swift in Sources */,
-				3274B98D1F8DD9B0004561F7 /* RelInfo.swift in Sources */,
 				32CBB7CE1E9D042A0076D35B /* UILabel+Extensions.swift in Sources */,
 				326ABF331F90A0B60097F2A0 /* ODRefreshControl.m in Sources */,
 				32CBB7CF1E9D042A0076D35B /* UITextField+Extensions.swift in Sources */,
 				32B95AA01EA5EC2D0096EE83 /* CosmosLayerHelper.swift in Sources */,
 				32B95AB41EA5EC2D0096EE83 /* RightToLeft.swift in Sources */,
 				32B95A9C1EA5EC2D0096EE83 /* CosmosAccessibility.swift in Sources */,
+				326ABF3A1F90DFB50097F2A0 /* MovieBaseInfoCell.swift in Sources */,
 				323590D01E8BC4E60025E0E6 /* ResourceInfo.swift in Sources */,
 				3211A8F71F4425850024A586 /* JSONDicConvertible.swift in Sources */,
 				32B95AB21EA5EC2D0096EE83 /* CosmosTouchTarget.swift in Sources */,
+				326ABF371F90C23C0097F2A0 /* MovieInfoVC.swift in Sources */,
 				32A409F61E6EFA8B0004DBAC /* MainVC.swift in Sources */,
 				32A40A001E6EFA8B0004DBAC /* Int64+Extensions.swift in Sources */,
+				326ABF401F90DFF20097F2A0 /* MovieRelatedInfoCell.swift in Sources */,
 				32A40A011E6EFA8B0004DBAC /* Date+Extensions.swift in Sources */,
 				32115EF01F8DFF460023475F /* HotResourceCell.swift in Sources */,
 				32B95A9E1EA5EC2D0096EE83 /* CosmosDefaultSettings.swift in Sources */,
@@ -1045,6 +1080,7 @@
 				32B95AAE1EA5EC2D0096EE83 /* CosmosTouch.swift in Sources */,
 				32A40A071E6EFA8B0004DBAC /* UIViewController+Extensions.swift in Sources */,
 				32A40A0C1E6EFA8B0004DBAC /* JSONStringConvertible.swift in Sources */,
+				326ABF3D1F90DFE20097F2A0 /* MovieLinkCell.swift in Sources */,
 				32A409E61E6EFA7E0004DBAC /* Dimens.swift in Sources */,
 				32A409E81E6EFA7E0004DBAC /* APIAddress.swift in Sources */,
 				32A409E91E6EFA7E0004DBAC /* ErrorInfo.swift in Sources */,
@@ -1059,12 +1095,14 @@
 				32A409BB1E6EF9770004DBAC /* NetHelper.swift in Sources */,
 				32A409BC1E6EF9770004DBAC /* NetService.swift in Sources */,
 				32B95AB81EA5EC2D0096EE83 /* StarLayer.swift in Sources */,
+				326ABF431F90E0000097F2A0 /* MovieStoryCell.swift in Sources */,
 				32A409C01E6EF9770004DBAC /* AppUtil.swift in Sources */,
 				32A409C11E6EF9770004DBAC /* ArrayUtil.swift in Sources */,
 				32A409C21E6EF9770004DBAC /* BannerUtil.swift in Sources */,
 				32115EED1F8DFAFA0023475F /* NewResourceCell.swift in Sources */,
 				32A409C41E6EF9770004DBAC /* DateUtil.swift in Sources */,
 				32A409C51E6EF9770004DBAC /* FileUtil.swift in Sources */,
+				320FBAC71F911E1E0099811F /* MovieBannerCell.swift in Sources */,
 				32B95AB61EA5EC2D0096EE83 /* StarFillMode.swift in Sources */,
 				32B95AA41EA5EC2D0096EE83 /* CosmosLocalizedRating.swift in Sources */,
 				3274B98B1F8DD993004561F7 /* MovieInfo.swift in Sources */,

@@ -28,11 +28,12 @@ class HotResourceCell: UITableViewCell
     override init(style: UITableViewCellStyle, reuseIdentifier: String?)
     {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.accessoryType = .disclosureIndicator
         
         if titleLabel == nil
         {
             titleLabel = UILabel(fontSize: Dimens.fontSizeNormal, textColor: UIColor.darkText)
-            titleLabel.textAlignment = .left
+            titleLabel.lineBreakMode = .byCharWrapping
             titleLabel.numberOfLines = 2
             contentView.addSubview(titleLabel)
         }
@@ -60,7 +61,7 @@ class HotResourceCell: UITableViewCell
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(12)
             make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
+            make.right.equalToSuperview()
             make.height.equalTo(32)
         }
         

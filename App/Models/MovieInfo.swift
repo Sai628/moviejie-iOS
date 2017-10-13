@@ -22,11 +22,13 @@ class MovieInfo: ModelType
     var country: String         = ""  // 国家/地区
     var release_date: String    = ""  // 上映日期
     var runtime: String         = ""  // 片长
-    var akaname: String         = ""  // 双名
+    var akaname: String         = ""  // 又名
     var star: String            = ""  // 评分
     var story: String           = ""  // 剧情简介
     var links: [LinkInfo]       = []  // 下载页面链接列表
-    var rel_infos: [RelInfo]    = []  // 相关/推荐列表
+    var related_resources: [ResourceInfo]     = []  // 相关资源列表
+    var recommended_resources: [ResourceInfo] = []  // 推荐资源列表
+    
     
     init()
     {
@@ -48,7 +50,8 @@ class MovieInfo: ModelType
         star            = json["star"].stringValue
         story           = json["story"].stringValue
         links           = JSONUtil.readModels(json["links"]) ?? []
-        rel_infos       = JSONUtil.readModels(json["rel_infos"]) ?? []
+        related_resources     = JSONUtil.readModels(json["related_resources"]) ?? []
+        recommended_resources = JSONUtil.readModels(json["recommended_resources"]) ?? []
     }
 }
 
@@ -71,7 +74,8 @@ extension MovieInfo: JSONDicConvertible, JSONStringConvertible
             "star"          : star,
             "story"         : story,
             "links"         : JSONUtil.writeModels(links),
-            "rel_infos"     : JSONUtil.writeModels(rel_infos),
+            "related_resources"     : JSONUtil.writeModels(related_resources),
+            "recommended_resources" : JSONUtil.writeModels(recommended_resources),
         ]
     }
     
