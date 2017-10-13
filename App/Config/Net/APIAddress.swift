@@ -11,7 +11,7 @@ import Foundation
 
 class APIAddress
 {
-    //static let API_DOMAIN = "http://api-moviejie.sai628.com:5000"  // API域名
-    static let API_DOMAIN = "http://localhost:5000"  // API域名
+    static let API_DOMAIN = "http://api-moviejie.sai628.com:5000"  // API域名
+    //static let API_DOMAIN = "http://localhost:5000"  // API域名
 }
 

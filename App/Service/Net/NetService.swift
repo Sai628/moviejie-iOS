@@ -17,7 +17,7 @@ class NetService
         NetHelper.get(APIAddress.API_DOMAIN, values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
             
             let news: [NewInfo] = JSONUtil.readModels(jsonObject, key: "news") ?? []
-            let hots: [NewInfo] = JSONUtil.readModels(jsonObject, key: "hots") ?? []
+            let hots: [HotInfo] = JSONUtil.readModels(jsonObject, key: "hots") ?? []
             
             let data: [String: Any] = [
                 "news": news,
