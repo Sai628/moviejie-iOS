@@ -155,7 +155,7 @@ extension MovieInfoVC: UITableViewDelegate
             return !movieInfo.banner.isBlank ? MovieBannerCell.cellHeight : 0
             
         case Sections.info.rawValue:
-            return MovieBaseInfoCell.cellHeight
+            return MovieBaseInfoCell.cellHeightWith(movieInfo: movieInfo)
             
         case Sections.link.rawValue:
             return MovieLinkCell.cellHeight

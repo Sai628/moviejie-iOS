@@ -15,17 +15,10 @@ import SnapKit
 class MovieBaseInfoCell: UITableViewCell
 {
     var titleLabel: UILabel!
-    var directorsLabel: UILabel!
-    var writersLabel: UILabel!
-    var starsLabel: UILabel!
-    var genresLabel: UILabel!
-    var countryLabel: UILabel!
-    var releaseDateLabel: UILabel!
-    var runtimeLabel: UILabel!
-    var akanameLabel: UILabel!
+    var baseInfoLabel: UILabel!
     
     var starBg: UIView!
-    var starLayout: UIView!
+    var starContentView: UIView!
     var doubanRatingTipLabel: UILabel!
     var starLabel: UILabel!
     var ratingbar: CosmosView!
@@ -46,57 +39,16 @@ class MovieBaseInfoCell: UITableViewCell
         if titleLabel == nil
         {
             titleLabel = UILabel(fontSize: 26, textColor: UIColor.black, isBold: true)
+            titleLabel.lineBreakMode = .byWordWrapping
             titleLabel.numberOfLines = 0
             contentView.addSubview(titleLabel)
         }
-        
-        if directorsLabel == nil
+        if baseInfoLabel == nil
         {
-            directorsLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
-            directorsLabel.numberOfLines = 0
-            contentView.addSubview(directorsLabel)
-        }
-        if writersLabel == nil
-        {
-            writersLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
-            writersLabel.numberOfLines = 0
-            contentView.addSubview(writersLabel)
-        }
-        if starsLabel == nil
-        {
-            starsLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
-            starsLabel.numberOfLines = 0
-            contentView.addSubview(starsLabel)
-        }
-        if genresLabel == nil
-        {
-            genresLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
-            genresLabel.numberOfLines = 0
-            contentView.addSubview(genresLabel)
-        }
-        if countryLabel == nil
-        {
-            countryLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
-            countryLabel.numberOfLines = 0
-            contentView.addSubview(countryLabel)
-        }
-        if releaseDateLabel == nil
-        {
-            releaseDateLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
-            releaseDateLabel.numberOfLines = 0
-            contentView.addSubview(releaseDateLabel)
-        }
-        if runtimeLabel == nil
-        {
-            runtimeLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
-            runtimeLabel.numberOfLines = 0
-            contentView.addSubview(runtimeLabel)
-        }
-        if akanameLabel == nil
-        {
-            akanameLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
-            akanameLabel.numberOfLines = 0
-            contentView.addSubview(akanameLabel)
+            baseInfoLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
+            baseInfoLabel.lineBreakMode = .byWordWrapping
+            baseInfoLabel.numberOfLines = 0
+            contentView.addSubview(baseInfoLabel)
         }
         
         if starBg == nil
@@ -105,23 +57,23 @@ class MovieBaseInfoCell: UITableViewCell
             starBg.addShadow(offset: CGSize(width: 2, height: 2), radius: 2, color: Colors._999, opacity: 0.75)
             contentView.addSubview(starBg)
         }
-        if starLayout == nil
+        if starContentView == nil
         {
-            starLayout = UIView()
-            starBg.addSubview(starLayout)
+            starContentView = UIView()
+            starBg.addSubview(starContentView)
         }
         if doubanRatingTipLabel == nil
         {
             doubanRatingTipLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.lightWhite)
             doubanRatingTipLabel.textAlignment = .center
             doubanRatingTipLabel.text = "豆瓣评分"
-            starLayout.addSubview(doubanRatingTipLabel)
+            starContentView.addSubview(doubanRatingTipLabel)
         }
         if starLabel == nil
         {
             starLabel = UILabel(fontSize: 26, textColor: UIColor.black, isBold: true)
             starLabel.textAlignment = .center
-            starLayout.addSubview(starLabel)
+            starContentView.addSubview(starLabel)
         }
         if ratingbar == nil
         {
@@ -135,14 +87,14 @@ class MovieBaseInfoCell: UITableViewCell
             ratingbar.settings.filledColor = Colors.ratingBar
             ratingbar.settings.emptyBorderColor = Colors.ratingBarEmpty
             ratingbar.settings.emptyColor = Colors.ratingBarEmpty
-            starLayout.addSubview(ratingbar)
+            starContentView.addSubview(ratingbar)
         }
         if starEmptyTipLabel == nil
         {
             starEmptyTipLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.lightDark)
             starEmptyTipLabel.textAlignment = .center
             starEmptyTipLabel.text = "暂无评分"
-            starLayout.addSubview(starEmptyTipLabel)
+            starContentView.addSubview(starEmptyTipLabel)
         }
         
         titleLabel.snp.makeConstraints { (make) in
@@ -151,46 +103,18 @@ class MovieBaseInfoCell: UITableViewCell
             make.top.equalToSuperview().offset(20)
         }
         
-        directorsLabel.snp.makeConstraints { (make) in
+        baseInfoLabel.snp.makeConstraints { (make) in
             make.left.equalTo(titleLabel)
             make.right.equalTo(starBg.snp.left).offset(-20)
             make.top.equalTo(titleLabel.snp.bottom).offset(16)
-        }
-        writersLabel.snp.makeConstraints { (make) in
-            make.left.right.equalTo(directorsLabel)
-            make.top.equalTo(directorsLabel.snp.bottom).offset(2)
-        }
-        starsLabel.snp.makeConstraints { (make) in
-            make.left.right.equalTo(writersLabel)
-            make.top.equalTo(writersLabel.snp.bottom).offset(2)
-        }
-        genresLabel.snp.makeConstraints { (make) in
-            make.left.right.equalTo(starsLabel)
-            make.top.equalTo(starsLabel.snp.bottom).offset(2)
-        }
-        countryLabel.snp.makeConstraints { (make) in
-            make.left.right.equalTo(genresLabel)
-            make.top.equalTo(genresLabel.snp.bottom).offset(2)
-        }
-        releaseDateLabel.snp.makeConstraints { (make) in
-            make.left.right.equalTo(countryLabel)
-            make.top.equalTo(countryLabel.snp.bottom).offset(2)
-        }
-        runtimeLabel.snp.makeConstraints { (make) in
-            make.left.right.equalTo(releaseDateLabel)
-            make.top.equalTo(releaseDateLabel.snp.bottom).offset(2)
-        }
-        akanameLabel.snp.makeConstraints { (make) in
-            make.left.right.equalTo(runtimeLabel)
-            make.top.equalTo(runtimeLabel.snp.bottom).offset(2)
         }
         
         starBg.snp.makeConstraints { (make) in
             make.width.height.equalTo(78)
             make.right.equalToSuperview().offset(-20)
-            make.top.equalTo(titleLabel.snp.bottom).offset(4)
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
         }
-        starLayout.snp.makeConstraints { (make) in
+        starContentView.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
             make.center.equalToSuperview()
             make.top.equalTo(doubanRatingTipLabel)
@@ -222,15 +146,8 @@ class MovieBaseInfoCell: UITableViewCell
     func setModel(_ movieInfo: MovieInfo)
     {
         titleLabel.text = movieInfo.title
-        directorsLabel.text = "导演: \(movieInfo.directors)"
-        writersLabel.text = "编剧: \(movieInfo.writers)"
-        starsLabel.text = "主演: \(movieInfo.stars)"
-        genresLabel.text = "类型: \(movieInfo.genres)"
-        countryLabel.text = "国家/地区: \(movieInfo.country)"
-        releaseDateLabel.text = "上映日期: \(movieInfo.release_date)"
-        runtimeLabel.text = "片长: \(movieInfo.runtime)"
-        akanameLabel.text = "又名: \(movieInfo.akaname)"
-        
+        baseInfoLabel.text = MovieBaseInfoCell.getBaseInfoText(movieInfo: movieInfo)
+ 
         if movieInfo.star.isNumber()
         {
             starLabel.text = movieInfo.star
@@ -266,8 +183,32 @@ class MovieBaseInfoCell: UITableViewCell
     }
     
     
-    static var cellHeight: CGFloat
+    private static func getBaseInfoText(movieInfo: MovieInfo) -> String
     {
-        return 340
+        var baseInfoText = ""
+        baseInfoText += !movieInfo.directors.isBlank ? "导演: \(movieInfo.directors)\n" : ""
+        baseInfoText += !movieInfo.writers.isBlank ? "编剧: \(movieInfo.writers)\n" : ""
+        baseInfoText += !movieInfo.stars.isBlank ? "主演: \(movieInfo.stars)\n" : ""
+        baseInfoText += !movieInfo.genres.isBlank ? "类型: \(movieInfo.genres)\n" : ""
+        baseInfoText += !movieInfo.country.isBlank ? "国家/地区: \(movieInfo.country)\n" : ""
+        baseInfoText += !movieInfo.release_date.isBlank ? "上映日期: \(movieInfo.release_date)\n" : ""
+        baseInfoText += !movieInfo.runtime.isBlank ? "片长: \(movieInfo.runtime)\n" : ""
+        baseInfoText += !movieInfo.akaname.isBlank ? "又名: \(movieInfo.akaname)" : ""
+        
+        return baseInfoText
+    }
+    
+    
+    static func cellHeightWith(movieInfo: MovieInfo) -> CGFloat
+    {
+        let titleLabelWidth = ez.screenWidth - 20 * 2
+        let baseInfoLabelWidth = ez.screenWidth - 20 * 2 - 78 - 20
+        let baseInfoText = getBaseInfoText(movieInfo: movieInfo)
+        
+        let titleLabelHeight = movieInfo.title.height(titleLabelWidth, font: UIFont.systemFont(ofSize: 26), lineBreakMode: .byWordWrapping)
+        let baseInfoLabelHeight = baseInfoText.height(baseInfoLabelWidth, font: UIFont.systemFont(ofSize: Dimens.fontSizeTiny),
+                                      lineBreakMode: .byWordWrapping)
+        
+        return 20 + titleLabelHeight + 16 + max(baseInfoLabelHeight, 100) + 30
     }
 }
