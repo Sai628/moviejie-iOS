@@ -33,7 +33,7 @@ class MovieBannerCell: UITableViewCell
         {
             bannerIv = UIImageView()
             bannerIv.contentMode = .scaleAspectFit
-            backgroundColor = UIColor.random()
+            backgroundColor = UIColor.random(randomAlpha: true)
             contentView.addSubview(bannerIv)
         }
         
@@ -54,6 +54,6 @@ class MovieBannerCell: UITableViewCell
     
     static var cellHeight: CGFloat
     {
-        return 220
+        return 300
     }
 }
