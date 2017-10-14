@@ -46,7 +46,7 @@ class MovieInfoVC: UIViewController
         tableView.register(MovieLinkCell.self, forCellReuseIdentifier: MovieLinkCell.className)
         tableView.register(MovieRelatedInfoCell.self, forCellReuseIdentifier: MovieRelatedInfoCell.className)
         tableView.register(MovieStoryCell.self, forCellReuseIdentifier: MovieStoryCell.className)
-        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, w: ez.screenWidth, h: 0.1))
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, w: ez.screenWidth, h: CGFloat.leastNormalMagnitude))
         tableView.separatorStyle = .none
         view.addSubview(tableView)
         
@@ -174,32 +174,22 @@ extension MovieInfoVC: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
-        switch section
+        let sectionType = Sections(rawValue: section)!
+        if sectionType == .link && movieInfo.links.count > 0 ||
+            sectionType == .related && movieInfo.related_resources.count > 0 ||
+            sectionType == .recommended && movieInfo.recommended_resources.count > 0 ||
+            sectionType == .story && !movieInfo.story.isBlank
         {
-        case Sections.banner.rawValue, Sections.info.rawValue:
-            return 0.1
-            
-        case Sections.link.rawValue:
-            return movieInfo.links.count > 0 ? 40 : 0.1
-            
-        case Sections.related.rawValue:
-            return movieInfo.related_resources.count > 0 ? 40 : 0.1
-            
-        case Sections.recommended.rawValue:
-            return movieInfo.recommended_resources.count > 0 ? 40 : 0.1
-            
-        case Sections.story.rawValue:
-            return movieInfo.story.count > 0 ? 40 : 0.1
-            
-        default:
-            fatalError("section invalid:\(section)")
+            return 40
         }
+        
+        return CGFloat.leastNormalMagnitude
     }
     
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
     {
-        return 0.1
+        return CGFloat.leastNormalMagnitude
     }
     
     
@@ -213,7 +203,8 @@ extension MovieInfoVC: UITableViewDelegate
         if type == .link && movieInfo.links.count == 0 ||
             type == .related && movieInfo.related_resources.count == 0 ||
             type == .recommended && movieInfo.recommended_resources.count == 0 ||
-            type == .story && movieInfo.story.isBlank {
+            type == .story && movieInfo.story.isBlank
+        {
             return nil
         }
         
