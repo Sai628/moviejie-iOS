@@ -112,7 +112,7 @@ class MovieBaseInfoCell: UITableViewCell
         }
         if doubanRatingTipLabel == nil
         {
-            doubanRatingTipLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.light)
+            doubanRatingTipLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.lightWhite)
             doubanRatingTipLabel.textAlignment = .center
             doubanRatingTipLabel.text = "豆瓣评分"
             starLayout.addSubview(doubanRatingTipLabel)
@@ -131,10 +131,10 @@ class MovieBaseInfoCell: UITableViewCell
             ratingbar.settings.starMargin = 0.1
             ratingbar.settings.updateOnTouch = false
             ratingbar.settings.fillMode = .precise
-            ratingbar.settings.filledBorderColor = UIColor.red
-            ratingbar.settings.filledColor = UIColor.red
-            ratingbar.settings.emptyBorderColor = UIColor.lightGray
-            ratingbar.settings.emptyColor = UIColor.lightGray
+            ratingbar.settings.filledBorderColor = Colors.ratingBar
+            ratingbar.settings.filledColor = Colors.ratingBar
+            ratingbar.settings.emptyBorderColor = Colors.ratingBarEmpty
+            ratingbar.settings.emptyColor = Colors.ratingBarEmpty
             starLayout.addSubview(ratingbar)
         }
         if starEmptyTipLabel == nil

@@ -30,7 +30,7 @@ class MovieRelatedInfoCell: UITableViewCell
         
         if titleLabel == nil
         {
-            titleLabel = UILabel(fontSize: Dimens.fontSizeSmall, textColor: UIColor.darkText)
+            titleLabel = UILabel(fontSize: Dimens.fontSizeSmall, textColor: Colors.link)
             titleLabel.lineBreakMode = .byWordWrapping
             contentView.addSubview(titleLabel)
         }

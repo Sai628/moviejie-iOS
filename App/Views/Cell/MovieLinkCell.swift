@@ -31,14 +31,14 @@ class MovieLinkCell: UITableViewCell
         
         if nameLabel == nil
         {
-            nameLabel = UILabel(fontSize: Dimens.fontSizeSmall, textColor: UIColor.darkText)
+            nameLabel = UILabel(fontSize: Dimens.fontSizeSmall, textColor: Colors.link)
             nameLabel.lineBreakMode = .byCharWrapping
             nameLabel.numberOfLines = 2
             contentView.addSubview(nameLabel)
         }
         if otherInfoLabel == nil
         {
-            otherInfoLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: UIColor.lightGray)
+            otherInfoLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.lightWhite)
             otherInfoLabel.textAlignment = .right
             contentView.addSubview(otherInfoLabel)
         }
