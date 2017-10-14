@@ -80,14 +80,14 @@ class HotResourceCell: UITableViewCell
         ratingbar.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(2)
             make.right.equalTo(ratingLabel.snp.left)
-            make.width.equalTo(68)
+            make.width.equalTo(58)
             make.height.equalTo(14)
         }
         
         ratingLabel.snp.makeConstraints { (make) in
-            make.centerY.equalTo(ratingbar)
+            make.centerY.equalTo(ratingbar).offset(-1)
             make.right.equalTo(titleLabel)
-            make.height.equalTo(12)
+            make.height.equalTo(14)
         }
     }
     
