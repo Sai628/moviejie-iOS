@@ -15,9 +15,10 @@ import SnapKit
 class MovieLinkCell: UITableViewCell
 {
     var nameLabel: UILabel!
+    var sizeLabel: UILabel!
     var otherInfoLabel: UILabel!
     
-    
+
     required init?(coder aDecoder: NSCoder)
     {
         fatalError("init(coder:) has not been implemented")
@@ -36,10 +37,15 @@ class MovieLinkCell: UITableViewCell
             nameLabel.numberOfLines = 2
             contentView.addSubview(nameLabel)
         }
+        if sizeLabel == nil
+        {
+            sizeLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.lightWhite)
+            sizeLabel.textAlignment = .right
+            contentView.addSubview(sizeLabel)
+        }
         if otherInfoLabel == nil
         {
             otherInfoLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.lightWhite)
-            otherInfoLabel.textAlignment = .right
             contentView.addSubview(otherInfoLabel)
         }
         
@@ -50,8 +56,14 @@ class MovieLinkCell: UITableViewCell
             make.height.equalTo(36)
         }
         
-        otherInfoLabel.snp.makeConstraints { (make) in
+        sizeLabel.snp.makeConstraints { (make) in
             make.right.equalTo(nameLabel)
+            make.top.equalTo(nameLabel.snp.bottom).offset(2)
+            make.height.equalTo(14)
+        }
+        
+        otherInfoLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(nameLabel)
             make.top.equalTo(nameLabel.snp.bottom).offset(2)
             make.height.equalTo(14)
         }
@@ -61,7 +73,11 @@ class MovieLinkCell: UITableViewCell
     func setModel(_ linkInfo: LinkInfo)
     {
         nameLabel.text = linkInfo.name
-        otherInfoLabel.text = "\(linkInfo.size)/\(linkInfo.dimen)/\(linkInfo.format)"
+        sizeLabel.text = "\(linkInfo.size)"
+        otherInfoLabel.text = "\(linkInfo.dimen)/\(linkInfo.format)"
+        
+        nameLabel.textColor = !linkInfo.link.isBlank ? Colors.link : Colors._999
+        self.accessoryType = !linkInfo.link.isBlank ? .disclosureIndicator : .none
     }
     
     
