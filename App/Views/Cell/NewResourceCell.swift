@@ -14,6 +14,7 @@ import SnapKit
 
 class NewResourceCell: UITableViewCell
 {
+    var movieMarkLine: UIView!
     var titleLabel: UILabel!
     var sizeLabel: UILabel!
     
@@ -29,18 +30,30 @@ class NewResourceCell: UITableViewCell
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.accessoryType = .disclosureIndicator
         
+        if movieMarkLine == nil
+        {
+            movieMarkLine = UIView(backgroundColor: Colors.movieMarkLine)
+            contentView.addSubview(movieMarkLine)
+        }
         if titleLabel == nil
         {
-            titleLabel = UILabel(fontSize: Dimens.fontSizeNormal, textColor: UIColor.darkText)
+            titleLabel = UILabel(fontSize: Dimens.fontSizeNormal, textColor: Colors.link)
             titleLabel.lineBreakMode = .byCharWrapping
             titleLabel.numberOfLines = 2
             contentView.addSubview(titleLabel)
         }
         if sizeLabel == nil
         {
-            sizeLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: UIColor.lightGray)
+            sizeLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.lightWhite)
             sizeLabel.textAlignment = .right
             contentView.addSubview(sizeLabel)
+        }
+        
+        movieMarkLine.snp.makeConstraints { (make) in
+            make.left.equalToSuperview()
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.width.equalTo(5)
         }
         
         titleLabel.snp.makeConstraints { (make) in
@@ -60,6 +73,7 @@ class NewResourceCell: UITableViewCell
     
     func setModel(_ resource: ResourceInfo)
     {
+        movieMarkLine.isHidden = resource.movie_link.isBlank
         titleLabel.text = resource.title
         sizeLabel.text = resource.size
     }

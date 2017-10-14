@@ -58,5 +58,9 @@ struct Colors
     static var darkWhite: UIColor                { return (0xFFE8E8E8 as ColorInt).toColor() }
     static var darkGeen: UIColor                 { return (0xFF14CD34 as ColorInt).toColor() }
     static var milky: UIColor                    { return (0xFFE4E4E4 as ColorInt).toColor() }
-    static var ratingBar: UIColor                { return (0xFFED9E2D as ColorInt).toColor() }
+    static var movieMarkLine: UIColor            { return (0xFF008018 as ColorInt).toColor() }
+    static var link: UIColor                     { return (0xFF428BCA as ColorInt).toColor() }
+    static var ratingBar: UIColor                { return (0xFFFF0000 as ColorInt).toColor() }
+    static var ratingBarEmpty: UIColor           { return (0xFFC0C0C0 as ColorInt).toColor() }
+
 }

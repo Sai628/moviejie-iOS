@@ -14,6 +14,7 @@ import SnapKit
 
 class HotResourceCell: UITableViewCell
 {
+    var movieMarkLine: UIView!
     var titleLabel: UILabel!
     var ratingbar: CosmosView!
     var ratingLabel: UILabel!
@@ -30,11 +31,15 @@ class HotResourceCell: UITableViewCell
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.accessoryType = .disclosureIndicator
         
+        if movieMarkLine == nil
+        {
+            movieMarkLine = UIView(backgroundColor: Colors.movieMarkLine)
+            contentView.addSubview(movieMarkLine)
+        }
         if titleLabel == nil
         {
-            titleLabel = UILabel(fontSize: Dimens.fontSizeNormal, textColor: UIColor.darkText)
+            titleLabel = UILabel(fontSize: Dimens.fontSizeNormal, textColor: Colors.link)
             titleLabel.lineBreakMode = .byCharWrapping
-            titleLabel.numberOfLines = 2
             contentView.addSubview(titleLabel)
         }
         if ratingbar == nil
@@ -42,13 +47,13 @@ class HotResourceCell: UITableViewCell
             ratingbar = CosmosView()
             ratingbar.settings.totalStars = 5
             ratingbar.settings.starSize = 13
-            ratingbar.settings.starMargin = 0
+            ratingbar.settings.starMargin = -2
             ratingbar.settings.updateOnTouch = false
             ratingbar.settings.fillMode = .precise
-            ratingbar.settings.filledBorderColor = UIColor.red
-            ratingbar.settings.filledColor = UIColor.red
-            ratingbar.settings.emptyBorderColor = UIColor.lightGray
-            ratingbar.settings.emptyColor = UIColor.lightGray
+            ratingbar.settings.filledBorderColor = Colors.ratingBar
+            ratingbar.settings.filledColor = Colors.ratingBar
+            ratingbar.settings.emptyBorderColor = Colors.ratingBarEmpty
+            ratingbar.settings.emptyColor = Colors.ratingBarEmpty
             contentView.addSubview(ratingbar)
         }
         if ratingLabel == nil
@@ -58,11 +63,18 @@ class HotResourceCell: UITableViewCell
             contentView.addSubview(ratingLabel)
         }
         
+        movieMarkLine.snp.makeConstraints { (make) in
+            make.left.equalToSuperview()
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.width.equalTo(5)
+        }
+        
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(12)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview()
-            make.height.equalTo(32)
+            make.height.equalTo(20)
         }
         
         ratingbar.snp.makeConstraints { (make) in
@@ -82,7 +94,9 @@ class HotResourceCell: UITableViewCell
     
     func setModel(_ resource: ResourceInfo)
     {
+        movieMarkLine.isHidden = resource.movie_link.isBlank
         titleLabel.text = resource.title
+        
         if resource.rating.isNumber()
         {
             ratingLabel.text = resource.rating
@@ -99,6 +113,6 @@ class HotResourceCell: UITableViewCell
     
     static var cellHeight: CGFloat
     {
-        return 70
+        return 60
     }
 }
