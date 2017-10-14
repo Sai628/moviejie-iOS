@@ -164,7 +164,7 @@ extension MovieInfoVC: UITableViewDelegate
             return MovieRelatedInfoCell.cellHeight
             
         case Sections.story.rawValue:
-            return MovieStoryCell.cellHeightWith(story: movieInfo.story)
+            return !movieInfo.story.isBlank ? MovieStoryCell.cellHeightWith(story: movieInfo.story) : 0
             
         default:
             fatalError("indexPath invalid:\(indexPath)")
@@ -189,7 +189,7 @@ extension MovieInfoVC: UITableViewDelegate
             return movieInfo.recommended_resources.count > 0 ? 40 : 0.1
             
         case Sections.story.rawValue:
-            return 40
+            return movieInfo.story.count > 0 ? 40 : 0.1
             
         default:
             fatalError("section invalid:\(section)")
@@ -205,14 +205,15 @@ extension MovieInfoVC: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     {
-        guard let type = Sections(rawValue: section),
-            [Sections.link, Sections.related, Sections.recommended, Sections.story].contains(type) else {
+        let type = Sections(rawValue: section)!
+        guard [Sections.link, Sections.related, Sections.recommended, Sections.story].contains(type) else {
             return nil
         }
         
         if type == .link && movieInfo.links.count == 0 ||
             type == .related && movieInfo.related_resources.count == 0 ||
-            type == .recommended && movieInfo.recommended_resources.count == 0 {
+            type == .recommended && movieInfo.recommended_resources.count == 0 ||
+            type == .story && movieInfo.story.isBlank {
             return nil
         }
         
