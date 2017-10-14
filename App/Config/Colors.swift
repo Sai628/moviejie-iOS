@@ -59,6 +59,7 @@ struct Colors
     static var darkGeen: UIColor                 { return (0xFF14CD34 as ColorInt).toColor() }
     static var milky: UIColor                    { return (0xFFE4E4E4 as ColorInt).toColor() }
     static var movieMarkLine: UIColor            { return (0xFF008018 as ColorInt).toColor() }
+    static var linkMarkLine: UIColor             { return (0xFF006D9A as ColorInt).toColor() }
     static var link: UIColor                     { return (0xFF428BCA as ColorInt).toColor() }
     static var ratingBar: UIColor                { return (0xFFFF0000 as ColorInt).toColor() }
     static var ratingBarEmpty: UIColor           { return (0xFFC0C0C0 as ColorInt).toColor() }

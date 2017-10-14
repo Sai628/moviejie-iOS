@@ -33,7 +33,7 @@ class HotResourceCell: UITableViewCell
         
         if movieMarkLine == nil
         {
-            movieMarkLine = UIView(backgroundColor: Colors.movieMarkLine)
+            movieMarkLine = UIView()
             contentView.addSubview(movieMarkLine)
         }
         if titleLabel == nil
@@ -94,8 +94,9 @@ class HotResourceCell: UITableViewCell
     
     func setModel(_ resource: ResourceInfo)
     {
-        movieMarkLine.isHidden = resource.movie_link.isBlank
         titleLabel.text = resource.title
+        movieMarkLine.backgroundColor = !resource.movie_link.isBlank ? Colors.movieMarkLine : Colors.linkMarkLine
+        titleLabel.textColor = !resource.movie_link.isBlank ? Colors._333 : Colors.link
         
         if resource.rating.isNumber()
         {
