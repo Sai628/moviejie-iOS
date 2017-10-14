@@ -49,14 +49,16 @@ class MovieStoryCell: UITableViewCell
     func setModel(_ story: String)
     {
         storyLabel.text = story
+        storyLabel.setLineSpacing(lineSpacing: 6)
     }
     
     
     static func cellHeightWith(story: String) -> CGFloat
     {
         let storyLabelWidth = ez.screenWidth - 16 * 2
-        let textHeight = story.height(storyLabelWidth, font: UIFont.systemFont(ofSize: Dimens.fontSizeSmall), lineBreakMode: .byCharWrapping)
+        let textHeight = story.height(storyLabelWidth, font: UIFont.systemFont(ofSize: Dimens.fontSizeSmall),
+                                      lineBreakMode: .byCharWrapping, lineSpacing: 6)
         
-        return 40 + textHeight
+        return 44 + textHeight
     }
 }

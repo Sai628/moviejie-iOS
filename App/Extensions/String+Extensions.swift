@@ -13,15 +13,14 @@ import EZSwiftExtensions
 extension String
 {
     /// From Sai: Calculate String height dynamically
-    func height(_ width: CGFloat, font: UIFont, lineBreakMode: NSLineBreakMode? = nil) -> CGFloat
+    func height(_ width: CGFloat, font: UIFont, lineBreakMode: NSLineBreakMode, lineSpacing: CGFloat = 0.0, lineHeightMultiple: CGFloat = 0.0) -> CGFloat
     {
         var attrib: [String: AnyObject] = [NSFontAttributeName: font]
-        if lineBreakMode != nil
-        {
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineBreakMode = lineBreakMode!
-            attrib.updateValue(paragraphStyle, forKey: NSParagraphStyleAttributeName)
-        }
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineBreakMode = lineBreakMode
+        paragraphStyle.lineSpacing = lineSpacing
+        paragraphStyle.lineHeightMultiple = lineHeightMultiple
+        attrib.updateValue(paragraphStyle, forKey: NSParagraphStyleAttributeName)
         
         let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         return ceil((self as NSString).boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes:attrib, context: nil).height)

@@ -26,13 +26,17 @@ extension UILabel
     }
     
     
-    func addTextSpacing(_ spaceValue: CGFloat)
+    func setLineSpacing(lineSpacing: CGFloat, lineHeightMultiple: CGFloat = 0.0)
     {
-        if let textString = text
-        {
-            let attributedString = NSMutableAttributedString(string: textString)
-            attributedString.addAttribute(NSKernAttributeName, value: spaceValue, range: NSRange(location: 0, length: attributedString.length - 1))
-            attributedText = attributedString
+        guard let labelText = self.text else {
+            return
         }
+        
+        let attrString = NSMutableAttributedString(string: labelText)
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = lineSpacing
+        style.lineHeightMultiple = lineHeightMultiple
+        attrString.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSRange(location: 0, length: labelText.length))
+        self.attributedText = attrString
     }
 }
