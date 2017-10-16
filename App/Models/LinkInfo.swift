@@ -1,6 +1,6 @@
 //
 //  LinkInfo.swift
-//  下载链接信息model. 对应URL: /movie/<movie_id> 页面中下载链接列表每项的数据结构
+//  下载链接信息model. 对应URL: /movie/<movie_id>/ 页面中下载链接列表每项的数据结构
 //
 //  Created by Sai on 11/10/2017.
 //  Copyright © 2017 Sai628.com. All rights reserved.
