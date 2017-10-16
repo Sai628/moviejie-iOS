@@ -18,7 +18,7 @@ class MovieInfoVC: UIViewController
     fileprivate var loadingMenu: LoadingMenu!
     
     fileprivate var movieInfo: MovieInfo!
-    var resourceInfo: ResourceInfo!
+    var movieLink: String!
     
     
     //MARK:- LIFE CYCLE
@@ -75,7 +75,7 @@ class MovieInfoVC: UIViewController
     //MARK:- ACTION
     func loadMovieInfo()
     {
-        NetService.getMovieInfo(movieLink: resourceInfo.movie_link, onError: { [weak self] (errorCode, errorMsg) in
+        NetService.getMovieInfo(movieLink: movieLink, onError: { [weak self] (errorCode, errorMsg) in
         
             self?.loadingMenu.showFail()
             
@@ -132,14 +132,14 @@ extension MovieInfoVC: UITableViewDelegate
         switch indexPath.section
         {
         case Sections.link.rawValue:
-            //TODO
+            AppUtil.readLinkInfo(self, movieInfo.links[indexPath.row].link)
             break
         
         case Sections.related.rawValue:
-            AppUtil.readMovieInfo(self, movieInfo.related_resources[indexPath.row])
+            AppUtil.readMovieInfo(self, movieInfo.related_resources[indexPath.row].movie_link)
             
         case Sections.recommended.rawValue:
-            AppUtil.readMovieInfo(self, movieInfo.recommended_resources[indexPath.row])
+            AppUtil.readMovieInfo(self, movieInfo.recommended_resources[indexPath.row].movie_link)
             
         default:
             break

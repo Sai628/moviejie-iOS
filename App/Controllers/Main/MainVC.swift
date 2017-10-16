@@ -130,7 +130,18 @@ extension MainVC: UITableViewDelegate
         tableView.deselectRow(at: indexPath, animated: true)
         
         let resourceInfo = dataItems[indexPath.section].resources[indexPath.row]
-        AppUtil.readMovieInfo(self, resourceInfo)
+        if !resourceInfo.movie_link.isBlank
+        {
+            AppUtil.readMovieInfo(self, resourceInfo.movie_link)
+        }
+        else if !resourceInfo.link.isBlank
+        {
+            AppUtil.readLinkInfo(self, resourceInfo.link)
+        }
+        else
+        {
+            BannerUtil.showWarning("未支持")
+        }
     }
     
     

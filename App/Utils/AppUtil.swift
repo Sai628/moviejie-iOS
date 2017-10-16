@@ -19,10 +19,18 @@ struct AppUtil
     }
     
     
-    static func readMovieInfo(_ viewController: UIViewController, _ resourceInfo: ResourceInfo)
+    static func readMovieInfo(_ viewController: UIViewController, _ movieLink: String)
     {
         let movieInfoVC = MovieInfoVC()
-        movieInfoVC.resourceInfo = resourceInfo
+        movieInfoVC.movieLink = movieLink
         viewController.pushVC(movieInfoVC)
+    }
+    
+    
+    static func readLinkInfo(_ viewController: UIViewController, _ link: String)
+    {
+        let linkInfoVC = LinkInfoVC()
+        linkInfoVC.link = link
+        viewController.pushVC(linkInfoVC)
     }
 }

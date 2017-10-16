@@ -20,14 +20,20 @@ struct Colors
     static var clickedBg: UIColor                { return (0xFFABCEED as ColorInt).toColor() }
     static var itemClickedBg: UIColor            { return (0xFFE4E4E4 as ColorInt).toColor() }
     static var editInputBg: UIColor              { return (0xFF15427B as ColorInt).toColor() }
-    static var bannerInfoBg: UIColor             { return (0xE0153B44 as ColorInt).toColor() }
-    static var bannerWarningBg: UIColor          { return (0xE0FF0000 as ColorInt).toColor() }
+    static var bannerInfoBg: UIColor             { return (0xFF449D44 as ColorInt).toColor() }
+    static var bannerWarningBg: UIColor          { return (0xFFF0AD4E as ColorInt).toColor() }
     
     //------------------  按钮背景色  -------------------//
-    static var buttonDefaultNormalBg: UIColor    { return (0xFF136BFB as ColorInt).toColor() }
-    static var buttonDefaultSelectedBg: UIColor  { return (0x80136BFB as ColorInt).toColor() }
-    static var buttonDefaultHighlightBg: UIColor { return (0x80136BFB as ColorInt).toColor() }
-    static var buttonDefaultDisableBg: UIColor   { return (0x80136BFB as ColorInt).toColor() }
+    static var buttonNormalBg: UIColor           { return (0xFF5CB85C as ColorInt).toColor() }
+    static var buttonHighlightBg: UIColor        { return (0xFF449D44 as ColorInt).toColor() }
+    
+    //------------------  UI元素颜色  -------------------//
+    static var movieMarkLine: UIColor            { return (0xFF008018 as ColorInt).toColor() }
+    static var linkMarkLine: UIColor             { return (0xFF006D9A as ColorInt).toColor() }
+    static var link: UIColor                     { return (0xFF428BCA as ColorInt).toColor() }
+    static var downloadLinkText: UIColor         { return (0xFF31708F as ColorInt).toColor() }
+    static var ratingBar: UIColor                { return (0xFFFF0000 as ColorInt).toColor() }
+    static var ratingBarEmpty: UIColor           { return (0xFFC0C0C0 as ColorInt).toColor() }
     
     //------------------  常用颜色  -------------------//
     static var _222: UIColor                     { return (0xFF222222 as ColorInt).toColor() }
@@ -58,10 +64,4 @@ struct Colors
     static var darkWhite: UIColor                { return (0xFFE8E8E8 as ColorInt).toColor() }
     static var darkGeen: UIColor                 { return (0xFF14CD34 as ColorInt).toColor() }
     static var milky: UIColor                    { return (0xFFE4E4E4 as ColorInt).toColor() }
-    static var movieMarkLine: UIColor            { return (0xFF008018 as ColorInt).toColor() }
-    static var linkMarkLine: UIColor             { return (0xFF006D9A as ColorInt).toColor() }
-    static var link: UIColor                     { return (0xFF428BCA as ColorInt).toColor() }
-    static var ratingBar: UIColor                { return (0xFFFF0000 as ColorInt).toColor() }
-    static var ratingBarEmpty: UIColor           { return (0xFFC0C0C0 as ColorInt).toColor() }
-
 }

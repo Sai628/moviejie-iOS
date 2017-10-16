@@ -230,6 +230,8 @@
 		32CBB7CF1E9D042A0076D35B /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CBB7C71E9CE8860076D35B /* UITextField+Extensions.swift */; };
 		32CF9B211F946E8300BEC24F /* LinkDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */; };
 		32CF9B221F946E8300BEC24F /* LinkDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */; };
+		32CF9B241F94744100BEC24F /* LinkInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B231F94744100BEC24F /* LinkInfoVC.swift */; };
+		32CF9B251F94744100BEC24F /* LinkInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B231F94744100BEC24F /* LinkInfoVC.swift */; };
 		32F72A4E1E8CC7FF00A69C41 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A409901E6EF5360004DBAC /* TestData.swift */; };
 /* End PBXBuildFile section */
 
@@ -376,6 +378,7 @@
 		32CBB7C61E9CE8860076D35B /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		32CBB7C71E9CE8860076D35B /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDetailInfo.swift; sourceTree = "<group>"; };
+		32CF9B231F94744100BEC24F /* LinkInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInfoVC.swift; sourceTree = "<group>"; };
 		7344CDD31806649D00222272 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7344CDD51806649D00222272 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7344CDD71806649D00222272 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -519,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				326ABF351F90C23C0097F2A0 /* MovieInfoVC.swift */,
+				32CF9B231F94744100BEC24F /* LinkInfoVC.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -988,6 +992,7 @@
 				326ABF361F90C23C0097F2A0 /* MovieInfoVC.swift in Sources */,
 				32B95AAF1EA5EC2D0096EE83 /* CosmosView.swift in Sources */,
 				32B95AB31EA5EC2D0096EE83 /* RightToLeft.swift in Sources */,
+				32CF9B241F94744100BEC24F /* LinkInfoVC.swift in Sources */,
 				32A4097B1E6EF5110004DBAC /* FileUtil.swift in Sources */,
 				32A408611E6EF5100004DBAC /* Colors.swift in Sources */,
 				32B95AA71EA5EC2D0096EE83 /* CosmosSettings.swift in Sources */,
@@ -1081,6 +1086,7 @@
 				32CF9B221F946E8300BEC24F /* LinkDetailInfo.swift in Sources */,
 				32A40A051E6EFA8B0004DBAC /* UITableView+Extensions.swift in Sources */,
 				32B95AA81EA5EC2D0096EE83 /* CosmosSettings.swift in Sources */,
+				32CF9B251F94744100BEC24F /* LinkInfoVC.swift in Sources */,
 				32115EEA1F8DFA950023475F /* ResourceType.swift in Sources */,
 				32A40A061E6EFA8B0004DBAC /* UIView+Extensions.swift in Sources */,
 				32B95AAE1EA5EC2D0096EE83 /* CosmosTouch.swift in Sources */,
