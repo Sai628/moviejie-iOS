@@ -25,9 +25,9 @@ class NetServiceTests: NetBaseTests
     }
     
     
-    func test_getDownloadLink()
+    func test_getLinkDetailInfo()
     {
-        NetService.getDownloadLink(link: TestData.link, onError: onError, onFailure: onFailure, onSuccess: onSuccess)
+        NetService.getLinkDetailInfo(link: TestData.link, onError: onError, onFailure: onFailure, onSuccess: onSuccess)
         waitForMe()
     }
 }

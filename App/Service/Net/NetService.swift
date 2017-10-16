@@ -42,13 +42,13 @@ class NetService
     
     
     /// 获取下载链接
-    static func getDownloadLink(link: String, onError: NetError, onFailure: NetFailure, onSuccess: @escaping NetSuccess)
+    static func getLinkDetailInfo(link: String, onError: NetError, onFailure: NetFailure, onSuccess: @escaping NetSuccess)
     {
         NetHelper.get(APIAddress.API_DOMAIN + link, values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
             
-            let downloadLink = jsonObject["link"].stringValue
+            let linkDetailInfo: LinkDetalInfo? = JSONUtil.readModel(jsonObject, key: "link_detail")
             
-            onSuccess(downloadLink)
+            onSuccess(linkDetailInfo)
         }
     }
 }
