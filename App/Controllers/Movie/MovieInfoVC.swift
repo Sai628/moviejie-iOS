@@ -1,6 +1,6 @@
 //
 //  MovieInfoVC.swift
-//  "电视/电视剧"信息视图
+//  "电影/电视剧"信息视图
 //
 //  Created by Sai on 13/10/2017.
 //  Copyright © 2017 Sai628.com. All rights reserved.
