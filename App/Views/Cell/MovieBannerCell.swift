@@ -9,11 +9,13 @@
 import Foundation
 
 import EZSwiftExtensions
+import Kingfisher
 import SnapKit
 
 
 class MovieBannerCell: UITableViewCell
 {
+    fileprivate var bgIv: UIImageView!
     fileprivate var bannerIv: UIImageView!
     
     
@@ -29,12 +31,26 @@ class MovieBannerCell: UITableViewCell
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
         
+        if bgIv == nil
+        {
+            bgIv = UIImageView()
+            bgIv.backgroundColor = UIColor(gray: 0, alpha: 0.75)
+            bgIv.contentMode = .scaleAspectFill
+            bgIv.clipsToBounds = true
+            contentView.addSubview(bgIv)
+        }
         if bannerIv == nil
         {
             bannerIv = UIImageView()
             bannerIv.contentMode = .scaleAspectFit
-            backgroundColor = UIColor.random(randomAlpha: true)
             contentView.addSubview(bannerIv)
+        }
+        
+        bgIv.snp.makeConstraints { (make) in
+            make.top.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
         
         bannerIv.snp.makeConstraints { (make) in
@@ -48,7 +64,8 @@ class MovieBannerCell: UITableViewCell
     
     func setModel(_ bannerURL: String)
     {
-        bannerIv.app_setImage(with: bannerURL)
+        bgIv.app_setImage(with: bannerURL, options: [.processor(BlurImageProcessor(blurRadius: 10) >> OverlayImageProcessor(overlay: .black, fraction: 0.3))])
+        bannerIv.app_setImage(with: bannerURL, options: [.transition(ImageTransition.fade(0.2))])
     }
     
     
