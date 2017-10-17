@@ -14,10 +14,13 @@ import SnapKit
 
 class HotResourceCell: UITableViewCell
 {
-    var movieMarkLine: UIView!
+    var movieMarkLine: UIImageView!
     var titleLabel: UILabel!
     var ratingbar: CosmosView!
     var ratingLabel: UILabel!
+    
+    var movieMarkLineImage: UIImage!
+    var linkMarkLineImage: UIImage!
     
     
     required init?(coder aDecoder: NSCoder)
@@ -31,9 +34,19 @@ class HotResourceCell: UITableViewCell
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.accessoryType = .disclosureIndicator
         
+        if movieMarkLineImage == nil
+        {
+            movieMarkLineImage = ImageUtil.create(withColor: Colors.movieMarkLine, andSize: CGSize(width: 5, height: HotResourceCell.cellHeight))
+        }
+        if linkMarkLineImage == nil
+        {
+            linkMarkLineImage = ImageUtil.create(withColor: Colors.linkMarkLine, andSize: CGSize(width: 5, height: HotResourceCell.cellHeight))
+        }
+        
         if movieMarkLine == nil
         {
-            movieMarkLine = UIView()
+            movieMarkLine = UIImageView()
+            movieMarkLine.contentMode = .scaleToFill
             contentView.addSubview(movieMarkLine)
         }
         if titleLabel == nil
@@ -95,7 +108,8 @@ class HotResourceCell: UITableViewCell
     func setModel(_ resource: ResourceInfo)
     {
         titleLabel.text = resource.title
-        movieMarkLine.backgroundColor = !resource.movie_link.isBlank ? Colors.movieMarkLine : Colors.linkMarkLine
+        
+        movieMarkLine.image = !resource.movie_link.isBlank ? movieMarkLineImage : linkMarkLineImage
         titleLabel.textColor = !resource.movie_link.isBlank ? Colors._333 : Colors.link
         
         if resource.rating.isNumber()
