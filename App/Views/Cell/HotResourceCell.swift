@@ -14,13 +14,10 @@ import SnapKit
 
 class HotResourceCell: UITableViewCell
 {
-    var movieMarkLine: UIImageView!
     var titleLabel: UILabel!
     var ratingbar: CosmosView!
     var ratingLabel: UILabel!
-    
-    var movieMarkLineImage: UIImage!
-    var linkMarkLineImage: UIImage!
+    var starEmptyTipLabel: UILabel!
     
     
     required init?(coder aDecoder: NSCoder)
@@ -34,24 +31,9 @@ class HotResourceCell: UITableViewCell
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.accessoryType = .disclosureIndicator
         
-        if movieMarkLineImage == nil
-        {
-            movieMarkLineImage = ImageUtil.create(withColor: Colors.movieMarkLine, andSize: CGSize(width: 5, height: HotResourceCell.cellHeight))
-        }
-        if linkMarkLineImage == nil
-        {
-            linkMarkLineImage = ImageUtil.create(withColor: Colors.linkMarkLine, andSize: CGSize(width: 5, height: HotResourceCell.cellHeight))
-        }
-        
-        if movieMarkLine == nil
-        {
-            movieMarkLine = UIImageView()
-            movieMarkLine.contentMode = .scaleToFill
-            contentView.addSubview(movieMarkLine)
-        }
         if titleLabel == nil
         {
-            titleLabel = UILabel(fontSize: Dimens.fontSizeNormal, textColor: Colors.link)
+            titleLabel = UILabel(fontSize: 16, textColor: Colors.link)
             titleLabel.lineBreakMode = .byCharWrapping
             contentView.addSubview(titleLabel)
         }
@@ -71,16 +53,16 @@ class HotResourceCell: UITableViewCell
         }
         if ratingLabel == nil
         {
-            ratingLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.ratingBar)
+            ratingLabel = UILabel(fontSize: 12, textColor: Colors._AAA)
             ratingLabel.textAlignment = .right
             contentView.addSubview(ratingLabel)
         }
-        
-        movieMarkLine.snp.makeConstraints { (make) in
-            make.left.equalToSuperview()
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.width.equalTo(5)
+        if starEmptyTipLabel == nil
+        {
+            starEmptyTipLabel = UILabel(fontSize: 12, textColor: Colors._AAA)
+            starEmptyTipLabel.textAlignment = .right
+            starEmptyTipLabel.text = "暂无评分"
+            contentView.addSubview(starEmptyTipLabel)
         }
         
         titleLabel.snp.makeConstraints { (make) in
@@ -102,24 +84,32 @@ class HotResourceCell: UITableViewCell
             make.right.equalTo(titleLabel)
             make.height.equalTo(16)
         }
+        
+        starEmptyTipLabel.snp.makeConstraints { (make) in
+            make.centerY.equalTo(ratingbar)
+            make.right.equalTo(titleLabel)
+            make.height.equalTo(16)
+        }
     }
     
     
     func setModel(_ resource: ResourceInfo)
     {
         titleLabel.text = resource.title
-        
-        movieMarkLine.image = !resource.movie_link.isBlank ? movieMarkLineImage : linkMarkLineImage
         titleLabel.textColor = !resource.movie_link.isBlank ? Colors._333 : Colors.link
         
         if resource.rating.isNumber()
         {
+            starEmptyTipLabel.isHidden = true
+            
             ratingLabel.text = resource.rating
             ratingbar.rating = (resource.rating.toDouble()!) / 2
             ratingbar.isHidden = false
         }
         else
         {
+            starEmptyTipLabel.isHidden = false
+            
             ratingLabel.text = nil
             ratingbar.isHidden = true
         }

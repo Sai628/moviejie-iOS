@@ -14,12 +14,8 @@ import SnapKit
 
 class NewResourceCell: UITableViewCell
 {
-    var movieMarkLine: UIImageView!
     var titleLabel: UILabel!
     var sizeLabel: UILabel!
-    
-    var movieMarkLineImage: UIImage!
-    var linkMarkLineImage: UIImage!
     
     
     required init?(coder aDecoder: NSCoder)
@@ -33,21 +29,6 @@ class NewResourceCell: UITableViewCell
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.accessoryType = .disclosureIndicator
         
-        if movieMarkLineImage == nil
-        {
-            movieMarkLineImage = ImageUtil.create(withColor: Colors.movieMarkLine, andSize: CGSize(width: 5, height: NewResourceCell.cellHeight))
-        }
-        if linkMarkLineImage == nil
-        {
-            linkMarkLineImage = ImageUtil.create(withColor: Colors.linkMarkLine, andSize: CGSize(width: 5, height: NewResourceCell.cellHeight))
-        }
-        
-        if movieMarkLine == nil
-        {
-            movieMarkLine = UIImageView()
-            movieMarkLine.contentMode = .scaleToFill
-            contentView.addSubview(movieMarkLine)
-        }
         if titleLabel == nil
         {
             titleLabel = UILabel(fontSize: Dimens.fontSizeNormal, textColor: Colors.link)
@@ -60,13 +41,6 @@ class NewResourceCell: UITableViewCell
             sizeLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.lightWhite)
             sizeLabel.textAlignment = .right
             contentView.addSubview(sizeLabel)
-        }
-        
-        movieMarkLine.snp.makeConstraints { (make) in
-            make.left.equalToSuperview()
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.width.equalTo(5)
         }
         
         titleLabel.snp.makeConstraints { (make) in
@@ -89,7 +63,6 @@ class NewResourceCell: UITableViewCell
         titleLabel.text = resource.title
         sizeLabel.text = resource.size
         
-        movieMarkLine.image = !resource.movie_link.isBlank ? movieMarkLineImage : linkMarkLineImage
         titleLabel.textColor = !resource.movie_link.isBlank ? Colors._333 : Colors.link
     }
     

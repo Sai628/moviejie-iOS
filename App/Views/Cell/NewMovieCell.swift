@@ -70,7 +70,7 @@ class NewMovieCell: UITableViewCell
         }
         if ratingLabel == nil
         {
-            ratingLabel = UILabel(fontSize: 12, textColor: Colors.lightDark)
+            ratingLabel = UILabel(fontSize: 12, textColor: Colors._AAA)
             contentView.addSubview(ratingLabel)
         }
         if starEmptyTipLabel == nil
