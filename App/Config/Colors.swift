@@ -32,7 +32,7 @@ struct Colors
     static var linkMarkLine: UIColor             { return (0xFF006D9A as ColorInt).toColor() }
     static var link: UIColor                     { return (0xFF428BCA as ColorInt).toColor() }
     static var downloadLinkText: UIColor         { return (0xFF31708F as ColorInt).toColor() }
-    static var ratingBar: UIColor                { return (0xFFFF0000 as ColorInt).toColor() }
+    static var ratingBar: UIColor                { return (0xFFF89F40 as ColorInt).toColor() }
     static var ratingBarEmpty: UIColor           { return (0xFFC0C0C0 as ColorInt).toColor() }
     
     //------------------  常用颜色  -------------------//
@@ -41,6 +41,7 @@ struct Colors
     static var _666: UIColor                     { return (0xFF666666 as ColorInt).toColor() }
     static var _888: UIColor                     { return (0xFF888888 as ColorInt).toColor() }
     static var _999: UIColor                     { return (0xFF999999 as ColorInt).toColor() }
+    static var _AAA: UIColor                     { return (0xFFAAAAAA as ColorInt).toColor() }
     static var _BBB: UIColor                     { return (0xFFBBBBBB as ColorInt).toColor() }
     static var _CCC: UIColor                     { return (0xFFCCCCCC as ColorInt).toColor() }
     static var _DDD: UIColor                     { return (0xFFDDDDDD as ColorInt).toColor() }

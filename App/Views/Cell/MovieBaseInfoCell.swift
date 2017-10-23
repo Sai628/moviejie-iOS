@@ -45,7 +45,7 @@ class MovieBaseInfoCell: UITableViewCell
         }
         if baseInfoLabel == nil
         {
-            baseInfoLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
+            baseInfoLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._AAA)
             baseInfoLabel.lineBreakMode = .byWordWrapping
             baseInfoLabel.numberOfLines = 0
             contentView.addSubview(baseInfoLabel)
@@ -54,7 +54,7 @@ class MovieBaseInfoCell: UITableViewCell
         if starBg == nil
         {
             starBg = UIView(backgroundColor: UIColor.white)
-            starBg.addShadow(offset: CGSize(width: 2, height: 2), radius: 2, color: Colors._999, opacity: 0.75)
+            starBg.addShadow(offset: CGSize(width: 2, height: 2), radius: 2, color: Colors._AAA, opacity: 0.75)
             contentView.addSubview(starBg)
         }
         if starContentView == nil

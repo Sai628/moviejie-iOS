@@ -51,4 +51,30 @@ class NetService
             onSuccess(linkDetailInfo)
         }
     }
+    
+    
+    /// 获取最新电影
+    /// - parameter page: 分页. 如"p1"表示第1页, "p2"表示第2页. 从"p1"开始索引.
+    static func getNewMovie(page: String, onError: NetError, onFailure: NetFailure, onSuccess: @escaping NetSuccess)
+    {
+        NetHelper.get(APIAddress.NEW_MOVIE + page + "/", values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
+            
+            let movies: [MovieSimpleInfo] = JSONUtil.readModels(jsonObject, key: "movies") ?? []
+            
+            onSuccess(movies)
+        }
+    }
+    
+    
+    /// 获取最新电视剧
+    /// - parameter page: 分页. 如"p1"表示第1页, "p2"表示第2页. 从"p1"开始索引.
+    static func getNewTv(page: String, onError: NetError, onFailure: NetFailure, onSuccess: @escaping NetSuccess)
+    {
+        NetHelper.get(APIAddress.NEW_TV + page + "/", values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
+            
+            let movies: [MovieSimpleInfo] = JSONUtil.readModels(jsonObject, key: "movies") ?? []
+            
+            onSuccess(movies)
+        }
+    }
 }

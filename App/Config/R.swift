@@ -12,4 +12,10 @@ import Foundation
 struct R
 {
     static let icon_empty_prompt = "icon_empty_prompt"
+    static let icon_new_normal = "icon_new_normal"
+    static let icon_new_highlight = "icon_new_highlight"
+    static let icon_movie_normal = "icon_movie_normal"
+    static let icon_movie_highlight = "icon_movie_highlight"
+    static let icon_tv_normal = "icon_tv_normal"
+    static let icon_tv_highlight = "icon_tv_highlight"
 }

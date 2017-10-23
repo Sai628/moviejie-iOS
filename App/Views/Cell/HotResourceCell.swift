@@ -60,7 +60,7 @@ class HotResourceCell: UITableViewCell
             ratingbar = CosmosView()
             ratingbar.settings.totalStars = 5
             ratingbar.settings.starSize = 13
-            ratingbar.settings.starMargin = -2
+            ratingbar.settings.starMargin = 0.1
             ratingbar.settings.updateOnTouch = false
             ratingbar.settings.fillMode = .precise
             ratingbar.settings.filledBorderColor = Colors.ratingBar
@@ -71,7 +71,7 @@ class HotResourceCell: UITableViewCell
         }
         if ratingLabel == nil
         {
-            ratingLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: UIColor.red)
+            ratingLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors.ratingBar)
             ratingLabel.textAlignment = .right
             contentView.addSubview(ratingLabel)
         }
@@ -93,14 +93,14 @@ class HotResourceCell: UITableViewCell
         ratingbar.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom).offset(2)
             make.right.equalTo(ratingLabel.snp.left)
-            make.width.equalTo(58)
-            make.height.equalTo(14)
+            make.width.equalTo(68)
+            make.height.equalTo(16)
         }
         
         ratingLabel.snp.makeConstraints { (make) in
-            make.centerY.equalTo(ratingbar).offset(-1)
+            make.centerY.equalTo(ratingbar).offset(-2)
             make.right.equalTo(titleLabel)
-            make.height.equalTo(14)
+            make.height.equalTo(16)
         }
     }
     

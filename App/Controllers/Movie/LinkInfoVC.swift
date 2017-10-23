@@ -64,7 +64,7 @@ class LinkInfoVC: UIViewController
         linkNameLabel.numberOfLines = 0
         contentView.addSubview(linkNameLabel)
         
-        linkSizeLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._999)
+        linkSizeLabel = UILabel(fontSize: Dimens.fontSizeTiny, textColor: Colors._AAA)
         linkSizeLabel.numberOfLines = 0
         contentView.addSubview(linkSizeLabel)
         

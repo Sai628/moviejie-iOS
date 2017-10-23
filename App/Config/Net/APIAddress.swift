@@ -13,5 +13,9 @@ class APIAddress
 {
     static let API_DOMAIN = "http://api-moviejie.sai628.com:5000"  // API域名
     //static let API_DOMAIN = "http://localhost:5000"  // API域名
+    
+    /// 最新电影
+    static let NEW_MOVIE = API_DOMAIN + "/new/movie/"
+    /// 最新电视剧
+    static let NEW_TV = API_DOMAIN + "/new/tv/"
 }
-

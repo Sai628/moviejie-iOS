@@ -42,8 +42,11 @@ struct Dimens
     /// 页面除开顶部导航栏外的高度(默认为带标题的导航栏)
     static let screenHeightWithouNavBar: DimenFloat = ez.screenHeight - navBarHeight
     
-    // 页面除开顶部导航栏外的 Rect(默认为带标题的导航栏)
+    /// 页面除开顶部导航栏外的 Rect(默认为带标题的导航栏)
     static let screenFrameWithoutNavBar: CGRect = CGRect(x: 0, y: safeAreaTop + navBarHeight,
                                                          width: ez.screenWidth,
                                                          height: ez.screenHeight - safeAreaTop - navBarHeight - safeAreaBottom)
+    
+    /// 页面底部TabBar的高度
+    static let tabBarHeight: DimenFloat = 49
 }
