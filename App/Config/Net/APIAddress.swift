@@ -18,4 +18,6 @@ class APIAddress
     static let NEW_MOVIE = API_DOMAIN + "/new/movie/"
     /// 最新电视剧
     static let NEW_TV = API_DOMAIN + "/new/tv/"
+    /// 最新原声大碟
+    static let NEW_OST = API_DOMAIN + "/new/ost/"
 }

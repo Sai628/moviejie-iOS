@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3208B2761F9F270F002DE020 /* OSTSimpleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208B2751F9F270F002DE020 /* OSTSimpleInfo.swift */; };
+		3208B2771F9F270F002DE020 /* OSTSimpleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208B2751F9F270F002DE020 /* OSTSimpleInfo.swift */; };
 		320FBAC61F911E1E0099811F /* MovieBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FBAC51F911E1E0099811F /* MovieBannerCell.swift */; };
 		320FBAC71F911E1E0099811F /* MovieBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320FBAC51F911E1E0099811F /* MovieBannerCell.swift */; };
 		32115EE61F8DFA320023475F /* HotInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32115EE51F8DFA320023475F /* HotInfo.swift */; };
@@ -317,6 +319,7 @@
 		1846F1CF1812542000B6EB3A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		1846F1D11812543200B6EB3A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1846F1D31812546200B6EB3A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3208B2751F9F270F002DE020 /* OSTSimpleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSTSimpleInfo.swift; sourceTree = "<group>"; };
 		320FBAC51F911E1E0099811F /* MovieBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBannerCell.swift; sourceTree = "<group>"; };
 		32115EE51F8DFA320023475F /* HotInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotInfo.swift; sourceTree = "<group>"; };
 		32115EE81F8DFA950023475F /* ResourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceType.swift; sourceTree = "<group>"; };
@@ -721,6 +724,7 @@
 				327C08511F9D9F1700248BF2 /* MovieSimpleInfo.swift */,
 				3274B9801F8DBDFB004561F7 /* NewInfo.swift */,
 				323590B91E8B71960025E0E6 /* ResourceInfo.swift */,
+				3208B2751F9F270F002DE020 /* OSTSimpleInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1090,6 +1094,7 @@
 				32B95A9D1EA5EC2D0096EE83 /* CosmosDefaultSettings.swift in Sources */,
 				32CBB7C81E9CE8860076D35B /* UILabel+Extensions.swift in Sources */,
 				32B95AB11EA5EC2D0096EE83 /* CosmosTouchTarget.swift in Sources */,
+				3208B2761F9F270F002DE020 /* OSTSimpleInfo.swift in Sources */,
 				32A408661E6EF5100004DBAC /* ErrorInfo.swift in Sources */,
 				326ABF391F90DFB50097F2A0 /* MovieBaseInfoCell.swift in Sources */,
 				32115EE61F8DFA320023475F /* HotInfo.swift in Sources */,
@@ -1243,6 +1248,7 @@
 				32A409AA1E6EF9350004DBAC /* Global.swift in Sources */,
 				32A409A51E6EF7F10004DBAC /* BaseTests.swift in Sources */,
 				327C08531F9D9F1700248BF2 /* MovieSimpleInfo.swift in Sources */,
+				3208B2771F9F270F002DE020 /* OSTSimpleInfo.swift in Sources */,
 				3274B98C1F8DD9AA004561F7 /* LinkInfo.swift in Sources */,
 				32A409A61E6EF7F10004DBAC /* NetBaseTests.swift in Sources */,
 				32A409A71E6EF7F10004DBAC /* TestData.swift in Sources */,

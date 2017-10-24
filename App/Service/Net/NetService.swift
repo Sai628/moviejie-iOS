@@ -77,4 +77,17 @@ class NetService
             onSuccess(movies)
         }
     }
+    
+    
+    /// 获取最新原声大碟
+    /// - parameter page: 分布. 如"p1"表示第1页, "p2"表示第2页. 从"p1"开始索引.
+    static func getNewOST(page: String, onError: NetError, onFailure: NetFailure, onSuccess: @escaping NetSuccess)
+    {
+        NetHelper.get(APIAddress.NEW_OST + page + "/", values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
+            
+            let ostInfos: [OSTSimpleInfo] = JSONUtil.readModels(jsonObject, key: "ost_infos") ?? []
+            
+            onSuccess(ostInfos)
+        }
+    }
 }

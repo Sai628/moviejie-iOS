@@ -44,4 +44,11 @@ class NetServiceTests: NetBaseTests
         NetService.getNewTv(page: "p1", onError: onError, onFailure: onFailure, onSuccess: onSuccess)
         waitForMe()
     }
+    
+    
+    func test_getNewOST()
+    {
+        NetService.getNewOST(page: "p1", onError: onError, onFailure: onFailure, onSuccess: onSuccess)
+        waitForMe()
+    }
 }
