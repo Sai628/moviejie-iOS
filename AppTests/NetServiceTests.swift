@@ -30,4 +30,18 @@ class NetServiceTests: NetBaseTests
         NetService.getLinkDetailInfo(link: TestData.link, onError: onError, onFailure: onFailure, onSuccess: onSuccess)
         waitForMe()
     }
+
+
+    func test_getNewMovie()
+    {
+        NetService.getNewMovie(page: "p1", onError: onError, onFailure: onFailure, onSuccess: onSuccess)
+        waitForMe()
+    }
+
+
+    func test_getNewTv()
+    {
+        NetService.getNewTv(page: "p1", onError: onError, onFailure: onFailure, onSuccess: onSuccess)
+        waitForMe()
+    }
 }
