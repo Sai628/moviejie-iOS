@@ -223,7 +223,7 @@ extension NewestInfoVC: UITableViewDataSource
             fatalError("type invalid")
         }
         
-        tableView.addLineForCell(cell: cell, at: indexPath, leftSpace: 0, rightSpace: 0, hasSectionLine: true)
+        tableView.addLineForCell(cell: cell, at: indexPath, leftSpace: 0, rightSpace: 0, hasSectionLine: false)
         return cell
     }
     

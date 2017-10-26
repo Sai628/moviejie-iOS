@@ -40,6 +40,11 @@ class MainVC: UITabBarController
                                          image: UIImage(named: R.icon_tv_normal),
                                          selectedImage: UIImage(named: R.icon_tv_highlight))
         
-        self.viewControllers = [newestInfoVC, newMovieVC, newTvVC]
+        let newOSTVC = NewOSTVC()
+        newOSTVC.tabBarItem = UITabBarItem(title: "原声大碟",
+                                           image: UIImage(named: R.icon_ost_normal),
+                                           selectedImage: UIImage(named: R.icon_ost_highlight))
+        
+        self.viewControllers = [newestInfoVC, newMovieVC, newTvVC, newOSTVC]
     }
 }

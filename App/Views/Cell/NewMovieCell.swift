@@ -25,7 +25,8 @@ class NewMovieCell: UITableViewCell
     
     fileprivate var bannerPlaceHolder: UIImage!
     static let bannerImageHeight: CGFloat = 110
-    
+    static let bannerImageWidth: CGFloat = bannerImageHeight * 0.72
+
     
     required init?(coder aDecoder: NSCoder)
     {
@@ -39,7 +40,7 @@ class NewMovieCell: UITableViewCell
     
         if bannerPlaceHolder == nil
         {
-            bannerPlaceHolder = ImageUtil.create(withColor: Colors._EEE, andSize: CGSize(width: NewMovieCell.bannerImageHeight * 0.72,
+            bannerPlaceHolder = ImageUtil.create(withColor: Colors._EEE, andSize: CGSize(width: NewMovieCell.bannerImageWidth,
                                                                                          height: NewMovieCell.bannerImageHeight))
         }
         if bannerIv == nil
@@ -49,7 +50,7 @@ class NewMovieCell: UITableViewCell
         }
         if titleLabel == nil
         {
-            titleLabel = UILabel(fontSize: 18, textColor: Colors._333, isBold: true)
+            titleLabel = UILabel(fontSize: 17, textColor: Colors._333, isBold: true)
             titleLabel.lineBreakMode = .byCharWrapping
             titleLabel.numberOfLines = 2
             contentView.addSubview(titleLabel)
@@ -93,12 +94,12 @@ class NewMovieCell: UITableViewCell
         bannerIv.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(16)
             make.left.equalToSuperview().offset(16)
+            make.width.equalTo(NewMovieCell.bannerImageWidth)
             make.height.equalTo(NewMovieCell.bannerImageHeight)
-            make.width.equalTo(bannerIv.snp.height).multipliedBy(0.72)
         }
         
         titleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(bannerIv).offset(4)
+            make.top.equalTo(bannerIv).offset(2)
             make.left.equalTo(bannerIv.snp.right).offset(12)
             make.right.equalToSuperview().offset(-16)
         }

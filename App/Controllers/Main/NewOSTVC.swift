@@ -1,8 +1,8 @@
 //
-//  NewMovieVC.swift
-//  "最新电影"视图
+//  NewOSTVC.swift
+//  "原声大碟"视图
 //
-//  Created by Sai on 23/10/2017.
+//  Created by Sai on 26/10/2017.
 //  Copyright © 2017 Sai628.com. All rights reserved.
 //
 
@@ -13,13 +13,13 @@ import EZSwiftExtensions
 import SnapKit
 
 
-class NewMovieVC: UIViewController
+class NewOSTVC: UIViewController
 {
     fileprivate var refreshControl: ODRefreshControl!
     fileprivate var tableView: UITableView!
     fileprivate var loadingMenu: LoadingMenu!
     
-    fileprivate var dataItems: [MovieSimpleInfo] = []
+    fileprivate var dataItems: [OSTSimpleInfo] = []
     fileprivate var currentPage: Int = 1
     
     
@@ -29,7 +29,7 @@ class NewMovieVC: UIViewController
         super.viewDidLoad()
         
         initView()
-        loadNewMovies()
+        loadNewOSTInfos()
         loadingMenu.showLoading()
     }
     
@@ -37,7 +37,7 @@ class NewMovieVC: UIViewController
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
-        self.parent?.title = "电影"
+        self.parent?.title = "原声大碟"
     }
     
     //MARK:- INIT
@@ -47,18 +47,18 @@ class NewMovieVC: UIViewController
         view.backgroundColor = Colors.viewBg
         
         tableView = UITableView(frame: CGRect.zero, style: .plain)
-        tableView.register(NewMovieCell.self, forCellReuseIdentifier: NewMovieCell.className)
+        tableView.register(NewOSTCell.self, forCellReuseIdentifier: NewOSTCell.className)
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
         let refreshFooter = MyRefreshFooterAnimator(frame: CGRect(x: 0, y: 0, w: ez.screenWidth, h: 68))
         tableView.es.addInfiniteScrolling(animator: refreshFooter) { [weak self] in
-            self?.loadMoreMovies()
+            self?.loadMoreOSTInfos()
         }
         view.addSubview(tableView)
         
         refreshControl = ODRefreshControl(in: tableView)
-        refreshControl.addTarget(self, action: #selector(refreshNewMovies), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(refreshNewOSTInfos), for: .valueChanged)
         
         loadingMenu = LoadingMenu(frame: Dimens.screenFrameWithoutNavBar)
         loadingMenu.delegate = self
@@ -73,72 +73,72 @@ class NewMovieVC: UIViewController
     
     
     //MARK:- ACTION
-    func loadNewMovies()
+    func loadNewOSTInfos()
     {
-        NetService.getNewMovie(page: "p1", onError: { [weak self] (errorCode, errorMsg) in
+        NetService.getNewOST(page: "p1", onError: { [weak self] (errorCode, errorMsg) in
             
             self?.loadingMenu.showFail()
             
-        }, onFailure: { [weak self] (failureMsg) in
-            
-            self?.loadingMenu.showFail()
-            
+            }, onFailure: { [weak self] (failureMsg) in
+                
+                self?.loadingMenu.showFail()
+                
         }) { [weak self] (data) in
             
             self?.loadingMenu.dismiss()
-            guard let movies = data as? [MovieSimpleInfo], movies.count > 0 else {
+            guard let ostInfos = data as? [OSTSimpleInfo], ostInfos.count > 0 else {
                 self?.loadingMenu.showEmpty()
                 return
             }
             
             self?.currentPage = 2
-            self?.dataItems = movies
+            self?.dataItems = ostInfos
             self?.tableView.reloadData()
         }
     }
     
     
-    func refreshNewMovies()
+    func refreshNewOSTInfos()
     {
-        NetService.getNewMovie(page: "p1", onError: { [weak self] (errorCode, errorMsg) in
+        NetService.getNewOST(page: "p1", onError: { [weak self] (errorCode, errorMsg) in
             
             self?.refreshControl.endRefreshing()
             
-        }, onFailure: { [weak self] (failureMsg) in
-            
-            self?.refreshControl.endRefreshing()
-            
+            }, onFailure: { [weak self] (failureMsg) in
+                
+                self?.refreshControl.endRefreshing()
+                
         }) { [weak self] (data) in
             
             self?.refreshControl.endRefreshing()
-            guard let movies = data as? [MovieSimpleInfo], movies.count > 0 else {
+            guard let ostInfos = data as? [OSTSimpleInfo], ostInfos.count > 0 else {
                 return
             }
             
             self?.currentPage = 2
-            self?.dataItems = movies
+            self?.dataItems = ostInfos
             self?.tableView.reloadData()
         }
     }
     
     
-    func loadMoreMovies()
+    func loadMoreOSTInfos()
     {
-        NetService.getNewMovie(page: "p\(currentPage)", onError: { [weak self] (errorCode, errorMsg) in
+        NetService.getNewOST(page: "p\(currentPage)", onError: { [weak self] (errorCode, errorMsg) in
             
             self?.tableView.es.stopLoadingMore()
             
-        }, onFailure: { [weak self] (failureMsg) in
-            
-            self?.tableView.es.stopLoadingMore()
-            
+            }, onFailure: { [weak self] (failureMsg) in
+                
+                self?.tableView.es.stopLoadingMore()
+                
         }) { [weak self] (data) in
             
-            let movies = data as! [MovieSimpleInfo]
-            self?.dataItems.append(contentsOf: movies)
+            let ostInfos = data as! [OSTSimpleInfo]
+            self?.dataItems.append(contentsOf: ostInfos)
             self?.tableView.reloadData()
             
-            guard movies.count >= 10 else {
+            guard ostInfos.count >= 10 else {
                 self?.tableView.es.stopLoadingMore()
                 return
             }
@@ -151,17 +151,17 @@ class NewMovieVC: UIViewController
 
 
 //MARK:- LoadingMenuDelegate
-extension NewMovieVC: LoadingMenuDelegate
+extension NewOSTVC: LoadingMenuDelegate
 {
     func onRetryClicked(_ view: LoadingMenu)
     {
-        loadNewMovies()
+        loadNewOSTInfos()
     }
 }
 
 
 //MARK:- UITableViewDelegate
-extension NewMovieVC: UITableViewDelegate
+extension NewOSTVC: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
@@ -172,7 +172,7 @@ extension NewMovieVC: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return NewMovieCell.cellHeight
+        return NewOSTCell.cellHeight
     }
     
     
@@ -184,7 +184,7 @@ extension NewMovieVC: UITableViewDelegate
 
 
 //MARK:- UITableViewDataSource
-extension NewMovieVC: UITableViewDataSource
+extension NewOSTVC: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -194,7 +194,7 @@ extension NewMovieVC: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NewMovieCell.className, for: indexPath) as! NewMovieCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewOSTCell.className, for: indexPath) as! NewOSTCell
         cell.setModel(dataItems[indexPath.row])
         tableView.addLineForCell(cell: cell, at: indexPath, leftSpace: 0, rightSpace: 0, hasSectionLine: false)
         
