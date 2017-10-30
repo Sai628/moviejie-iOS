@@ -14,7 +14,7 @@ import SwiftyJSON
 class OSTSimpleInfo: ModelType
 {
     var movie_name: String      = ""  // 电影名称
-    var movie_link: String      = ""  // 电影详情页面链接
+    var ost_link: String        = ""  // 原声大碟详情页面链接
     var banner: String          = ""  // 封面图URL
     var res_name: String        = ""  // 资源名称
     var res_size: String        = ""  // 资源大小
@@ -31,7 +31,7 @@ class OSTSimpleInfo: ModelType
     required init?(json: JSON)
     {
         movie_name      = json["movie_name"].stringValue
-        movie_link      = json["movie_link"].stringValue
+        ost_link        = json["ost_link"].stringValue
         banner          = json["banner"].stringValue
         res_name        = json["res_name"].stringValue
         res_size        = json["res_size"].stringValue
@@ -48,7 +48,7 @@ extension OSTSimpleInfo: JSONDicConvertible, JSONStringConvertible
     {
         return [
             "movie_name"    : movie_name,
-            "movie_link"    : movie_link,
+            "ost_link"      : ost_link,
             "banner"        : banner,
             "res_name"      : res_name,
             "res_size"      : res_size,
