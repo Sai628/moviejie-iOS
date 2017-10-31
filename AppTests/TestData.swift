@@ -13,4 +13,5 @@ struct TestData
 {
     static let movie_link = "/movie/1c7f93/"
     static let link = "/link/AQpkZmx5AP50qQR2ZGHmAmDhZwNhAGD1ZmR=/"
+    static let ost_link = "/ost/c54d92/"
 }

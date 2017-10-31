@@ -54,8 +54,6 @@
 		326514FB1F7BB1E80048FCC8 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326514F91F7BB1E80048FCC8 /* Display.swift */; };
 		326ABF321F90A0B60097F2A0 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF311F90A0B60097F2A0 /* ODRefreshControl.m */; };
 		326ABF331F90A0B60097F2A0 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF311F90A0B60097F2A0 /* ODRefreshControl.m */; };
-		326ABF361F90C23C0097F2A0 /* MovieInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF351F90C23C0097F2A0 /* MovieInfoVC.swift */; };
-		326ABF371F90C23C0097F2A0 /* MovieInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF351F90C23C0097F2A0 /* MovieInfoVC.swift */; };
 		326ABF391F90DFB50097F2A0 /* MovieBaseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF381F90DFB50097F2A0 /* MovieBaseInfoCell.swift */; };
 		326ABF3A1F90DFB50097F2A0 /* MovieBaseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF381F90DFB50097F2A0 /* MovieBaseInfoCell.swift */; };
 		326ABF3C1F90DFE20097F2A0 /* MovieLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326ABF3B1F90DFE20097F2A0 /* MovieLinkCell.swift */; };
@@ -71,6 +69,22 @@
 		3274B98A1F8DD672004561F7 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9891F8DD672004561F7 /* MovieInfo.swift */; };
 		3274B98B1F8DD993004561F7 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9891F8DD672004561F7 /* MovieInfo.swift */; };
 		3274B98C1F8DD9AA004561F7 /* LinkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3274B9851F8DD4DD004561F7 /* LinkInfo.swift */; };
+		327556E41FA76618003A0592 /* OSTInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556E31FA76618003A0592 /* OSTInfo.swift */; };
+		327556E51FA76618003A0592 /* OSTInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556E31FA76618003A0592 /* OSTInfo.swift */; };
+		327556E91FA76A6D003A0592 /* LinkInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556E71FA76A6C003A0592 /* LinkInfoVC.swift */; };
+		327556EA1FA76A6D003A0592 /* LinkInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556E71FA76A6C003A0592 /* LinkInfoVC.swift */; };
+		327556EB1FA76A6D003A0592 /* MovieInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556E81FA76A6C003A0592 /* MovieInfoVC.swift */; };
+		327556EC1FA76A6D003A0592 /* MovieInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556E81FA76A6C003A0592 /* MovieInfoVC.swift */; };
+		327556EE1FA76BC2003A0592 /* OSTInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556ED1FA76BC2003A0592 /* OSTInfoVC.swift */; };
+		327556EF1FA76BC2003A0592 /* OSTInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556ED1FA76BC2003A0592 /* OSTInfoVC.swift */; };
+		327556F11FA76ED1003A0592 /* OSTBaseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556F01FA76ED0003A0592 /* OSTBaseInfoCell.swift */; };
+		327556F21FA76ED1003A0592 /* OSTBaseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556F01FA76ED0003A0592 /* OSTBaseInfoCell.swift */; };
+		327556F41FA77032003A0592 /* OSTLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556F31FA77032003A0592 /* OSTLinkCell.swift */; };
+		327556F51FA77032003A0592 /* OSTLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556F31FA77032003A0592 /* OSTLinkCell.swift */; };
+		327556F71FA770A6003A0592 /* OSTTrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556F61FA770A6003A0592 /* OSTTrackListCell.swift */; };
+		327556F81FA770A6003A0592 /* OSTTrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556F61FA770A6003A0592 /* OSTTrackListCell.swift */; };
+		327556FA1FA77498003A0592 /* OSTSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556F91FA77498003A0592 /* OSTSourceCell.swift */; };
+		327556FB1FA77498003A0592 /* OSTSourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327556F91FA77498003A0592 /* OSTSourceCell.swift */; };
 		327C08281F9D913900248BF2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C08271F9D913900248BF2 /* MainVC.swift */; };
 		327C08291F9D913900248BF2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C08271F9D913900248BF2 /* MainVC.swift */; };
 		327C08361F9D9BD800248BF2 /* icon_new_highlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 327C082A1F9D9BD700248BF2 /* icon_new_highlight@3x.png */; };
@@ -283,8 +297,6 @@
 		32CBB7CF1E9D042A0076D35B /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CBB7C71E9CE8860076D35B /* UITextField+Extensions.swift */; };
 		32CF9B211F946E8300BEC24F /* LinkDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */; };
 		32CF9B221F946E8300BEC24F /* LinkDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */; };
-		32CF9B241F94744100BEC24F /* LinkInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B231F94744100BEC24F /* LinkInfoVC.swift */; };
-		32CF9B251F94744100BEC24F /* LinkInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B231F94744100BEC24F /* LinkInfoVC.swift */; };
 		32F72A4E1E8CC7FF00A69C41 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A409901E6EF5360004DBAC /* TestData.swift */; };
 /* End PBXBuildFile section */
 
@@ -348,7 +360,6 @@
 		326514F91F7BB1E80048FCC8 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		326ABF301F90A0B60097F2A0 /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
 		326ABF311F90A0B60097F2A0 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
-		326ABF351F90C23C0097F2A0 /* MovieInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoVC.swift; sourceTree = "<group>"; };
 		326ABF381F90DFB50097F2A0 /* MovieBaseInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBaseInfoCell.swift; sourceTree = "<group>"; };
 		326ABF3B1F90DFE20097F2A0 /* MovieLinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLinkCell.swift; sourceTree = "<group>"; };
 		326ABF3E1F90DFF20097F2A0 /* MovieRelatedInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRelatedInfoCell.swift; sourceTree = "<group>"; };
@@ -357,6 +368,14 @@
 		3274B9831F8DCEFB004561F7 /* NetServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetServiceTests.swift; sourceTree = "<group>"; };
 		3274B9851F8DD4DD004561F7 /* LinkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInfo.swift; sourceTree = "<group>"; };
 		3274B9891F8DD672004561F7 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
+		327556E31FA76618003A0592 /* OSTInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSTInfo.swift; sourceTree = "<group>"; };
+		327556E71FA76A6C003A0592 /* LinkInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkInfoVC.swift; sourceTree = "<group>"; };
+		327556E81FA76A6C003A0592 /* MovieInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfoVC.swift; sourceTree = "<group>"; };
+		327556ED1FA76BC2003A0592 /* OSTInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSTInfoVC.swift; sourceTree = "<group>"; };
+		327556F01FA76ED0003A0592 /* OSTBaseInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSTBaseInfoCell.swift; sourceTree = "<group>"; };
+		327556F31FA77032003A0592 /* OSTLinkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSTLinkCell.swift; sourceTree = "<group>"; };
+		327556F61FA770A6003A0592 /* OSTTrackListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSTTrackListCell.swift; sourceTree = "<group>"; };
+		327556F91FA77498003A0592 /* OSTSourceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSTSourceCell.swift; sourceTree = "<group>"; };
 		327C08271F9D913900248BF2 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		327C082A1F9D9BD700248BF2 /* icon_new_highlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_new_highlight@3x.png"; sourceTree = "<group>"; };
 		327C082B1F9D9BD700248BF2 /* icon_movie_highlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_movie_highlight@3x.png"; sourceTree = "<group>"; };
@@ -458,7 +477,6 @@
 		32CBB7C61E9CE8860076D35B /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		32CBB7C71E9CE8860076D35B /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDetailInfo.swift; sourceTree = "<group>"; };
-		32CF9B231F94744100BEC24F /* LinkInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkInfoVC.swift; sourceTree = "<group>"; };
 		7344CDD31806649D00222272 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7344CDD51806649D00222272 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7344CDD71806649D00222272 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -571,8 +589,12 @@
 				326ABF3E1F90DFF20097F2A0 /* MovieRelatedInfoCell.swift */,
 				326ABF411F90E0000097F2A0 /* MovieStoryCell.swift */,
 				327C08541F9DA9A500248BF2 /* NewMovieCell.swift */,
-				32115EEB1F8DFAFA0023475F /* NewResourceCell.swift */,
 				329A9B701FA181D500D2EA42 /* NewOSTCell.swift */,
+				32115EEB1F8DFAFA0023475F /* NewResourceCell.swift */,
+				327556F01FA76ED0003A0592 /* OSTBaseInfoCell.swift */,
+				327556F31FA77032003A0592 /* OSTLinkCell.swift */,
+				327556F91FA77498003A0592 /* OSTSourceCell.swift */,
+				327556F61FA770A6003A0592 /* OSTTrackListCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -602,13 +624,14 @@
 			path = ODRefreshControl;
 			sourceTree = "<group>";
 		};
-		326ABF341F90C20A0097F2A0 /* Movie */ = {
+		327556E61FA76A6C003A0592 /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				326ABF351F90C23C0097F2A0 /* MovieInfoVC.swift */,
-				32CF9B231F94744100BEC24F /* LinkInfoVC.swift */,
+				327556E71FA76A6C003A0592 /* LinkInfoVC.swift */,
+				327556E81FA76A6C003A0592 /* MovieInfoVC.swift */,
+				327556ED1FA76BC2003A0592 /* OSTInfoVC.swift */,
 			);
-			path = Movie;
+			path = Info;
 			sourceTree = "<group>";
 		};
 		328C12F51CFC3D9700536E54 /* 3rdParty */ = {
@@ -682,8 +705,8 @@
 			isa = PBXGroup;
 			children = (
 				32A4071F1E6EF5100004DBAC /* Base */,
+				327556E61FA76A6C003A0592 /* Info */,
 				32A407211E6EF5100004DBAC /* Main */,
-				326ABF341F90C20A0097F2A0 /* Movie */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -745,6 +768,7 @@
 				3274B9801F8DBDFB004561F7 /* NewInfo.swift */,
 				323590B91E8B71960025E0E6 /* ResourceInfo.swift */,
 				3208B2751F9F270F002DE020 /* OSTSimpleInfo.swift */,
+				327556E31FA76618003A0592 /* OSTInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1125,15 +1149,14 @@
 				32B95AAB1EA5EC2D0096EE83 /* CosmosText.swift in Sources */,
 				32B95A9D1EA5EC2D0096EE83 /* CosmosDefaultSettings.swift in Sources */,
 				32CBB7C81E9CE8860076D35B /* UILabel+Extensions.swift in Sources */,
+				327556F71FA770A6003A0592 /* OSTTrackListCell.swift in Sources */,
 				32B95AB11EA5EC2D0096EE83 /* CosmosTouchTarget.swift in Sources */,
 				3208B2761F9F270F002DE020 /* OSTSimpleInfo.swift in Sources */,
 				32A408661E6EF5100004DBAC /* ErrorInfo.swift in Sources */,
 				326ABF391F90DFB50097F2A0 /* MovieBaseInfoCell.swift in Sources */,
 				32115EE61F8DFA320023475F /* HotInfo.swift in Sources */,
-				326ABF361F90C23C0097F2A0 /* MovieInfoVC.swift in Sources */,
 				32B95AAF1EA5EC2D0096EE83 /* CosmosView.swift in Sources */,
 				32B95AB31EA5EC2D0096EE83 /* RightToLeft.swift in Sources */,
-				32CF9B241F94744100BEC24F /* LinkInfoVC.swift in Sources */,
 				327C08281F9D913900248BF2 /* MainVC.swift in Sources */,
 				32A4097B1E6EF5110004DBAC /* FileUtil.swift in Sources */,
 				32A408611E6EF5100004DBAC /* Colors.swift in Sources */,
@@ -1143,6 +1166,7 @@
 				3211A8F91F44276B0024A586 /* Dictionary+Extensions.swift in Sources */,
 				32B95AAD1EA5EC2D0096EE83 /* CosmosTouch.swift in Sources */,
 				32A408681E6EF5100004DBAC /* R.swift in Sources */,
+				327556EE1FA76BC2003A0592 /* OSTInfoVC.swift in Sources */,
 				32A408821E6EF5100004DBAC /* UIImageView+Extensions.swift in Sources */,
 				326ABF421F90E0000097F2A0 /* MovieStoryCell.swift in Sources */,
 				3274B9861F8DD4DD004561F7 /* LinkInfo.swift in Sources */,
@@ -1150,10 +1174,12 @@
 				3245EF471F1C6A0400EEB1E4 /* LoadingMenu.swift in Sources */,
 				3274B98A1F8DD672004561F7 /* MovieInfo.swift in Sources */,
 				32A408581E6EF5100004DBAC /* Global.swift in Sources */,
+				327556E41FA76618003A0592 /* OSTInfo.swift in Sources */,
 				32115EEF1F8DFF460023475F /* HotResourceCell.swift in Sources */,
 				327C084F1F9D9E8E00248BF2 /* NewMovieVC.swift in Sources */,
 				32A408801E6EF5100004DBAC /* String+Extensions.swift in Sources */,
 				32B95AA31EA5EC2D0096EE83 /* CosmosLocalizedRating.swift in Sources */,
+				327556F11FA76ED1003A0592 /* OSTBaseInfoCell.swift in Sources */,
 				32B95AB51EA5EC2D0096EE83 /* StarFillMode.swift in Sources */,
 				32B95AB71EA5EC2D0096EE83 /* StarLayer.swift in Sources */,
 				323590BA1E8B71960025E0E6 /* ResourceInfo.swift in Sources */,
@@ -1161,6 +1187,7 @@
 				32A408851E6EF5100004DBAC /* UIViewController+Extensions.swift in Sources */,
 				32A408731E6EF5100004DBAC /* AppNavigationController.swift in Sources */,
 				32A4089E1E6EF5100004DBAC /* JSONStringConvertible.swift in Sources */,
+				327556FA1FA77498003A0592 /* OSTSourceCell.swift in Sources */,
 				32A408631E6EF5100004DBAC /* Dimens.swift in Sources */,
 				3211A8F61F4425850024A586 /* JSONDicConvertible.swift in Sources */,
 				32A408741E6EF5100004DBAC /* NewestInfoVC.swift in Sources */,
@@ -1196,9 +1223,12 @@
 				32A408571E6EF5100004DBAC /* AppDelegate.swift in Sources */,
 				32B95AA91EA5EC2D0096EE83 /* CosmosSize.swift in Sources */,
 				32A409771E6EF5110004DBAC /* ArrayUtil.swift in Sources */,
+				327556EB1FA76A6D003A0592 /* MovieInfoVC.swift in Sources */,
 				327C08521F9D9F1700248BF2 /* MovieSimpleInfo.swift in Sources */,
 				32A4097C1E6EF5110004DBAC /* ImageUtil.swift in Sources */,
+				327556F41FA77032003A0592 /* OSTLinkCell.swift in Sources */,
 				3274B9811F8DBDFB004561F7 /* NewInfo.swift in Sources */,
+				327556E91FA76A6D003A0592 /* LinkInfoVC.swift in Sources */,
 				32A408831E6EF5100004DBAC /* UITableView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1216,12 +1246,12 @@
 				32B95AA01EA5EC2D0096EE83 /* CosmosLayerHelper.swift in Sources */,
 				32B95AB41EA5EC2D0096EE83 /* RightToLeft.swift in Sources */,
 				32B95A9C1EA5EC2D0096EE83 /* CosmosAccessibility.swift in Sources */,
+				327556EC1FA76A6D003A0592 /* MovieInfoVC.swift in Sources */,
 				326ABF3A1F90DFB50097F2A0 /* MovieBaseInfoCell.swift in Sources */,
 				327C08501F9D9E8E00248BF2 /* NewMovieVC.swift in Sources */,
 				323590D01E8BC4E60025E0E6 /* ResourceInfo.swift in Sources */,
 				3211A8F71F4425850024A586 /* JSONDicConvertible.swift in Sources */,
 				32B95AB21EA5EC2D0096EE83 /* CosmosTouchTarget.swift in Sources */,
-				326ABF371F90C23C0097F2A0 /* MovieInfoVC.swift in Sources */,
 				32A409F61E6EFA8B0004DBAC /* NewestInfoVC.swift in Sources */,
 				32A40A001E6EFA8B0004DBAC /* Int64+Extensions.swift in Sources */,
 				326ABF401F90DFF20097F2A0 /* MovieRelatedInfoCell.swift in Sources */,
@@ -1239,13 +1269,13 @@
 				32CF9B221F946E8300BEC24F /* LinkDetailInfo.swift in Sources */,
 				32A40A051E6EFA8B0004DBAC /* UITableView+Extensions.swift in Sources */,
 				32B95AA81EA5EC2D0096EE83 /* CosmosSettings.swift in Sources */,
-				32CF9B251F94744100BEC24F /* LinkInfoVC.swift in Sources */,
 				32115EEA1F8DFA950023475F /* ResourceType.swift in Sources */,
 				32A40A061E6EFA8B0004DBAC /* UIView+Extensions.swift in Sources */,
 				327C08291F9D913900248BF2 /* MainVC.swift in Sources */,
 				32B95AAE1EA5EC2D0096EE83 /* CosmosTouch.swift in Sources */,
 				32A40A071E6EFA8B0004DBAC /* UIViewController+Extensions.swift in Sources */,
 				32A40A0C1E6EFA8B0004DBAC /* JSONStringConvertible.swift in Sources */,
+				327556F51FA77032003A0592 /* OSTLinkCell.swift in Sources */,
 				326ABF3D1F90DFE20097F2A0 /* MovieLinkCell.swift in Sources */,
 				327C08561F9DA9A500248BF2 /* NewMovieCell.swift in Sources */,
 				32A409E61E6EFA7E0004DBAC /* Dimens.swift in Sources */,
@@ -1263,6 +1293,7 @@
 				32A409BC1E6EF9770004DBAC /* NetService.swift in Sources */,
 				32B95AB81EA5EC2D0096EE83 /* StarLayer.swift in Sources */,
 				326ABF431F90E0000097F2A0 /* MovieStoryCell.swift in Sources */,
+				327556F21FA76ED1003A0592 /* OSTBaseInfoCell.swift in Sources */,
 				32A409C01E6EF9770004DBAC /* AppUtil.swift in Sources */,
 				32A409C11E6EF9770004DBAC /* ArrayUtil.swift in Sources */,
 				32A409C21E6EF9770004DBAC /* BannerUtil.swift in Sources */,
@@ -1270,9 +1301,11 @@
 				32A409C41E6EF9770004DBAC /* DateUtil.swift in Sources */,
 				329A9B721FA181D500D2EA42 /* NewOSTCell.swift in Sources */,
 				32A409C51E6EF9770004DBAC /* FileUtil.swift in Sources */,
+				327556F81FA770A6003A0592 /* OSTTrackListCell.swift in Sources */,
 				320FBAC71F911E1E0099811F /* MovieBannerCell.swift in Sources */,
 				32B95AB61EA5EC2D0096EE83 /* StarFillMode.swift in Sources */,
 				32B95AA41EA5EC2D0096EE83 /* CosmosLocalizedRating.swift in Sources */,
+				327556E51FA76618003A0592 /* OSTInfo.swift in Sources */,
 				3274B98B1F8DD993004561F7 /* MovieInfo.swift in Sources */,
 				32A409C61E6EF9770004DBAC /* ImageUtil.swift in Sources */,
 				32A409C71E6EF9770004DBAC /* JSONUtil.swift in Sources */,
@@ -1282,6 +1315,7 @@
 				32A409D01E6EF9770004DBAC /* EZAlertController.swift in Sources */,
 				32A409A91E6EF9340004DBAC /* AppDelegate.swift in Sources */,
 				32A409AA1E6EF9350004DBAC /* Global.swift in Sources */,
+				327556EA1FA76A6D003A0592 /* LinkInfoVC.swift in Sources */,
 				32A409A51E6EF7F10004DBAC /* BaseTests.swift in Sources */,
 				327C08531F9D9F1700248BF2 /* MovieSimpleInfo.swift in Sources */,
 				3208B2771F9F270F002DE020 /* OSTSimpleInfo.swift in Sources */,
@@ -1289,6 +1323,8 @@
 				32A409A61E6EF7F10004DBAC /* NetBaseTests.swift in Sources */,
 				32A409A71E6EF7F10004DBAC /* TestData.swift in Sources */,
 				3274B9821F8DBDFB004561F7 /* NewInfo.swift in Sources */,
+				327556FB1FA77498003A0592 /* OSTSourceCell.swift in Sources */,
+				327556EF1FA76BC2003A0592 /* OSTInfoVC.swift in Sources */,
 				32B95AB01EA5EC2D0096EE83 /* CosmosView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

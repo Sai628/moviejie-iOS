@@ -33,4 +33,12 @@ struct AppUtil
         linkInfoVC.link = link
         viewController.pushVC(linkInfoVC)
     }
+    
+    
+    static func readOSTInfo(_ viewController: UIViewController, _ ostLink: String)
+    {
+        let ostInfoVC = OSTInfoVC()
+        ostInfoVC.ostLink = ostLink
+        viewController.pushVC(ostInfoVC)
+    }
 }

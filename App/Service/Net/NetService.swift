@@ -41,7 +41,7 @@ class NetService
     }
     
     
-    /// 获取下载链接
+    /// 获取下载链接详情信息
     static func getLinkDetailInfo(link: String, onError: NetError, onFailure: NetFailure, onSuccess: @escaping NetSuccess)
     {
         NetHelper.get(APIAddress.API_DOMAIN + link, values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
@@ -49,6 +49,18 @@ class NetService
             let linkDetailInfo: LinkDetalInfo? = JSONUtil.readModel(jsonObject, key: "link_detail")
             
             onSuccess(linkDetailInfo)
+        }
+    }
+    
+    
+    /// 获取原声大碟信息
+    static func getOSTInfo(ostLink: String, onError: NetError, onFailure: NetFailure, onSuccess: @escaping NetSuccess)
+    {
+        NetHelper.get(APIAddress.API_DOMAIN + ostLink, values: nil, onError: onError, onFailure: onFailure) { (jsonObject) in
+            
+            let ostInfo: OSTInfo? = JSONUtil.readModel(jsonObject, key: "ost")
+            
+            onSuccess(ostInfo)
         }
     }
     

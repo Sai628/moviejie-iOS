@@ -166,7 +166,7 @@ extension NewOSTVC: UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         tableView.deselectRow(at: indexPath, animated: true)
-        AppUtil.readMovieInfo(self.parent!, dataItems[indexPath.row].movie_link)
+        AppUtil.readOSTInfo(self.parent!, dataItems[indexPath.row].ost_link)
     }
     
     

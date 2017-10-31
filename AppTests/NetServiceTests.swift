@@ -31,6 +31,13 @@ class NetServiceTests: NetBaseTests
         waitForMe()
     }
 
+    
+    func test_getOSTInfo()
+    {
+        NetService.getOSTInfo(ostLink: TestData.ost_link, onError: onError, onFailure: onFailure, onSuccess: onSuccess)
+        waitForMe()
+    }
+    
 
     func test_getNewMovie()
     {

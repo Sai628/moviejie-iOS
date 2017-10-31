@@ -1,6 +1,6 @@
 //
 //  MovieBannerCell.swift
-//  "电影/电视剧"封面图列表子项
+//  "电影/电视剧"封面图列表子项(也适用于"原声大碟"的封面图)
 //
 //  Created by Sai on 14/10/2017.
 //  Copyright © 2017 Sai628.com. All rights reserved.
