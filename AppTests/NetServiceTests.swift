@@ -58,4 +58,11 @@ class NetServiceTests: NetBaseTests
         NetService.getNewOST(page: "p1", onError: onError, onFailure: onFailure, onSuccess: onSuccess)
         waitForMe()
     }
+    
+    
+    func test_search()
+    {
+        NetService.search(keyboard: "你好", page: "p1", onError: onError, onFailure: onFailure, onSuccess: onSuccess)
+        waitForMe()
+    }
 }
