@@ -46,5 +46,15 @@ class MainVC: UITabBarController
                                            selectedImage: UIImage(named: R.icon_ost_highlight))
         
         self.viewControllers = [newestInfoVC, newMovieVC, newTvVC, newOSTVC]
+        
+        let searchItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(doSearch))
+        navigationItem.rightBarButtonItem = searchItem
+    }
+    
+    
+    //MARK:- HANDLER
+    func doSearch()
+    {
+        pushVC(SearchVC())
     }
 }

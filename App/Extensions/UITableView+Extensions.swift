@@ -37,7 +37,8 @@ extension UITableView
     }
     
     
-    func addLineForCell(cell: UITableViewCell, at indexPath: IndexPath, leftSpace: CGFloat = 16, rightSpace: CGFloat = 0, hasSectionLine: Bool = true)
+    func addLineForCell(cell: UITableViewCell, at indexPath: IndexPath, leftSpace: CGFloat = 16, rightSpace: CGFloat = 0,
+                        hasSectionLine: Bool = true, color: UIColor = Colors._DDD)
     {
         let pathRef = CGMutablePath()
         let bounds = cell.bounds.insetBy(dx: 0, dy: 0)
@@ -59,7 +60,7 @@ extension UITableView
             layer.fillColor = UIColor(white: 1.0, alpha: 0.8).cgColor
         }
         
-        let lineColor = Colors._DDD.cgColor
+        let lineColor = color.cgColor
         let sectionLineColor = lineColor
         let row = indexPath.row
         let numberOfRows = self.numberOfRows(inSection: indexPath.section)

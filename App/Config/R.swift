@@ -20,4 +20,7 @@ struct R
     static let icon_tv_highlight = "icon_tv_highlight"
     static let icon_ost_normal = "icon_ost_normal"
     static let icon_ost_highlight = "icon_ost_highlight"
+    
+    static let icon_search = "icon_search"
+    static let icon_close = "icon_close"
 }
