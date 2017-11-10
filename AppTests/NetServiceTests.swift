@@ -62,7 +62,7 @@ class NetServiceTests: NetBaseTests
     
     func test_search()
     {
-        NetService.search(keyboard: "你好", page: "p1", onError: onError, onFailure: onFailure, onSuccess: onSuccess)
+        NetService.search(keyword: "你好", page: "p1", onError: onError, onFailure: onFailure, onSuccess: onSuccess)
         waitForMe()
     }
 }
