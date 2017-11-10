@@ -47,8 +47,13 @@ class MainVC: UITabBarController
         
         self.viewControllers = [newestInfoVC, newMovieVC, newTvVC, newOSTVC]
         
-        let searchItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(doSearch))
-        navigationItem.rightBarButtonItem = searchItem
+        let searchBtn = UIButton(type: .custom)
+        searchBtn.frame = CGRect(x: 0, y: 0, w: 40, h: 40)
+        searchBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 0)
+        searchBtn.setImage(UIImage(named: R.icon_search_normal), for: .normal)
+        searchBtn.setImage(UIImage(named: R.icon_search_highlight), for: .highlighted)
+        searchBtn.addTarget(self, action: #selector(doSearch), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchBtn)
     }
     
     

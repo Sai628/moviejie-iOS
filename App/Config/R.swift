@@ -12,6 +12,8 @@ import Foundation
 struct R
 {
     static let icon_empty_prompt = "icon_empty_prompt"
+    static let icon_search_normal = "icon_search_normal"
+    static let icon_search_highlight = "icon_search_highlight"
     static let icon_new_normal = "icon_new_normal"
     static let icon_new_highlight = "icon_new_highlight"
     static let icon_movie_normal = "icon_movie_normal"
@@ -20,7 +22,6 @@ struct R
     static let icon_tv_highlight = "icon_tv_highlight"
     static let icon_ost_normal = "icon_ost_normal"
     static let icon_ost_highlight = "icon_ost_highlight"
-    
-    static let icon_search = "icon_search"
+
     static let icon_close = "icon_close"
 }

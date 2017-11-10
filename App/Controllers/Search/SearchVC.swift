@@ -69,7 +69,7 @@ class SearchVC: UIViewController
         searchLayout.setCornerRadius(radius: 15)
         navBarLayout.addSubview(searchLayout)
         
-        searchIconIv = UIImageView(image: UIImage(named: R.icon_search))
+        searchIconIv = UIImageView(image: UIImage(named: R.icon_search_normal))
         searchLayout.addSubview(searchIconIv)
         
         searchTextField = UITextField(fontSize: 14, textColor: Colors._333)
