@@ -14,7 +14,7 @@ struct AppUserData
     /// 搜索历史
     static let SEARCH_HISTORY = "search_history"
     
-    fileprivate static let searchHistoryMaxCacheLength = 20   //搜索历史数组缓存的最大长度为20
+    fileprivate static let searchHistoryMaxCacheLength = 10   //搜索历史数组缓存的最大长度为10
     
     
     //MARK:-

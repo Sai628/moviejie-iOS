@@ -182,15 +182,6 @@ class SearchVC: UIViewController
             self.tableView.reloadData()
         }
     }
-    
-    
-    func searchHistoryRemoveMenuHandler(row: Int)
-    {
-        searchHistoryDataItems.remove(at: row)
-        AppUserData.saveSearchHistory(searchHistoryDataItems)
-        
-        tableView.reloadData()
-    }
 }
 
 
@@ -212,60 +203,15 @@ extension SearchVC: UITextFieldDelegate
 //MARK:- UITableViewDelegate
 extension SearchVC: UITableViewDelegate
 {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        tableView.deselectRow(at: indexPath, animated: true)
-        doSearch(searchHistoryDataItems[indexPath.row])
-    }
-    
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return SearchHistoryCell.cellHeight
+        return searchHistoryDataItems.isEmpty ? 0 : SearchHistoryCell.cellHeight
     }
     
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
-        return 40
-    }
-    
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
-    {
-        guard searchHistoryDataItems.count > 0 else {
-            return nil
-        }
-        
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.w, height: 40))
-        
-        let tipSearchTipLabel = UILabel(fontSize: 14, textColor: UIColor.black, isBold: true)
-        tipSearchTipLabel.textAlignment = .left
-        tipSearchTipLabel.text = "搜索历史"
-        headerView.addSubview(tipSearchTipLabel)
-        
-        let clearBtn = UIButton(type: .custom)
-        clearBtn.contentEdgeInsets = UIEdgeInsets(top: 9, left: 9, bottom: 9, right: 0)
-        clearBtn.setImage(UIImage(named: R.icon_clearup_normal), for: .normal)
-        clearBtn.setImage(UIImage(named: R.icon_clearup_highlight), for: .highlighted)
-        clearBtn.addTarget(self, action: #selector(clearAllSearchHistory), for: .touchUpInside)
-        headerView.addSubview(clearBtn)
-        
-        tipSearchTipLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(16)
-            make.width.equalTo(60)
-            make.height.equalTo(20)
-            make.centerY.equalToSuperview()
-        }
-        
-        clearBtn.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().offset(-16)
-            make.width.equalTo(40)
-            make.height.equalTo(40)
-            make.centerY.equalToSuperview()
-        }
-        
-        return headerView
+        return 0.1
     }
     
     
@@ -279,28 +225,19 @@ extension SearchVC: UITableViewDelegate
 //MARK:- UITableViewDataSource
 extension SearchVC: UITableViewDataSource
 {
-    func numberOfSections(in tableView: UITableView) -> Int
-    {
-        return 1
-    }
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return searchHistoryDataItems.count
+        return searchHistoryDataItems.isEmpty ? 0 : 1
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchHistoryCell.className, for: indexPath) as! SearchHistoryCell
-        let title = searchHistoryDataItems[indexPath.row]
-        cell.setModel(title: title)
-        cell.removeMenuHandler = { [weak self] in
-            self?.searchHistoryRemoveMenuHandler(row: indexPath.row)
-        }
+        cell.setModel(tagList: searchHistoryDataItems)
+        cell.clearUpMenuHandler = clearAllSearchHistory
+        cell.onTagItemClicked = doSearch(_:)
         
-        tableView.addLineForCell(cell: cell, at: indexPath, leftSpace: 16, rightSpace: 16, hasSectionLine: true, color: Colors._EEE)
         return cell
     }
 }

@@ -7,4 +7,5 @@ github "SwiftyJSON/SwiftyJSON"
 github "scinfu/SwiftSoup"
 github "jdg/MBProgressHUD"
 github "eggswift/pull-to-refresh"
+github "ElaWorkshop/TagListView"
 github "DaveWoodCom/XCGLogger" ~> 4.0.0

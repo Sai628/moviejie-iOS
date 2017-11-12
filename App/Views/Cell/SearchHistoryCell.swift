@@ -10,14 +10,17 @@ import Foundation
 
 import EZSwiftExtensions
 import SnapKit
+import TagListView
 
 
 class SearchHistoryCell: UITableViewCell
 {
-    fileprivate var titleLabel: UILabel!
-    fileprivate var removeIv: UIImageView!
+    fileprivate var searchTipLabel: UILabel!
+    fileprivate var clearUpBtn: UIButton!
+    fileprivate var tagListView: TagListView!
     
-    var removeMenuHandler: (() -> Void)?
+    var clearUpMenuHandler: (() -> Void)?
+    var onTagItemClicked: ((String) -> Void)?
     
     
     required init?(coder aDecoder: NSCoder)
@@ -30,45 +33,90 @@ class SearchHistoryCell: UITableViewCell
     override init(style: UITableViewCellStyle, reuseIdentifier: String?)
     {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = .none
         
-        if titleLabel == nil
+        if searchTipLabel == nil
         {
-            titleLabel = UILabel(fontSize: 16, textColor: Colors._999)
-            titleLabel.textAlignment = .left
-            self.contentView.addSubview(titleLabel)
+            searchTipLabel = UILabel(fontSize: 14, textColor: Colors._999)
+            searchTipLabel.textAlignment = .left
+            searchTipLabel.text = "搜索历史"
+            contentView.addSubview(searchTipLabel)
         }
-        if removeIv == nil
+        
+        if clearUpBtn == nil
         {
-            removeIv = UIImageView(image: UIImage(named: R.icon_close))
-            removeIv.addTapGesture(action: { [weak self] (_) in
-                self?.removeMenuHandler?()
+            clearUpBtn = UIButton(type: .custom)
+            clearUpBtn.contentEdgeInsets = UIEdgeInsets(top: 9, left: 9, bottom: 9, right: 0)
+            clearUpBtn.setImage(UIImage(named: R.icon_clearup_normal), for: .normal)
+            clearUpBtn.setImage(UIImage(named: R.icon_clearup_highlight), for: .highlighted)
+            clearUpBtn.addTapGesture(action: { [weak self] (_) in
+                self?.clearUpMenuHandler?()
             })
-            self.contentView.addSubview(removeIv)
+            contentView.addSubview(clearUpBtn)
         }
         
-        removeIv.snp.makeConstraints { (make) in
-            make.right.equalTo(-20)
-            make.width.height.equalTo(26)
-            make.centerY.equalToSuperview()
+        if tagListView == nil
+        {
+            tagListView = TagListView()
+            tagListView.borderColor = Colors._DDD
+            tagListView.tagBackgroundColor = UIColor.white
+            tagListView.tagHighlightedBackgroundColor = Colors.itemClickedBg
+            tagListView.textFont = UIFont.systemFont(ofSize: 14)
+            tagListView.textColor = Colors._333
+            tagListView.selectedTextColor = Colors._333
+            tagListView.borderWidth = 0.5
+            tagListView.cornerRadius = 15
+            tagListView.paddingX = 16
+            tagListView.paddingY = 8
+            tagListView.marginX = 8
+            tagListView.marginY = 8
+            tagListView.delegate = self
+            self.contentView.addSubview(tagListView)
         }
         
-        titleLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(16)
-            make.right.equalTo(removeIv.snp.left).offset(20)
+        searchTipLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(18)
+            make.top.equalToSuperview().offset(16)
+            make.width.equalTo(60)
             make.height.equalTo(20)
-            make.centerY.equalToSuperview()
+        }
+        
+        clearUpBtn.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().offset(-16)
+            make.top.equalToSuperview().offset(2)
+            make.width.equalTo(40)
+            make.height.equalTo(40)
+        }
+        
+        tagListView.snp.makeConstraints { (make) in
+            make.top.equalTo(searchTipLabel.snp.bottom).offset(8)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.height.equalTo(110)
         }
     }
     
     
-    func setModel(title: String)
+    func setModel(tagList: [String])
     {
-        titleLabel.text = title
+        tagListView.removeAllTags()
+        tagList.forEachEnumerated { (_, tag) in
+            self.tagListView.addTag(tag)
+        }
     }
     
     
     static var cellHeight: CGFloat
     {
-        return 44
+        return 170
+    }
+}
+
+
+extension SearchHistoryCell: TagListViewDelegate
+{
+    func tagPressed(_ title: String, tagView: TagView, sender: TagListView)
+    {
+        self.onTagItemClicked?(title)
     }
 }
