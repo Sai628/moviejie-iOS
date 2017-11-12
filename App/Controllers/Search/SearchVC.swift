@@ -244,8 +244,10 @@ extension SearchVC: UITableViewDelegate
         tipSearchTipLabel.text = "搜索历史"
         headerView.addSubview(tipSearchTipLabel)
         
-        let clearBtn = UIButton(fontSize: 14, textColor: Colors._AAA, type: .system)
-        clearBtn.setTitle("清除历史", for: .normal)
+        let clearBtn = UIButton(type: .custom)
+        clearBtn.contentEdgeInsets = UIEdgeInsets(top: 9, left: 9, bottom: 9, right: 0)
+        clearBtn.setImage(UIImage(named: R.icon_clearup_normal), for: .normal)
+        clearBtn.setImage(UIImage(named: R.icon_clearup_highlight), for: .highlighted)
         clearBtn.addTarget(self, action: #selector(clearAllSearchHistory), for: .touchUpInside)
         headerView.addSubview(clearBtn)
         
@@ -258,8 +260,8 @@ extension SearchVC: UITableViewDelegate
         
         clearBtn.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-16)
-            make.width.equalTo(60)
-            make.height.equalTo(36)
+            make.width.equalTo(40)
+            make.height.equalTo(40)
             make.centerY.equalToSuperview()
         }
         
