@@ -39,7 +39,7 @@ class SearchResultVC: UIViewController
     {
         automaticallyAdjustsScrollViewInsets = false
         view.backgroundColor = Colors.viewBg
-        title = "搜索结果"
+        title = "搜索\"\(keyword!)\""
         
         tableView = UITableView(frame: CGRect.zero, style: .plain)
         tableView.register(NewMovieCell.self, forCellReuseIdentifier: NewMovieCell.className)
