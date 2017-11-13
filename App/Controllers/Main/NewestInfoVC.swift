@@ -28,8 +28,8 @@ class NewestInfoVC: UIViewController
         super.viewDidLoad()
         
         initView()
-        loadNewestInfo()
         loadingMenu.showLoading()
+        loadNewestInfo()
     }
     
     

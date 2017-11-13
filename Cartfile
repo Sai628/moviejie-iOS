@@ -1,4 +1,5 @@
 github "Alamofire/Alamofire" >= 4.0.0
+github "hyperoslo/Cache"
 github "goktugyil/EZSwiftExtensions"
 github "hackiftekhar/IQKeyboardManager"
 github "onevcat/Kingfisher"

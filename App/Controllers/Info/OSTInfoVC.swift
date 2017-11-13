@@ -27,8 +27,8 @@ class OSTInfoVC: UIViewController
         super.viewDidLoad()
         
         initView()
-        loadOSTInfo()
         loadingMenu.showLoading()
+        loadOSTInfo()
     }
     
     

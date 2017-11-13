@@ -29,8 +29,8 @@ class NewOSTVC: UIViewController
         super.viewDidLoad()
         
         initView()
-        loadNewOSTInfos()
         loadingMenu.showLoading()
+        loadNewOSTInfos()
     }
     
     

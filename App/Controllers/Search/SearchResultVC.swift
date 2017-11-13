@@ -29,8 +29,8 @@ class SearchResultVC: UIViewController
         super.viewDidLoad()
         
         initView()
-        loadSearchResult()
         loadingMenu.showLoading()
+        loadSearchResult()
     }
     
     

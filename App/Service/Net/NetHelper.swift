@@ -42,7 +42,8 @@ class NetHelper
     
     
     //MARK:-
-    fileprivate static func handleResponse(_ response: DataResponse<String>, onError: NetError, onFailure: NetFailure, handler: NetSuccessHandler)
+    fileprivate static func handleResponse(_ response: DataResponse<String>, cacheResult: Bool = false, cacheKey: String? = nil,
+                                           onError: NetError, onFailure: NetFailure, handler: NetSuccessHandler)
     {
         guard let res = response.response else
         {
@@ -53,7 +54,7 @@ class NetHelper
         switch res.statusCode
         {
         case 200..<300:  //请求成功
-            handleResponseValue(response.result.value!, onError: onError, successHandler: handler)
+            handleResponseValue(response.result.value!, cacheResult: cacheResult, cacheKey: cacheKey, onError: onError, successHandler: handler)
             
         case 400..<500:  //请求错误
             dealWithFailure(.requestError, onFailure: onFailure)
@@ -67,12 +68,17 @@ class NetHelper
     }
     
     
-    fileprivate static func handleResponseValue(_ value: String, onError: NetError, successHandler: NetSuccessHandler)
+    fileprivate static func handleResponseValue(_ value: String, cacheResult: Bool = false, cacheKey: String? = nil,
+                                                onError: NetError, successHandler: NetSuccessHandler)
     {
         let jsonObject = JSON(parseJSON: value)
         if !tryToHandleError(jsonObject, onError: onError)
         {
             successHandler(jsonObject)
+            if cacheResult, let cacheKey = cacheKey  // 若需对请求结果进行缓存时, 将其添加到全局缓存中
+            {
+                try? apiStorage.setObject(value, forKey: cacheKey, expiry: .date(Date().addingTimeInterval(20 * 60)))
+            }
         }
     }
     
@@ -141,9 +147,10 @@ class NetHelper
     
     
     //MARK:-
-    static func get(_ url: String, values: Values?, onError: NetError, onFailure: NetFailure, successHandler: @escaping NetSuccessHandler)
+    static func get(_ url: String, values: Values?, cacheResult: Bool = false,
+                    onError: NetError, onFailure: NetFailure, successHandler: @escaping NetSuccessHandler)
     {
-        request(url, method: .get, values: values, onError: onError, onFailure: onFailure, successHandler: successHandler)
+        request(url, method: .get, values: values, cacheResult: cacheResult, onError: onError, onFailure: onFailure, successHandler: successHandler)
     }
     
     
@@ -153,10 +160,21 @@ class NetHelper
     }
     
     
-    static func request(_ url: String, method: HTTPMethod, values: Values?, onError: NetError, onFailure: NetFailure, successHandler: @escaping NetSuccessHandler)
+    static func request(_ url: String, method: HTTPMethod, values: Values?, cacheResult: Bool = false,
+                        onError: NetError, onFailure: NetFailure, successHandler: @escaping NetSuccessHandler)
     {
         log.info("URL: \(url)")
         log.info("parameter: \(String(describing: values))")
+        
+        // 若这个请求需要进行缓存时, 先尝试从全局缓存中获取数据
+        if cacheResult, let result = try? apiStorage.object(ofType: String.self, forKey: url)
+        {
+            log.info("找到缓存数据.")
+            
+            let jsonObject = JSON(parseJSON: result)
+            successHandler(jsonObject)
+            return
+        }
         
         Alamofire.request(url, method: method, parameters: values).responseString { response in
             
@@ -166,7 +184,7 @@ class NetHelper
             switch response.result
             {
             case .success(_):
-                handleResponse(response, onError: onError, onFailure: onFailure, handler: successHandler)
+                handleResponse(response, cacheResult: cacheResult, cacheKey: url, onError: onError, onFailure: onFailure, handler: successHandler)
                 
             case .failure(let error):
                 log.error("error: \(error)")

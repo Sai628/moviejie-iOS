@@ -34,8 +34,8 @@ class LinkInfoVC: UIViewController
         super.viewDidLoad()
         
         initView()
-        loadLinkDetailInfo()
         loadingMenu.showLoading()
+        loadLinkDetailInfo()
     }
     
     

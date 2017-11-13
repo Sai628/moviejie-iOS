@@ -29,8 +29,8 @@ class NewTvVC: UIViewController
         super.viewDidLoad()
         
         initView()
-        loadNewMovies()
         loadingMenu.showLoading()
+        loadNewMovies()
     }
     
     

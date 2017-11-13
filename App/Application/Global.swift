@@ -7,10 +7,14 @@
 //
 
 import Foundation
+
+import Cache
 import XCGLogger
 
 
 let log = XCGLogger.default
+let apiStorage = try! Storage(diskConfig: DiskConfig(name: "api-storage"),
+                              memoryConfig: MemoryConfig(expiry: .date(Date().addingTimeInterval(20 * 60)), countLimit: 500, totalCostLimit: 0))
 
 
 func synchronized(_ lock: AnyObject!, closure:() -> ())

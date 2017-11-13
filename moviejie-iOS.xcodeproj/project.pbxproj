@@ -323,6 +323,9 @@
 		32CBB7CF1E9D042A0076D35B /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CBB7C71E9CE8860076D35B /* UITextField+Extensions.swift */; };
 		32CF9B211F946E8300BEC24F /* LinkDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */; };
 		32CF9B221F946E8300BEC24F /* LinkDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */; };
+		32D0C6B61FB9A00300C2BEEC /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D0C6B51FB9A00300C2BEEC /* Cache.framework */; };
+		32D0C6B71FB9A02100C2BEEC /* Cache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D0C6B51FB9A00300C2BEEC /* Cache.framework */; };
+		32D0C6B81FB9A03900C2BEEC /* Cache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32D0C6B51FB9A00300C2BEEC /* Cache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		32F72A4E1E8CC7FF00A69C41 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A409901E6EF5360004DBAC /* TestData.swift */; };
 /* End PBXBuildFile section */
 
@@ -343,6 +346,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				32D0C6B81FB9A03900C2BEEC /* Cache.framework in Embed Frameworks */,
 				327C085D1F9DCE8900248BF2 /* ESPullToRefresh.framework in Embed Frameworks */,
 				328D34C61D0561450027AAA8 /* Kingfisher.framework in Embed Frameworks */,
 				328C13931CFD313700536E54 /* MBProgressHUD.framework in Embed Frameworks */,
@@ -518,6 +522,7 @@
 		32CBB7C61E9CE8860076D35B /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		32CBB7C71E9CE8860076D35B /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDetailInfo.swift; sourceTree = "<group>"; };
+		32D0C6B51FB9A00300C2BEEC /* Cache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cache.framework; sourceTree = "<group>"; };
 		7344CDD31806649D00222272 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7344CDD51806649D00222272 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7344CDD71806649D00222272 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -548,6 +553,7 @@
 				3243A15B1D00405C000699F0 /* CoreMedia.framework in Frameworks */,
 				329B09221F5FD0DB00A18BF5 /* SwiftSoup.framework in Frameworks */,
 				3243A15D1D00405C000699F0 /* CoreText.framework in Frameworks */,
+				32D0C6B61FB9A00300C2BEEC /* Cache.framework in Frameworks */,
 				3243A15F1D00405C000699F0 /* Foundation.framework in Frameworks */,
 				3243A1601D00405C000699F0 /* ImageIO.framework in Frameworks */,
 				3243A1611D00405C000699F0 /* MapKit.framework in Frameworks */,
@@ -602,6 +608,7 @@
 				32A40A2A1E6EFC560004DBAC /* MapKit.framework in Frameworks */,
 				32A40A2B1E6EFC560004DBAC /* MessageUI.framework in Frameworks */,
 				32A40A2D1E6EFC560004DBAC /* OpenGLES.framework in Frameworks */,
+				32D0C6B71FB9A02100C2BEEC /* Cache.framework in Frameworks */,
 				32A40A2E1E6EFC560004DBAC /* QuartzCore.framework in Frameworks */,
 				32A40A301E6EFC560004DBAC /* Security.framework in Frameworks */,
 				32A40A311E6EFC560004DBAC /* SystemConfiguration.framework in Frameworks */,
@@ -700,6 +707,7 @@
 			isa = PBXGroup;
 			children = (
 				328C12F61CFC3D9700536E54 /* Alamofire.framework */,
+				32D0C6B51FB9A00300C2BEEC /* Cache.framework */,
 				327C08571F9DCBBE00248BF2 /* ESPullToRefresh.framework */,
 				328C12FA1CFC3D9700536E54 /* EZSwiftExtensions.framework */,
 				328C13001CFC3D9700536E54 /* IQKeyboardManagerSwift.framework */,

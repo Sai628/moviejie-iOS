@@ -27,8 +27,8 @@ class MovieInfoVC: UIViewController
         super.viewDidLoad()
         
         initView()
-        loadMovieInfo()
         loadingMenu.showLoading()
+        loadMovieInfo()
     }
     
     
