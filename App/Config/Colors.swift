@@ -34,6 +34,7 @@ struct Colors
     static var downloadLinkText: UIColor         { return (0xFF31708F as ColorInt).toColor() }
     static var ratingBar: UIColor                { return (0xFFF89F40 as ColorInt).toColor() }
     static var ratingBarEmpty: UIColor           { return (0xFFC0C0C0 as ColorInt).toColor() }
+    static var searchKeyword: UIColor            { return (0xFF428BCA as ColorInt).toColor() }
     
     //------------------  常用颜色  -------------------//
     static var _222: UIColor                     { return (0xFF222222 as ColorInt).toColor() }

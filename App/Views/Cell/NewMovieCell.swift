@@ -135,16 +135,27 @@ class NewMovieCell: UITableViewCell
     }
     
     
-    func setModel(_ movieSimpleInfo: MovieSimpleInfo)
+    func setModel(_ movieSimpleInfo: MovieSimpleInfo, keyword: String? = nil)
     {
         bannerIv.app_setImage(with: movieSimpleInfo.banner, placeholder: bannerPlaceHolder,
                               options: [.transition(ImageTransition.fade(0.2))])
         
-        titleLabel.text = movieSimpleInfo.title
+        // 设置搜索关键字的颜色
+        let attrTitle = NSMutableAttributedString(string: movieSimpleInfo.title)
+        if let keyword = keyword, !keyword.isBlank
+        {
+            let title: NSString = movieSimpleInfo.title as NSString
+            for char in keyword
+            {
+                let range = title.range(of: String(char), options: .caseInsensitive)
+                attrTitle.addAttributes([NSForegroundColorAttributeName: Colors.searchKeyword], range: range)
+            }
+        }
+        
+        titleLabel.attributedText = attrTitle
         if movieSimpleInfo.star.isNumber()
         {
             starEmptyTipLabel.isHidden = true
-            
             ratingbar.isHidden = false
             ratingbar.rating = (movieSimpleInfo.star.toDouble()!) / 2
             ratingLabel.text = movieSimpleInfo.star
@@ -152,7 +163,6 @@ class NewMovieCell: UITableViewCell
         else
         {
             starEmptyTipLabel.isHidden = false
-            
             ratingbar.isHidden = true
             ratingLabel.text = nil
         }

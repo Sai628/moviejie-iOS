@@ -163,7 +163,7 @@ extension SearchResultVC: UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewMovieCell.className, for: indexPath) as! NewMovieCell
-        cell.setModel(dataItems[indexPath.row])
+        cell.setModel(dataItems[indexPath.row], keyword: keyword)
         tableView.addLineForCell(cell: cell, at: indexPath, leftSpace: 0, rightSpace: 0, hasSectionLine: false)
         
         return cell
