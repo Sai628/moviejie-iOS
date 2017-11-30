@@ -39,7 +39,7 @@ class Display
         case (Dimens.iphoneXWidth, Dimens.iphoneXHeight):
             return .iphoneX
         default:
-            return .iphone6Plus  // 默认返回 iPhone6 Plus 的设置类型
+            return .iphone6Plus  // 默认返回 iPhone6 Plus 的设备类型
         }
     }
 }
