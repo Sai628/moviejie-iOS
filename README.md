@@ -1,6 +1,6 @@
 # moviejie-iOS
 
-An iOS app of https://moviejie.com, which write by swift 3.
+An iOS app of https://moviejie.net, which write by swift 3.
 
 # Requirements
 
@@ -9,7 +9,12 @@ An iOS app of https://moviejie.com, which write by swift 3.
 
 # Preview
 
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-10-16-moviejie-ios-preview-00.png?imageView2/2/w/360)
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-10-16-moviejie-ios-preview01.png?imageView2/2/w/360)
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-10-16-moviejie-ios-preview02.png?imageView2/2/w/360)
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-10-16-moviejie-ios-preview03.png?imageView2/2/w/360)
+![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-00.png?imageView2/2/w/360)
+![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-01.png?imageView2/2/w/360)
+![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-02.png?imageView2/2/w/360)
+![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-03.png?imageView2/2/w/360)
+![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-04.png?imageView2/2/w/360)
+![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-05.png?imageView2/2/w/360)
+![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-06.png?imageView2/2/w/360)
+![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-07.png?imageView2/2/w/360)
+![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-08.png?imageView2/2/w/360)
