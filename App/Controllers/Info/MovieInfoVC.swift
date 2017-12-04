@@ -180,7 +180,7 @@ extension MovieInfoVC: UITableViewDelegate
             sectionType == .recommended && movieInfo.recommended_resources.count > 0 ||
             sectionType == .story && !movieInfo.story.isBlank
         {
-            return 40
+            return 28
         }
         
         return CGFloat.leastNormalMagnitude
@@ -208,11 +208,11 @@ extension MovieInfoVC: UITableViewDelegate
             return nil
         }
         
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.w, height: 40))
-        headerView.backgroundColor = Colors._EEE
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.w, height: 28))
+        headerView.backgroundColor = Colors.tableViewHeaderBg
         
-        let label = UILabel(fontSize: 20, textColor: UIColor.black, isBold: true)
-        label.frame = CGRect(x: 16, y: 14, width: tableView.w - 16 * 2, height: 20)
+        let label = UILabel(fontSize: 16, textColor: Colors.tableViewHeaderTitle, isBold: true)
+        label.frame = CGRect(x: 16, y: 6, width: tableView.w - 16, height: 18)
         label.textAlignment = .left
         label.text = ["", "", "下载链接", "相关影视", "猜你喜欢", "剧情简介"][section]
         headerView.addSubview(label)

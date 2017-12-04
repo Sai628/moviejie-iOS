@@ -170,17 +170,17 @@ extension NewestInfoVC: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
-        return 36
+        return 28
     }
     
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
     {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.w, height: 36))
-        headerView.backgroundColor = Colors._EEE
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.w, height: 28))
+        headerView.backgroundColor = Colors.tableViewHeaderBg
         
-        let label = UILabel(fontSize: 20, textColor: UIColor.black, isBold: true)
-        label.frame = CGRect(x: 16, y: 10, width: tableView.w - 16, height: 20)
+        let label = UILabel(fontSize: 16, textColor: Colors.tableViewHeaderTitle, isBold: true)
+        label.frame = CGRect(x: 16, y: 6, width: tableView.w - 16, height: 18)
         label.textAlignment = .left
         headerView.addSubview(label)
         

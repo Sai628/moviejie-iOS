@@ -20,6 +20,8 @@ struct Colors
     static var clickedBg: UIColor                { return (0xFFABCEED as ColorInt).toColor() }
     static var itemClickedBg: UIColor            { return (0xFFE4E4E4 as ColorInt).toColor() }
     static var editInputBg: UIColor              { return (0xFF15427B as ColorInt).toColor() }
+    static var tableViewHeaderBg: UIColor        { return (0xFFF0F0F0 as ColorInt).toColor() }
+    static var tableViewHeaderTitle: UIColor     { return (0xFF959595 as ColorInt).toColor() }
     static var bannerInfoBg: UIColor             { return (0xFF449D44 as ColorInt).toColor() }
     static var bannerWarningBg: UIColor          { return (0xFFF0AD4E as ColorInt).toColor() }
     
