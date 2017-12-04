@@ -57,7 +57,7 @@ class OSTInfoVC: UIViewController
         tableView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(Dimens.navBarHeight)
             make.left.right.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-Dimens.safeAreaBottom)
         }
     }
     

@@ -59,7 +59,7 @@ class SearchResultVC: UIViewController
         tableView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(Dimens.navBarHeight)
             make.left.right.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-Dimens.safeAreaBottom)
         }
     }
     
@@ -146,7 +146,7 @@ extension SearchResultVC: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
-        return 0.1
+        return CGFloat.leastNormalMagnitude
     }
 }
 

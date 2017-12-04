@@ -88,7 +88,7 @@ class SearchVC: UIViewController
         cancelBtn.addTarget(self, action: #selector(doCancel), for: .touchUpInside)
         navBarLayout.addSubview(cancelBtn)
         
-        tableView = UITableView(frame: CGRect.zero, style: .grouped)
+        tableView = UITableView(frame: CGRect.zero, style: .plain)
         tableView.register(SearchHistoryCell.self, forCellReuseIdentifier: SearchHistoryCell.className)
         tableView.keyboardDismissMode = .onDrag
         tableView.backgroundColor = UIColor.white
@@ -101,11 +101,11 @@ class SearchVC: UIViewController
             make.top.equalToSuperview().offset(-0.5)
             make.left.equalToSuperview().offset(-0.5)
             make.right.equalToSuperview().offset(0.5)
-            make.height.equalTo(64.5)
+            make.height.equalTo(Dimens.navBarHeight)
         }
         
         searchLayout.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(27)
+            make.top.equalToSuperview().offset(Display.currentType == .iphoneX ? 51 : 27)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-60)
             make.height.equalTo(30)
@@ -133,7 +133,8 @@ class SearchVC: UIViewController
         
         tableView.snp.makeConstraints { (make) in
             make.top.equalTo(navBarLayout.snp.bottom)
-            make.left.right.bottom.equalToSuperview()
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-Dimens.safeAreaBottom)
         }
     }
     
@@ -211,13 +212,13 @@ extension SearchVC: UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
-        return 0.1
+        return CGFloat.leastNormalMagnitude
     }
     
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
     {
-        return 0.1
+        return CGFloat.leastNormalMagnitude
     }
 }
 

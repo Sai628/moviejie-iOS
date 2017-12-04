@@ -33,19 +33,19 @@ struct Dimens
     static let iphoneXWidth: DimenFloat         = 375
     static let iphoneXHeight: DimenFloat        = 812
     
-    /// 安全区域的顶部间隔(在 iPhoneX 下为44. 在其它设备下为0, 表现为全屏显示)
+    /// 安全区域的顶部间隔(在 iPhoneX 下为44. 在其它设备下为0)
     static let safeAreaTop: DimenFloat = (Display.currentType == .iphoneX ? 44 : 0)
-    /// 安全区域的底部间隔(在 iPhoneX 下为34. 在其它设备下为0, 表现为全屏显示)
+    /// 安全区域的底部间隔(在 iPhoneX 下为34. 在其它设备下为0)
     static let safeAreaBottom: DimenFloat = (Display.currentType == .iphoneX ? 34 : 0)
     /// 页面顶部导航栏的高度(默认为带标题的布局)
-    static let navBarHeight: DimenFloat  = 65
-    /// 页面除开顶部导航栏外的高度(默认为带标题的导航栏)
+    static let navBarHeight: DimenFloat  = (Display.currentType == .iphoneX ? 88 : 64)
+    /// 页面除开顶部导航栏外的高度
     static let screenHeightWithouNavBar: DimenFloat = ez.screenHeight - navBarHeight
     
     /// 页面除开顶部导航栏外的 Rect(默认为带标题的导航栏)
-    static let screenFrameWithoutNavBar: CGRect = CGRect(x: 0, y: safeAreaTop + navBarHeight,
+    static let screenFrameWithoutNavBar: CGRect = CGRect(x: 0, y: navBarHeight,
                                                          width: ez.screenWidth,
-                                                         height: ez.screenHeight - safeAreaTop - navBarHeight - safeAreaBottom)
+                                                         height: ez.screenHeight - navBarHeight - safeAreaBottom)
     
     /// 页面底部TabBar的高度
     static let tabBarHeight: DimenFloat = 49
