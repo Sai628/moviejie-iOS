@@ -78,6 +78,14 @@ class MovieLinkCell: UITableViewCell
         
         nameLabel.textColor = !linkInfo.link.isBlank ? Colors.link : Colors._999
         self.accessoryType = !linkInfo.link.isBlank ? .disclosureIndicator : .none
+        self.selectionStyle = !linkInfo.link.isBlank ? .default : .none
+        
+        nameLabel.snp.remakeConstraints { (make) in
+            make.top.equalToSuperview().offset(10)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(linkInfo.link.isBlank ? -16 : 0)
+            make.height.equalTo(36)
+        }
     }
     
     

@@ -132,7 +132,10 @@ extension MovieInfoVC: UITableViewDelegate
         switch indexPath.section
         {
         case Sections.link.rawValue:
-            AppUtil.readLinkInfo(self, movieInfo.links[indexPath.row].link)
+            let link = movieInfo.links[indexPath.row].link
+            if !link.isBlank {
+                AppUtil.readLinkInfo(self, link)
+            }
             break
         
         case Sections.related.rawValue:
