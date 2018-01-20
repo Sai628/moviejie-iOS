@@ -23,6 +23,7 @@ class LinkInfoVC: UIViewController
     fileprivate var linkSizeLabel: UILabel!
     fileprivate var downloadLinkLabel: UILabel!
     fileprivate var copyBtn: UIButton!
+    fileprivate var thunderBtn: UIButton!
     
     var linkDetailInfo: LinkDetalInfo!
     var link: String!
@@ -84,6 +85,14 @@ class LinkInfoVC: UIViewController
         copyBtn.addTarget(self, action: #selector(copyMenuHandler), for: .touchUpInside)
         contentView.addSubview(copyBtn)
         
+        thunderBtn = UIButton(fontSize: 20, textColor: UIColor.white)
+        thunderBtn.setTitle("迅雷下载", for: .normal)
+        thunderBtn.setCornerRadius(radius: 3)
+        thunderBtn.setBackgroundColor(Colors.buttonNormalBg, forState: .normal)
+        thunderBtn.setBackgroundColor(Colors.buttonHighlightBg, forState: .highlighted)
+        thunderBtn.addTarget(self, action: #selector(thunderMenuHandler), for: .touchUpInside)
+        contentView.addSubview(thunderBtn)
+        
         loadingMenu = LoadingMenu(frame: Dimens.screenFrameWithoutNavBar)
         loadingMenu.delegate = self
         view.addSubview(loadingMenu)
@@ -92,7 +101,7 @@ class LinkInfoVC: UIViewController
             make.left.equalToSuperview().offset(16)
             make.width.equalTo(ez.screenWidth - 16 * 2)
             make.top.equalToSuperview()
-            make.bottom.equalTo(copyBtn.snp.bottom).offset(50)
+            make.bottom.equalTo(thunderBtn.snp.bottom).offset(50)
         }
         
         movieTitleBtn.snp.makeConstraints { (make) in
@@ -125,6 +134,11 @@ class LinkInfoVC: UIViewController
             make.left.right.equalToSuperview()
             make.top.equalTo(downloadLinkLabel.snp.bottom).offset(30)
             make.height.equalTo(44)
+        }
+        
+        thunderBtn.snp.makeConstraints { (make) in
+            make.left.right.height.equalTo(copyBtn)
+            make.top.equalTo(copyBtn.snp.bottom).offset(16)
         }
     }
     
@@ -187,6 +201,18 @@ class LinkInfoVC: UIViewController
     {
         UIPasteboard.general.string = linkDetailInfo.download_link
         BannerUtil.showInfo("下载链接已复制到剪贴板")
+    }
+    
+    
+    func thunderMenuHandler()
+    {
+        let link = "AA\(linkDetailInfo.download_link)ZZ".base64  // 根据迅雷的规范生成"迅雷下载"的scheme
+        AppUtil.open(scheme: "thunder://\(link)") { (isSuccess) in
+            if !isSuccess
+            {
+                BannerUtil.showInfo("请检查是否已安装了迅雷APP")
+            }
+        }
     }
 }
 

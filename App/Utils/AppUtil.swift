@@ -41,4 +41,25 @@ struct AppUtil
         ostInfoVC.ostLink = ostLink
         viewController.pushVC(ostInfoVC)
     }
+    
+    
+    static func open(scheme: String, completion: @escaping (Bool)-> Void)
+    {
+        guard let url = URL(string: scheme) else {
+            completion(false)
+            return
+        }
+        
+        if #available(iOS 10, *)
+        {
+            UIApplication.shared.open(url, options: [:], completionHandler: { (isSuccess) in
+                completion(isSuccess)
+            })
+        }
+        else
+        {
+            let result = UIApplication.shared.openURL(url)
+            completion(result)
+        }
+    }
 }
