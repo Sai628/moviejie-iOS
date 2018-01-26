@@ -58,7 +58,7 @@ class MainVC: UITabBarController
     
     
     //MARK:- HANDLER
-    func doSearch()
+    @objc func doSearch()
     {
         pushVC(SearchVC())
     }

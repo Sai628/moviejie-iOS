@@ -37,7 +37,7 @@ public enum BannerSpringiness {
 
 /// Banner is a dropdown notification view that presents above the main view controller, but below the status bar.
 open class Banner: UIView {
-    class func topWindow() -> UIWindow? {
+    public class func topWindow() -> UIWindow? {
         for window in UIApplication.shared.windows.reversed() {
             if window.windowLevel == UIWindowLevelNormal && !window.isHidden && window.frame != CGRect.zero { return window }
         }
@@ -194,14 +194,14 @@ open class Banner: UIView {
         updateConstraintsIfNeeded()
     }
   
-    internal func didTap(_ recognizer: UITapGestureRecognizer) {
+    @objc internal func didTap(_ recognizer: UITapGestureRecognizer) {
         if dismissesOnTap {
             dismiss()
         }
         didTapBlock?()
     }
     
-    internal func didSwipe(_ recognizer: UISwipeGestureRecognizer) {
+    @objc internal func didSwipe(_ recognizer: UISwipeGestureRecognizer) {
         if dismissesOnSwipe {
             dismiss()
         }

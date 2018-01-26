@@ -98,7 +98,7 @@ class NewTvVC: UIViewController
     }
     
     
-    func refreshNewMovies()
+    @objc func refreshNewMovies()
     {
         NetService.getNewTv(page: "p1", onError: { [weak self] (errorCode, errorMsg) in
             

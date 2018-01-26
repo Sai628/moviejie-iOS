@@ -99,7 +99,7 @@ class NewestInfoVC: UIViewController
     }
     
     
-    func refreshNewestInfo()
+    @objc func refreshNewestInfo()
     {
         NetService.getIndexInfo(onError: { [weak self] (errorCode, errorMsg) in
             

@@ -36,7 +36,7 @@ extension UILabel
         let style = NSMutableParagraphStyle()
         style.lineSpacing = lineSpacing
         style.lineHeightMultiple = lineHeightMultiple
-        attrString.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSRange(location: 0, length: labelText.length))
+        attrString.addAttribute(NSAttributedStringKey.paragraphStyle, value: style, range: NSRange(location: 0, length: labelText.length))
         self.attributedText = attrString
     }
 }

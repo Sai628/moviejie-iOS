@@ -168,7 +168,7 @@ class LoadingMenu: UIView
     }
     
     
-    func onClicked()
+    @objc func onClicked()
     {
         guard !indicatorView.isAnimating else {
             return

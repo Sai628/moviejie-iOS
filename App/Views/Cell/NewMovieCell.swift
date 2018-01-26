@@ -148,7 +148,7 @@ class NewMovieCell: UITableViewCell
             for char in keyword
             {
                 let range = title.range(of: String(char), options: .caseInsensitive)
-                attrTitle.addAttributes([NSForegroundColorAttributeName: Colors.searchKeyword], range: range)
+                attrTitle.addAttributes([NSAttributedStringKey.foregroundColor: Colors.searchKeyword], range: range)
             }
         }
         

@@ -98,7 +98,7 @@ class NewOSTVC: UIViewController
     }
     
     
-    func refreshNewOSTInfos()
+    @objc func refreshNewOSTInfos()
     {
         NetService.getNewOST(page: "p1", onError: { [weak self] (errorCode, errorMsg) in
             

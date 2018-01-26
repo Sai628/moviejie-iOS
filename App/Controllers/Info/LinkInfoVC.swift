@@ -188,7 +188,7 @@ class LinkInfoVC: UIViewController
     
     
     //MARK:- HANDLER
-    func movieLinkMenuHandler()
+    @objc func movieLinkMenuHandler()
     {
         if !linkDetailInfo.movie_link.isBlank
         {
@@ -197,14 +197,14 @@ class LinkInfoVC: UIViewController
     }
     
     
-    func copyMenuHandler()
+    @objc func copyMenuHandler()
     {
         UIPasteboard.general.string = linkDetailInfo.download_link
         BannerUtil.showInfo("下载链接已复制到剪贴板")
     }
     
     
-    func thunderMenuHandler()
+    @objc func thunderMenuHandler()
     {
         let link = "AA\(linkDetailInfo.download_link)ZZ".base64  // 根据迅雷的规范生成"迅雷下载"的scheme
         AppUtil.open(scheme: "thunder://\(link)") { (isSuccess) in
