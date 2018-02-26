@@ -28,6 +28,8 @@ struct Colors
     //------------------  按钮背景色  -------------------//
     static var buttonNormalBg: UIColor           { return (0xFF5CB85C as ColorInt).toColor() }
     static var buttonHighlightBg: UIColor        { return (0xFF449D44 as ColorInt).toColor() }
+    static var ccellItemNormalBg: UIColor        { return (0xFFF7F9FB as ColorInt).toColor() }
+    static var ccellItemHighlightBg: UIColor     { return (0xFFBBBBBB as ColorInt).toColor() }
     
     //------------------  UI元素颜色  -------------------//
     static var movieMarkLine: UIColor            { return (0xFF008018 as ColorInt).toColor() }

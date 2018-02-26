@@ -59,8 +59,8 @@ class EpisodeFilterCCell: UICollectionViewCell
     
     func setModel(text: String, isSelected: Bool)
     {
-        layoutBtn.setBackgroundColor((0xFFF7F9FB as ColorInt).toColor(), forState: .normal)
-        layoutBtn.setBackgroundColor(Colors.lightWhite, forState: .highlighted)
+        layoutBtn.setBackgroundColor(Colors.ccellItemNormalBg, forState: .normal)
+        layoutBtn.setBackgroundColor(Colors.ccellItemHighlightBg, forState: .highlighted)
         
         episodeLabel.text = text
         episodeLabel.textColor = isSelected ? Colors.link : Colors._333
