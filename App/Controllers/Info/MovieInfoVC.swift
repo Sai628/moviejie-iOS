@@ -18,6 +18,9 @@ class MovieInfoVC: UIViewController
     fileprivate var loadingMenu: LoadingMenu!
     
     fileprivate var movieInfo: MovieInfo!
+    fileprivate var episodeLinks: [LinkInfo] = []
+    fileprivate var currentEpisode: String = ""  // 当前分集(默认为空, 表示显示全部的分集)
+    fileprivate var currentEpisodeText: String = ""  // 当前分集提示文字
     var movieLink: String!
     
     
@@ -66,9 +69,16 @@ class MovieInfoVC: UIViewController
     func updateUI(data: MovieInfo)
     {
         movieInfo = data
+        episodeLinks = movieInfo.links
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
+        
+        if movieInfo.episode_filters.count > 0
+        {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "选集", style: .plain,
+                                                                target: self, action: #selector(doEpisodeFilter))
+        }
     }
     
  
@@ -94,6 +104,17 @@ class MovieInfoVC: UIViewController
             self?.updateUI(data: data)
         }
     }
+    
+    
+    //MARK:- HANDLER
+    @objc func doEpisodeFilter()
+    {
+        let episodeFilterVC = EpisodeFilterVC()
+        episodeFilterVC.episodeFitlers = movieInfo.episode_filters
+        episodeFilterVC.delegate = self
+        episodeFilterVC.selectedEpisode = currentEpisode
+        pushVC(episodeFilterVC)
+    }
 }
 
 
@@ -103,6 +124,19 @@ extension MovieInfoVC: LoadingMenuDelegate
     func onRetryClicked(_ view: LoadingMenu)
     {
         loadMovieInfo()
+    }
+}
+
+
+//MARK:- EpisodeFilterDelegate
+extension MovieInfoVC: EpisodeFilterDelegate
+{
+    func onItemClicked(index: Int, episode: String, text: String)
+    {
+        episodeLinks = (episode == "all" ? movieInfo.links : movieInfo.links.filter{ $0.episode == episode })
+        currentEpisode = episode
+        currentEpisodeText = text
+        tableView.reloadData()
     }
 }
 
@@ -132,7 +166,7 @@ extension MovieInfoVC: UITableViewDelegate
         switch indexPath.section
         {
         case Sections.link.rawValue:
-            let link = movieInfo.links[indexPath.row].link
+            let link = episodeLinks[indexPath.row].link
             if !link.isBlank {
                 AppUtil.readLinkInfo(self, link)
             }
@@ -178,7 +212,7 @@ extension MovieInfoVC: UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
         let sectionType = Sections(rawValue: section)!
-        if sectionType == .link && movieInfo.links.count > 0 ||
+        if sectionType == .link && episodeLinks.count > 0 ||
             sectionType == .related && movieInfo.related_resources.count > 0 ||
             sectionType == .recommended && movieInfo.recommended_resources.count > 0 ||
             sectionType == .story && !movieInfo.story.isBlank
@@ -203,7 +237,7 @@ extension MovieInfoVC: UITableViewDelegate
             return nil
         }
         
-        if type == .link && movieInfo.links.count == 0 ||
+        if type == .link && episodeLinks.count == 0 ||
             type == .related && movieInfo.related_resources.count == 0 ||
             type == .recommended && movieInfo.recommended_resources.count == 0 ||
             type == .story && movieInfo.story.isBlank
@@ -217,7 +251,7 @@ extension MovieInfoVC: UITableViewDelegate
         let label = UILabel(fontSize: 16, textColor: Colors.tableViewHeaderTitle, isBold: true)
         label.frame = CGRect(x: 16, y: 6, width: tableView.w - 16, height: 18)
         label.textAlignment = .left
-        label.text = ["", "", "下载链接", "相关影视", "猜你喜欢", "剧情简介"][section]
+        label.text = ["", "", "下载链接 \(currentEpisodeText)", "相关影视", "猜你喜欢", "剧情简介"][section]  //TODO
         headerView.addSubview(label)
 
         return headerView
@@ -251,7 +285,7 @@ extension MovieInfoVC: UITableViewDataSource
             return 1
             
         case Sections.link.rawValue:
-            return movieInfo.links.count
+            return episodeLinks.count
         
         case Sections.related.rawValue:
             return movieInfo.related_resources.count
@@ -319,7 +353,7 @@ extension MovieInfoVC: UITableViewDataSource
     func getLinkCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieLinkCell.className, for: indexPath) as! MovieLinkCell
-        cell.setModel(movieInfo.links[indexPath.row])
+        cell.setModel(episodeLinks[indexPath.row])
         return cell
     }
     

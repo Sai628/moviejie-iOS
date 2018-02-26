@@ -25,7 +25,8 @@ class MovieInfo: ModelType
     var akaname: String         = ""  // 又名
     var star: String            = ""  // 评分
     var story: String           = ""  // 剧情简介
-    var links: [LinkInfo]       = []  // 下载页面链接列表
+    var episode_filters: [[String: String]]   = []  // 分集查看过滤列表
+    var links: [LinkInfo]                     = []  // 下载页面链接列表
     var related_resources: [ResourceInfo]     = []  // 相关资源列表
     var recommended_resources: [ResourceInfo] = []  // 推荐资源列表
     
@@ -49,7 +50,8 @@ class MovieInfo: ModelType
         akaname         = json["akaname"].stringValue
         star            = json["star"].stringValue
         story           = json["story"].stringValue
-        links           = JSONUtil.readModels(json["links"]) ?? []
+        episode_filters       = json["episode_filters"].arrayObject as? [[String: String]] ?? []
+        links                 = JSONUtil.readModels(json["links"]) ?? []
         related_resources     = JSONUtil.readModels(json["related_resources"]) ?? []
         recommended_resources = JSONUtil.readModels(json["recommended_resources"]) ?? []
     }
@@ -73,7 +75,8 @@ extension MovieInfo: JSONDicConvertible, JSONStringConvertible
             "akaname"       : akaname,
             "star"          : star,
             "story"         : story,
-            "links"         : JSONUtil.writeModels(links),
+            "episode_filters"       : episode_filters,
+            "links"                 : JSONUtil.writeModels(links),
             "related_resources"     : JSONUtil.writeModels(related_resources),
             "recommended_resources" : JSONUtil.writeModels(recommended_resources),
         ]

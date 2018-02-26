@@ -18,6 +18,7 @@ class LinkInfo: ModelType
     var dimen: String   = ""  // 资源尺寸
     var format: String  = ""  // 资源格式
     var link: String    = ""  // 资源下载页面链接
+    var episode: String = ""  // 资源所属分集
     
     
     init()
@@ -32,6 +33,7 @@ class LinkInfo: ModelType
         dimen   = json["dimen"].stringValue
         format  = json["format"].stringValue
         link    = json["link"].stringValue
+        episode = json["episode"].stringValue
     }
 }
 
@@ -46,6 +48,7 @@ extension LinkInfo: JSONDicConvertible, JSONStringConvertible
             "dimen": dimen,
             "format": format,
             "link": link,
+            "episode": episode,
         ]
     }
     
