@@ -77,7 +77,7 @@ class NetHelper
             successHandler(jsonObject)
             if cacheResult, let cacheKey = cacheKey  // 若需对请求结果进行缓存时, 将其添加到全局缓存中
             {
-                try? apiStorage.setObject(value, forKey: cacheKey, expiry: .date(Date().addingTimeInterval(20 * 60)))
+                try? apiStorage.setObject(value, forKey: cacheKey, expiry: .date(Date().addingTimeInterval(Constant.CACHE_EXPIRE_TIME)))
             }
         }
     }
@@ -167,13 +167,17 @@ class NetHelper
         log.info("parameter: \(String(describing: values))")
         
         // 若这个请求需要进行缓存时, 先尝试从全局缓存中获取数据
-        if cacheResult, let result = try? apiStorage.object(ofType: String.self, forKey: url)
+        if cacheResult, let entry = try? apiStorage.entry(ofType: String.self, forKey: url)
         {
-            log.info("找到缓存数据.")
-            
-            let jsonObject = JSON(parseJSON: result)
-            successHandler(jsonObject)
-            return
+            if entry.expiry.isExpired {
+                log.info("找到缓存数据, 不过已过期. 将重新请求")
+                try? apiStorage.removeObject(forKey: url)  // 将当前过期的缓存删除掉
+            } else {
+                log.info("找到缓存数据.")
+                let jsonObject = JSON(parseJSON: entry.object)
+                successHandler(jsonObject)
+                return
+            }
         }
         
         Alamofire.request(url, method: method, parameters: values).responseString { response in

@@ -330,6 +330,8 @@
 		32D0C6B81FB9A03900C2BEEC /* Cache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32D0C6B51FB9A00300C2BEEC /* Cache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		32D96F3A2043E93F00B0A460 /* EpisodeFilterCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96F392043E93F00B0A460 /* EpisodeFilterCCell.swift */; };
 		32D96F3B2043E93F00B0A460 /* EpisodeFilterCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96F392043E93F00B0A460 /* EpisodeFilterCCell.swift */; };
+		32E53AA2209C08DD00EFF3A4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E53AA1209C08DD00EFF3A4 /* Constant.swift */; };
+		32E53AA3209C08DD00EFF3A4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E53AA1209C08DD00EFF3A4 /* Constant.swift */; };
 		32F72A4E1E8CC7FF00A69C41 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A409901E6EF5360004DBAC /* TestData.swift */; };
 /* End PBXBuildFile section */
 
@@ -529,6 +531,7 @@
 		32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDetailInfo.swift; sourceTree = "<group>"; };
 		32D0C6B51FB9A00300C2BEEC /* Cache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cache.framework; sourceTree = "<group>"; };
 		32D96F392043E93F00B0A460 /* EpisodeFilterCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeFilterCCell.swift; sourceTree = "<group>"; };
+		32E53AA1209C08DD00EFF3A4 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Constant.swift; sourceTree = "<group>"; };
 		7344CDD31806649D00222272 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7344CDD51806649D00222272 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7344CDD71806649D00222272 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -762,6 +765,7 @@
 			isa = PBXGroup;
 			children = (
 				32A407091E6EF5100004DBAC /* Colors.swift */,
+				32E53AA1209C08DD00EFF3A4 /* Constant.swift */,
 				32A4070C1E6EF5100004DBAC /* Dimens.swift */,
 				326514F91F7BB1E80048FCC8 /* Display.swift */,
 				32A407121E6EF5100004DBAC /* R.swift */,
@@ -1306,6 +1310,7 @@
 				327556FA1FA77498003A0592 /* OSTSourceCell.swift in Sources */,
 				32A408631E6EF5100004DBAC /* Dimens.swift in Sources */,
 				3211A8F61F4425850024A586 /* JSONDicConvertible.swift in Sources */,
+				32E53AA2209C08DD00EFF3A4 /* Constant.swift in Sources */,
 				32A408741E6EF5100004DBAC /* NewestInfoVC.swift in Sources */,
 				320FBAC61F911E1E0099811F /* MovieBannerCell.swift in Sources */,
 				32CF9B211F946E8300BEC24F /* LinkDetailInfo.swift in Sources */,
@@ -1438,6 +1443,7 @@
 				32A409CE1E6EF9770004DBAC /* Banner.swift in Sources */,
 				32A409D01E6EF9770004DBAC /* EZAlertController.swift in Sources */,
 				32A409A91E6EF9340004DBAC /* AppDelegate.swift in Sources */,
+				32E53AA3209C08DD00EFF3A4 /* Constant.swift in Sources */,
 				32A409AA1E6EF9350004DBAC /* Global.swift in Sources */,
 				327556EA1FA76A6D003A0592 /* LinkInfoVC.swift in Sources */,
 				32A409A51E6EF7F10004DBAC /* BaseTests.swift in Sources */,
