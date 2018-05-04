@@ -137,6 +137,7 @@ extension MovieInfoVC: EpisodeFilterDelegate
         currentEpisode = episode
         currentEpisodeText = text
         tableView.reloadData()
+        tableView.scrollToRow(at: IndexPath(row: 0, section: Sections.link.rawValue), at: .top, animated: true)
     }
 }
 
