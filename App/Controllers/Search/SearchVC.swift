@@ -41,6 +41,7 @@ class SearchVC: UIViewController
         app_autoToolbarDisabled()
         
         tableView.reloadData()
+        searchTextField.text = nil
         searchTextField.becomeFirstResponder()
     }
     
