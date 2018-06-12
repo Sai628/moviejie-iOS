@@ -32,8 +32,6 @@ struct Colors
     static var ccellItemHighlightBg: UIColor     { return (0xFFBBBBBB as ColorInt).toColor() }
     
     //------------------  UI元素颜色  -------------------//
-    static var movieMarkLine: UIColor            { return (0xFF008018 as ColorInt).toColor() }
-    static var linkMarkLine: UIColor             { return (0xFF006D9A as ColorInt).toColor() }
     static var link: UIColor                     { return (0xFF428BCA as ColorInt).toColor() }
     static var downloadLinkText: UIColor         { return (0xFF31708F as ColorInt).toColor() }
     static var ratingBar: UIColor                { return (0xFFF89F40 as ColorInt).toColor() }

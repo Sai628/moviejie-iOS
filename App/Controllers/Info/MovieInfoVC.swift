@@ -252,7 +252,7 @@ extension MovieInfoVC: UITableViewDelegate
         let label = UILabel(fontSize: 16, textColor: Colors.tableViewHeaderTitle, isBold: true)
         label.frame = CGRect(x: 16, y: 6, width: tableView.w - 16, height: 18)
         label.textAlignment = .left
-        label.text = ["", "", "下载链接 \(currentEpisodeText)", "相关影视", "猜你喜欢", "剧情简介"][section]  //TODO
+        label.text = ["", "", "下载链接 \(currentEpisodeText)", "相关影视", "猜你喜欢", "剧情简介"][section]
         headerView.addSubview(label)
 
         return headerView
