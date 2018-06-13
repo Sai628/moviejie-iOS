@@ -32,6 +32,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         
         return true
     }
+    
+    
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void)
+    {
+        guard let rootNav = window?.rootViewController as? AppNavigationController else {
+            return
+        }
+        
+        switch shortcutItem.type
+        {
+        case "search":  // "搜索"菜单
+            if !(rootNav.viewControllers.last is SearchVC)
+            {
+                rootNav.viewControllers.last?.pushVC(SearchVC())
+            }
+        default:
+            break
+        }
+    }
 }
 
 

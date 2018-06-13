@@ -78,5 +78,16 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>search</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>搜索电影</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>icon_search_normal</string>
+		</dict>
+	</array>
 </dict>
 </plist>
