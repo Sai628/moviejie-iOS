@@ -157,8 +157,6 @@
 		328C12D01CFC393E00536E54 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12CF1CFC393E00536E54 /* libz.tbd */; };
 		328C12D21CFC396B00536E54 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12D11CFC396B00536E54 /* libiconv.tbd */; };
 		328C12DD1CFC3BA800536E54 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12DB1CFC3B8300536E54 /* libsqlite3.tbd */; };
-		328C12DE1CFC3BB000536E54 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12D71CFC3B7000536E54 /* libstdc++.6.0.9.tbd */; };
-		328C12DF1CFC3BB700536E54 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12D91CFC3B7A00536E54 /* libstdc++.tbd */; };
 		328C12E01CFC3BBF00536E54 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12D51CFC3B6100536E54 /* libz.1.2.5.tbd */; };
 		328C13401CFC3D9700536E54 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C13001CFC3D9700536E54 /* IQKeyboardManagerSwift.framework */; };
 		328C13461CFC3D9800536E54 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C13021CFC3D9700536E54 /* SnapKit.framework */; };
@@ -266,8 +264,6 @@
 		32A40A071E6EFA8B0004DBAC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A407361E6EF5100004DBAC /* UIViewController+Extensions.swift */; };
 		32A40A0C1E6EFA8B0004DBAC /* JSONStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A407581E6EF5100004DBAC /* JSONStringConvertible.swift */; };
 		32A40A131E6EFC560004DBAC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12DB1CFC3B8300536E54 /* libsqlite3.tbd */; };
-		32A40A141E6EFC560004DBAC /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12D91CFC3B7A00536E54 /* libstdc++.tbd */; };
-		32A40A151E6EFC560004DBAC /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12D71CFC3B7000536E54 /* libstdc++.6.0.9.tbd */; };
 		32A40A161E6EFC560004DBAC /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12D51CFC3B6100536E54 /* libz.1.2.5.tbd */; };
 		32A40A171E6EFC560004DBAC /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12D11CFC396B00536E54 /* libiconv.tbd */; };
 		32A40A181E6EFC560004DBAC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 328C12CF1CFC393E00536E54 /* libz.tbd */; };
@@ -451,8 +447,6 @@
 		328C12CF1CFC393E00536E54 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		328C12D11CFC396B00536E54 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		328C12D51CFC3B6100536E54 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
-		328C12D71CFC3B7000536E54 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
-		328C12D91CFC3B7A00536E54 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		328C12DB1CFC3B8300536E54 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		328C12F61CFC3D9700536E54 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		328C12FA1CFC3D9700536E54 /* EZSwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EZSwiftExtensions.framework; sourceTree = "<group>"; };
@@ -547,8 +541,6 @@
 			files = (
 				32863E6A1F7CF65700A3A2D7 /* libresolv.tbd in Frameworks */,
 				328C12DD1CFC3BA800536E54 /* libsqlite3.tbd in Frameworks */,
-				328C12DF1CFC3BB700536E54 /* libstdc++.tbd in Frameworks */,
-				328C12DE1CFC3BB000536E54 /* libstdc++.6.0.9.tbd in Frameworks */,
 				328C12E01CFC3BBF00536E54 /* libz.1.2.5.tbd in Frameworks */,
 				328C12D21CFC396B00536E54 /* libiconv.tbd in Frameworks */,
 				328C12D01CFC393E00536E54 /* libz.tbd in Frameworks */,
@@ -598,8 +590,6 @@
 				32A409DB1E6EFA2E0004DBAC /* IQKeyboardManagerSwift.framework in Frameworks */,
 				32A409DD1E6EFA2E0004DBAC /* Alamofire.framework in Frameworks */,
 				32A40A131E6EFC560004DBAC /* libsqlite3.tbd in Frameworks */,
-				32A40A141E6EFC560004DBAC /* libstdc++.tbd in Frameworks */,
-				32A40A151E6EFC560004DBAC /* libstdc++.6.0.9.tbd in Frameworks */,
 				32A40A161E6EFC560004DBAC /* libz.1.2.5.tbd in Frameworks */,
 				327C08591F9DCBBF00248BF2 /* ESPullToRefresh.framework in Frameworks */,
 				32A40A171E6EFC560004DBAC /* libiconv.tbd in Frameworks */,
@@ -1050,8 +1040,6 @@
 			children = (
 				32863E691F7CF65700A3A2D7 /* libresolv.tbd */,
 				328C12DB1CFC3B8300536E54 /* libsqlite3.tbd */,
-				328C12D91CFC3B7A00536E54 /* libstdc++.tbd */,
-				328C12D71CFC3B7000536E54 /* libstdc++.6.0.9.tbd */,
 				328C12D51CFC3B6100536E54 /* libz.1.2.5.tbd */,
 				328C12D11CFC396B00536E54 /* libiconv.tbd */,
 				328C12CF1CFC393E00536E54 /* libz.tbd */,

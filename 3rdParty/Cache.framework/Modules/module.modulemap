@@ -1,4 +1,4 @@
 framework module Cache {
-    header "Cache-Swift.h"
-    requires objc
+  header "Cache-Swift.h"
+  requires objc
 }
