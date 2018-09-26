@@ -37,7 +37,6 @@
 		323A0C5A1FB8893A008E6DD3 /* icon_clearup_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 323A0C571FB8893A008E6DD3 /* icon_clearup_normal@2x.png */; };
 		323A0C5B1FB8893A008E6DD3 /* icon_clearup_highlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 323A0C581FB8893A008E6DD3 /* icon_clearup_highlight@3x.png */; };
 		323A0C5C1FB8893A008E6DD3 /* icon_clearup_highlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 323A0C581FB8893A008E6DD3 /* icon_clearup_highlight@3x.png */; };
-		323A0C5E1FB89061008E6DD3 /* TagListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323A0C5D1FB89061008E6DD3 /* TagListView.framework */; };
 		323A0C5F1FB89061008E6DD3 /* TagListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323A0C5D1FB89061008E6DD3 /* TagListView.framework */; };
 		323A0C601FB89076008E6DD3 /* TagListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323A0C5D1FB89061008E6DD3 /* TagListView.framework */; };
 		323A0C611FB89076008E6DD3 /* TagListView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 323A0C5D1FB89061008E6DD3 /* TagListView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -571,7 +570,6 @@
 				328C138A1CFD30AF00536E54 /* MBProgressHUD.framework in Frameworks */,
 				328C13461CFC3D9800536E54 /* SnapKit.framework in Frameworks */,
 				328C134C1CFC3D9800536E54 /* SwiftyJSON.framework in Frameworks */,
-				323A0C5E1FB89061008E6DD3 /* TagListView.framework in Frameworks */,
 				328C13791CFC3D9800536E54 /* XCGLogger.framework in Frameworks */,
 				323B65751E6C0EC500F6764A /* EZSwiftExtensions.framework in Frameworks */,
 			);
@@ -1111,7 +1109,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Sai628.com;
 				TargetAttributes = {
 					3236BAB11CF7F1C9009CD5DC = {
@@ -1665,11 +1663,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -1723,11 +1723,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
