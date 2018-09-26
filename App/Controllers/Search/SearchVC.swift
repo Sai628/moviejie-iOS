@@ -106,7 +106,7 @@ class SearchVC: UIViewController
         }
         
         searchLayout.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(Display.currentType == .iphoneX ? 51 : 27)
+            make.top.equalToSuperview().offset(Display.isIPhoneXSeries() ? 51 : 27)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-60)
             make.height.equalTo(30)

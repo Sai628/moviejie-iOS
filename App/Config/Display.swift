@@ -13,14 +13,14 @@ import EZSwiftExtensions
 
 class Display
 {
-    /// iPhone7/8 与 iPhone6 的尺寸一致. 不需要再进行定义
     enum DisplayType
     {
-        case iphone4
-        case iphone5
-        case iphone6
-        case iphone6Plus
-        case iphoneX
+        case iphone4        // 4 | 4S @2x
+        case iphone5        // 5 | 5S | SE @2x
+        case iphone6        // 6 | 6S | 7 | 8 @2x
+        case iphone6Plus    // 6Plus | 6s Plus | 7Plus | 8Plus @3x
+        case iphoneX        // X | XS @3x
+        case iphoneXR       // XR @2x | XS Max @3x
     }
 
     
@@ -38,8 +38,16 @@ class Display
             return .iphone6Plus
         case (Dimens.iphoneXWidth, Dimens.iphoneXHeight):
             return .iphoneX
+        case (Dimens.iphoneXRWidth, Dimens.iphoneXRHeight):
+            return .iphoneXR
         default:
             return .iphone6Plus  // 默认返回 iPhone6 Plus 的设备类型
         }
+    }
+    
+    
+    static func isIPhoneXSeries() -> Bool
+    {
+        return (currentType == .iphoneX || currentType == .iphoneXR)
     }
 }
