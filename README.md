@@ -9,18 +9,18 @@ An iOS app of https://moviejie.net, which write by swift 3.
 
 # Preview
 
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-00.png?imageView2/2/w/280)
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-01.png?imageView2/2/w/280)
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-02.png?imageView2/2/w/280)
+![](https://sai628-github-image.oss-cn-shenzhen.aliyuncs.com/2017-11-30-moviejie-ios-preview-00.png?x-oss-process=image/resize,w_280)
+![](https://sai628-github-image.oss-cn-shenzhen.aliyuncs.com/2017-11-30-moviejie-ios-preview-01.png?x-oss-process=image/resize,w_280)
+![](https://sai628-github-image.oss-cn-shenzhen.aliyuncs.com/2017-11-30-moviejie-ios-preview-02.png?x-oss-process=image/resize,w_280)
 
 ###    
 
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-03.png?imageView2/2/w/280)
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-04.png?imageView2/2/w/280)
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-05.png?imageView2/2/w/280)
+![](https://sai628-github-image.oss-cn-shenzhen.aliyuncs.com/2017-11-30-moviejie-ios-preview-03.png?x-oss-process=image/resize,w_280)
+![](https://sai628-github-image.oss-cn-shenzhen.aliyuncs.com/2017-11-30-moviejie-ios-preview-04.png?x-oss-process=image/resize,w_280)
+![](https://sai628-github-image.oss-cn-shenzhen.aliyuncs.com/2017-11-30-moviejie-ios-preview-05.png?x-oss-process=image/resize,w_280)
 
 ###    
 
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-06.png?imageView2/2/w/280)
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-07.png?imageView2/2/w/280)
-![](http://oo8lgm5bz.bkt.clouddn.com/2017-11-30-moviejie-ios-preview-08.png?imageView2/2/w/280)
+![](https://sai628-github-image.oss-cn-shenzhen.aliyuncs.com/2017-11-30-moviejie-ios-preview-06.png?x-oss-process=image/resize,w_280)
+![](https://sai628-github-image.oss-cn-shenzhen.aliyuncs.com/2017-11-30-moviejie-ios-preview-07.png?x-oss-process=image/resize,w_280)
+![](https://sai628-github-image.oss-cn-shenzhen.aliyuncs.com/2017-11-30-moviejie-ios-preview-08.png?x-oss-process=image/resize,w_280)
