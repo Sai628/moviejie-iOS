@@ -24,7 +24,7 @@ typealias NetSuccessHandler = (_ jsonObject: JSON) -> Void
 
 enum NetServiceError: Error
 {
-    case NetError  //网络异常
+    case netError  //网络异常
     case requestError  //请求错误(4xx)
     case serverError  //服务器出错(5xx/6xx)
     case noConnectionError  //无网络连接
@@ -125,7 +125,7 @@ class NetHelper
         
         switch error
         {
-        case .NetError:
+        case .netError:
             msg = ErrorInfo.MSG_NETWORK_ERROR
             
         case .requestError:
