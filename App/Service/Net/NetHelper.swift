@@ -47,7 +47,7 @@ class NetHelper
     {
         guard let res = response.response else
         {
-            dealWithFailure(.NetError, onFailure: onFailure)
+            dealWithFailure(.netError, onFailure: onFailure)
             return
         }
         
@@ -63,7 +63,7 @@ class NetHelper
             dealWithFailure(.serverError, onFailure: onFailure)
             
         default:
-            dealWithFailure(.NetError, onFailure: onFailure)
+            dealWithFailure(.netError, onFailure: onFailure)
         }
     }
     
@@ -192,7 +192,7 @@ class NetHelper
                 
             case .failure(let error):
                 log.error("error: \(error)")
-                dealWithFailure(.NetError, onFailure: onFailure)
+                dealWithFailure(.netError, onFailure: onFailure)
             }
         }
     }
