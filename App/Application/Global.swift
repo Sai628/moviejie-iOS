@@ -13,10 +13,9 @@ import XCGLogger
 
 
 let log = XCGLogger.default
-let apiStorage = try! Storage(diskConfig: DiskConfig(name: "api-storage", expiry: .date(Date().addingTimeInterval(Constant.CACHE_EXPIRE_TIME))),
-                            memoryConfig: MemoryConfig(expiry: .date(Date().addingTimeInterval(Constant.CACHE_EXPIRE_TIME)),
-                              countLimit: 500,
-                          totalCostLimit: 0))
+let stringStorage = try! Storage(diskConfig: DiskConfig(name: "api-storage", expiry: .date(Date().addingTimeInterval(Constant.CACHE_EXPIRE_TIME))),
+                                 memoryConfig: MemoryConfig(expiry: .date(Date().addingTimeInterval(Constant.CACHE_EXPIRE_TIME))),
+                                 transformer: TransformerFactory.forCodable(ofType: String.self))
 
 
 func synchronized(_ lock: AnyObject!, closure:() -> ())

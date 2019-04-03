@@ -71,7 +71,7 @@ extension AppDelegate
     
     fileprivate func initKeyboardManager()
     {
-        let manager = IQKeyboardManager.sharedManager()
+        let manager = IQKeyboardManager.shared
         manager.enable = true
         manager.shouldResignOnTouchOutside = true
         manager.shouldToolbarUsesTextFieldTintColor = true

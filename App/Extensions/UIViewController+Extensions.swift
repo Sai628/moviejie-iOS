@@ -15,7 +15,7 @@ extension UIViewController
 {
     func app_keyboardManagerEnabled()
     {
-        let manager = IQKeyboardManager.sharedManager()
+        let manager = IQKeyboardManager.shared
         if !manager.enable
         {
             manager.enable = true
@@ -26,7 +26,7 @@ extension UIViewController
     
     func app_keyboardManagerDisabled()
     {
-        let manager = IQKeyboardManager.sharedManager()
+        let manager = IQKeyboardManager.shared
         if manager.enable
         {
             manager.enable = false
@@ -37,13 +37,13 @@ extension UIViewController
     
     func app_autoToolbarEnable()
     {
-        IQKeyboardManager.sharedManager().enableAutoToolbar = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
     }
     
     
     func app_autoToolbarDisabled()
     {
-        IQKeyboardManager.sharedManager().enableAutoToolbar = false
+        IQKeyboardManager.shared.enableAutoToolbar = false
     }
 }
 
