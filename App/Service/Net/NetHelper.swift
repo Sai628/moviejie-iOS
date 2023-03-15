@@ -42,7 +42,7 @@ class NetHelper
     
     
     //MARK:-
-    fileprivate static func handleResponse(_ response: DataResponse<String>, cacheResult: Bool = false, cacheKey: String? = nil,
+    fileprivate static func handleResponse(_ response: AFDataResponse<String>, cacheResult: Bool = false, cacheKey: String? = nil,
                                            onError: NetError, onFailure: NetFailure, handler: NetSuccessHandler)
     {
         guard let res = response.response else
@@ -54,7 +54,7 @@ class NetHelper
         switch res.statusCode
         {
         case 200..<300:  //请求成功
-            handleResponseValue(response.result.value!, cacheResult: cacheResult, cacheKey: cacheKey, onError: onError, successHandler: handler)
+            handleResponseValue(response.value!, cacheResult: cacheResult, cacheKey: cacheKey, onError: onError, successHandler: handler)
             
         case 400..<500:  //请求错误
             dealWithFailure(.requestError, onFailure: onFailure)
@@ -180,10 +180,10 @@ class NetHelper
             }
         }
         
-        Alamofire.request(url, method: method, parameters: values).responseString { response in
+        AF.request(url, method: method, parameters: values).responseString { response in
             
             log.info("response: \(url)")
-            log.info("response: \(response.result.value ?? "")")
+            log.info("response: \(response.value ?? "")")
             
             switch response.result
             {
@@ -203,10 +203,10 @@ class NetHelper
         log.info("URL: \(url)")
         log.info("parameter: \(String(describing: values))")
         
-        Alamofire.request(url, method: method, parameters: values).validate(statusCode: 200..<300).responseString { response in
+        AF.request(url, method: method, parameters: values).validate(statusCode: 200..<300).responseString { response in
             
             log.info("response: \(url)")
-            log.info("response: \(response.result.value ?? "")")
+            log.info("response: \(response.value ?? "")")
             
             switch response.result
             {

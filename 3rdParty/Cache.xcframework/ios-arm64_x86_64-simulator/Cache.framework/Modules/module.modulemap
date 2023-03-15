@@ -1,0 +1,4 @@
+framework module Cache {
+  header "Cache-Swift.h"
+  requires objc
+}

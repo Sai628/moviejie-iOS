@@ -13,7 +13,7 @@ import XCGLogger
 
 
 let log = XCGLogger.default
-let stringStorage = try! Storage(diskConfig: DiskConfig(name: "api-storage", expiry: .date(Date().addingTimeInterval(Constant.CACHE_EXPIRE_TIME))),
+let stringStorage = try! Storage<String, String>(diskConfig: DiskConfig(name: "api-storage", expiry: .date(Date().addingTimeInterval(Constant.CACHE_EXPIRE_TIME))),
                                  memoryConfig: MemoryConfig(expiry: .date(Date().addingTimeInterval(Constant.CACHE_EXPIRE_TIME))),
                                  transformer: TransformerFactory.forCodable(ofType: String.self))
 
