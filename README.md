@@ -1,11 +1,15 @@
 # moviejie-iOS
 
-An iOS app of https://moviejie.net, which write by swift 3.
+An iOS app of https://moviejie.net, which write by swift 5.
+
+<br/>
 
 # Requirements
 
-* Xcode 9.0+
-* iOS 8.0+
+* Xcode 14.0+
+* iOS 13.0+
+
+<br/>
 
 # Preview
 
