@@ -28,7 +28,6 @@
 		3227216E1FB5555B00F7BCD8 /* icon_search_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3227216A1FB5555B00F7BCD8 /* icon_search_highlight@2x.png */; };
 		3227216F1FB5555B00F7BCD8 /* icon_search_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3227216B1FB5555B00F7BCD8 /* icon_search_normal@2x.png */; };
 		322F7A9C29C19F32001C54D6 /* EZSwiftExtensions.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322F7A9B29C19F32001C54D6 /* EZSwiftExtensions.xcframework */; };
-		322F7A9D29C19F32001C54D6 /* EZSwiftExtensions.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 322F7A9B29C19F32001C54D6 /* EZSwiftExtensions.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		322F7AA029C1A8BF001C54D6 /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322F7A9E29C1A8BE001C54D6 /* Alamofire.xcframework */; };
 		322F7AA129C1A8BF001C54D6 /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 322F7A9E29C1A8BE001C54D6 /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		322F7AA229C1A8BF001C54D6 /* Cache.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322F7A9F29C1A8BF001C54D6 /* Cache.xcframework */; };
@@ -316,6 +315,7 @@
 		32CBB7CF1E9D042A0076D35B /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CBB7C71E9CE8860076D35B /* UITextField+Extensions.swift */; };
 		32CF9B211F946E8300BEC24F /* LinkDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */; };
 		32CF9B221F946E8300BEC24F /* LinkDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CF9B201F946E8300BEC24F /* LinkDetailInfo.swift */; };
+		32D77D592AD9163A00839D7F /* EZSwiftExtensions.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 329114AB2AD66ED90054FCFB /* EZSwiftExtensions.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		32D96F3A2043E93F00B0A460 /* EpisodeFilterCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96F392043E93F00B0A460 /* EpisodeFilterCCell.swift */; };
 		32D96F3B2043E93F00B0A460 /* EpisodeFilterCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D96F392043E93F00B0A460 /* EpisodeFilterCCell.swift */; };
 		32E53AA2209C08DD00EFF3A4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E53AA1209C08DD00EFF3A4 /* Constant.swift */; };
@@ -340,9 +340,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				32D77D592AD9163A00839D7F /* EZSwiftExtensions.xcframework in Embed Frameworks */,
 				322F7AA129C1A8BF001C54D6 /* Alamofire.xcframework in Embed Frameworks */,
 				322F7AC329C1AF84001C54D6 /* MBProgressHUD.xcframework in Embed Frameworks */,
-				322F7A9D29C19F32001C54D6 /* EZSwiftExtensions.xcframework in Embed Frameworks */,
 				322F7AA629C1A8E7001C54D6 /* Kingfisher.xcframework in Embed Frameworks */,
 				322F7AB029C1A904001C54D6 /* SnapKit.xcframework in Embed Frameworks */,
 				322F7AB229C1A905001C54D6 /* SwiftSoup.xcframework in Embed Frameworks */,
@@ -450,6 +450,7 @@
 		328C12D11CFC396B00536E54 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		328C12D51CFC3B6100536E54 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		328C12DB1CFC3B8300536E54 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		329114AB2AD66ED90054FCFB /* EZSwiftExtensions.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EZSwiftExtensions.xcframework; path = 3rdParty/EZSwiftExtensions.xcframework; sourceTree = "<group>"; };
 		329809C11A53F47000BB00E1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		329A9B6D1FA1804800D2EA42 /* NewOSTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOSTVC.swift; sourceTree = "<group>"; };
 		329A9B701FA181D500D2EA42 /* NewOSTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOSTCell.swift; sourceTree = "<group>"; };
@@ -989,6 +990,7 @@
 		7344CDC71806649D00222272 = {
 			isa = PBXGroup;
 			children = (
+				329114AB2AD66ED90054FCFB /* EZSwiftExtensions.xcframework */,
 				3218876A1CDB4F6D003783CE /* App-Bridging-Header.h */,
 				32A406EE1E6EF5100004DBAC /* App */,
 				32A4098C1E6EF5360004DBAC /* AppTests */,
@@ -1464,7 +1466,7 @@
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/App/Support Files/Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/App";
 				INFOPLIST_FILE = "$(SRCROOT)/App/Support Files/App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1491,7 +1493,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USE_HEADERMAP = YES;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
@@ -1520,7 +1522,7 @@
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/App/Support Files/Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/App";
 				INFOPLIST_FILE = "$(SRCROOT)/App/Support Files/App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1545,7 +1547,7 @@
 				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/SharedPrecompiledHeaders";
 				SWIFT_OBJC_BRIDGING_HEADER = "App-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USE_HEADERMAP = YES;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
@@ -1598,7 +1600,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Debug;
@@ -1651,7 +1653,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Release;
@@ -1710,6 +1712,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -1765,6 +1768,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s arm64";

@@ -66,7 +66,7 @@ class LoadingMenu: UIView
         addSubview(retryPromptLabel)
         
         indicatorView.hidesWhenStopped = true
-        indicatorView.activityIndicatorViewStyle = .gray
+        indicatorView.style = .gray
         indicatorView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         indicatorView.isHidden = true
         addSubview(indicatorView)

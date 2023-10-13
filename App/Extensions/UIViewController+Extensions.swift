@@ -52,19 +52,19 @@ extension UIViewController
 {
     func addKeyboardDidChangeFrameNotification()
     {
-        self.addNotificationObserver(NSNotification.Name.UIKeyboardDidChangeFrame.rawValue, selector: #selector(UIViewController.keyboardDidChangeFrameNotification(_:)))
+        self.addNotificationObserver(UIResponder.keyboardDidChangeFrameNotification.rawValue, selector: #selector(UIViewController.keyboardDidChangeFrameNotification(_:)))
     }
     
     
     func removeKeyboardDidChangeFrameNotification()
     {
-        self.removeNotificationObserver(NSNotification.Name.UIKeyboardDidChangeFrame.rawValue)
+        self.removeNotificationObserver(UIResponder.keyboardDidChangeFrameNotification.rawValue)
     }
     
     
     @objc func keyboardDidChangeFrameNotification(_ notification: Notification)
     {
-        if let info = notification.userInfo, let value = info[UIKeyboardFrameEndUserInfoKey] as? NSValue
+        if let info = notification.userInfo, let value = info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
         {
             let frame = value.cgRectValue
             keyboardDidChangeFrame(frame)

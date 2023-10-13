@@ -1,7 +1,7 @@
 github "Alamofire/Alamofire" >= 4.0.0
 github "hyperoslo/Cache"
 github "goktugyil/EZSwiftExtensions"
-github "hackiftekhar/IQKeyboardManager"
+github "hackiftekhar/IQKeyboardManager" == 6.5.13
 github "onevcat/Kingfisher" ~> 4.10.0
 github "SnapKit/SnapKit"
 github "SwiftyJSON/SwiftyJSON"

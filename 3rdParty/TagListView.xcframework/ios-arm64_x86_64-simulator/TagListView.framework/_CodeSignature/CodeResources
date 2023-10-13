@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/TagListView-Swift.h</key>
 		<data>
-		MevDYwCCAGHFzgfut6WGzFLgewY=
+		nEjxhWLgu1DMy/gaJO7GtCDt7mw=
 		</data>
 		<key>Headers/TagListView.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0NisDA418FHex1p3acnYHnQ2ZcE=
+		jro7MSyq4qCG4UOsg3HrmQ8xW3g=
 		</data>
 		<key>Modules/TagListView.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		DofVlXnN/6rE2S/CpXwxhWYch5g=
+		97S0JA0pHfxRDyYD/8oBnONhvnI=
 		</data>
 		<key>Modules/TagListView.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		ijxLkMBLMQ1IOkI0Wu7edvy5i68=
+		7WDka8LtEthHjPyQx0P76XLkHh4=
 		</data>
 		<key>Modules/TagListView.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/TagListView.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		rXk2T7cUhlZejPCNeYp9A9/sZtM=
+		dSwR8oNcwWqHuPVZdQ3BsMjVNrk=
 		</data>
 		<key>Modules/TagListView.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cl9othDCht4YPnduKue6QMKKovo=
+		QrAIOO1toG6gO4yFxoCCp5sxdsQ=
 		</data>
 		<key>Modules/TagListView.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/TagListView.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		LWc2FSlk39uoU+5tlW/PNEpwFUs=
+		STeibPLfX58sxisfGZYmHzEvtQ0=
 		</data>
 		<key>Modules/TagListView.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		sYAbiIuCxm7nHSJ8Cl9hJOYI6jY=
+		ILUVEGqDMnkS8RMu9cM+4rtnnLM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -57,21 +57,13 @@
 	<dict>
 		<key>Headers/TagListView-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			MevDYwCCAGHFzgfut6WGzFLgewY=
-			</data>
 			<key>hash2</key>
 			<data>
-			0xp6taXjDzh6GzMnMqDRXIxa1VZBWGw3OK7wEt2nSHE=
+			i5QA3LOXYPAl5DEj3rM0i/TzuV/LlSU3oKjb6m6f2HY=
 			</data>
 		</dict>
 		<key>Headers/TagListView.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			7CrnqYC04JPEZFFU0SnY15SM5y8=
-			</data>
 			<key>hash2</key>
 			<data>
 			fS3iY1ZjISqflL8XfOXDzPnpxeEc6zVxP+ZLB0VteoU=
@@ -79,32 +71,20 @@
 		</dict>
 		<key>Modules/TagListView.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			DofVlXnN/6rE2S/CpXwxhWYch5g=
-			</data>
 			<key>hash2</key>
 			<data>
-			SusYOLH8cUZWlP4Ru5R2YrGegSeAdcaHvnJLVWKNfBU=
+			SOx0MBYFUoillZQmtcelbRvCzz4BO3UPSNMRHruHml4=
 			</data>
 		</dict>
 		<key>Modules/TagListView.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ijxLkMBLMQ1IOkI0Wu7edvy5i68=
-			</data>
 			<key>hash2</key>
 			<data>
-			Z6JgJAwBPh12bLLgNJYhEG2SFBcsUyDVtGOWxn4uszQ=
+			XTB2huxlxnPw1F55Sii2l5rP1W71zK3XucoqzbJy2pM=
 			</data>
 		</dict>
 		<key>Modules/TagListView.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FSPnLbho3G+LL9smI3XgVOqBIQ4=
-			</data>
 			<key>hash2</key>
 			<data>
 			KnRdWE4y6t4QM5zi5JDptPdHFgJy1Tku+7GLkZS2aNM=
@@ -112,32 +92,20 @@
 		</dict>
 		<key>Modules/TagListView.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rXk2T7cUhlZejPCNeYp9A9/sZtM=
-			</data>
 			<key>hash2</key>
 			<data>
-			/Qv2deBKEdR4J39C2VXtWyP+oUVwAZ0JdjXOUrquAIo=
+			BGyKAxEgu/+NMk8ANqnb2IpzFqY6tFjIwqA9rJwwjMc=
 			</data>
 		</dict>
 		<key>Modules/TagListView.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			cl9othDCht4YPnduKue6QMKKovo=
-			</data>
 			<key>hash2</key>
 			<data>
-			QWnFlfqw4C+4iVRaAYHDzjG6MXn1MeRq5VXU78pvtv0=
+			0iYz0+47BB8ZQpseY9SPbKWRpWU9AzfLX7MIgluTVog=
 			</data>
 		</dict>
 		<key>Modules/TagListView.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FSPnLbho3G+LL9smI3XgVOqBIQ4=
-			</data>
 			<key>hash2</key>
 			<data>
 			KnRdWE4y6t4QM5zi5JDptPdHFgJy1Tku+7GLkZS2aNM=
@@ -145,32 +113,20 @@
 		</dict>
 		<key>Modules/TagListView.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			LWc2FSlk39uoU+5tlW/PNEpwFUs=
-			</data>
 			<key>hash2</key>
 			<data>
-			7WzU+wN9hZ3obtV/ceFYF8XaClbaSVjdMEeiupoeq8o=
+			GxIt+x5VOchvaE3mYruE3p/X5R/c0LE0VGmephdztmE=
 			</data>
 		</dict>
 		<key>Modules/TagListView.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			sYAbiIuCxm7nHSJ8Cl9hJOYI6jY=
-			</data>
 			<key>hash2</key>
 			<data>
-			WE64850Tm56kEEBUTla1WzXGvNWxwtO/tMZQpRFf/lM=
+			TlyFextMoJG6O8q8az5L6TUwePZ7krFKFMtXqQ1xgrw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			syrkmqH7dQdhrez0wvy2NSF41RA=
-			</data>
 			<key>hash2</key>
 			<data>
 			kvmoQPZGoq2zlwXFD5wQLr/o90Xw/rLBFnPaL4Uod0o=

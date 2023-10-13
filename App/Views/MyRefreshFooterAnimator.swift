@@ -38,7 +38,7 @@ class MyRefreshFooterAnimator: UIView, ESRefreshProtocol, ESRefreshAnimatorProto
     
     private let indicatorView: UIActivityIndicatorView =
     {
-        let indicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let indicatorView = UIActivityIndicatorView(style: .medium)
         indicatorView.isHidden = true
         return indicatorView
     }()

@@ -15,12 +15,12 @@ extension String
     /// From Sai: Calculate String height dynamically
     func height(_ width: CGFloat, font: UIFont, lineBreakMode: NSLineBreakMode, lineSpacing: CGFloat = 0.0, lineHeightMultiple: CGFloat = 0.0) -> CGFloat
     {
-        var attrib: [NSAttributedStringKey: AnyObject] = [NSAttributedStringKey.font: font]
+        var attrib: [NSAttributedString.Key: AnyObject] = [NSAttributedString.Key.font: font]
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineBreakMode = lineBreakMode
         paragraphStyle.lineSpacing = lineSpacing
         paragraphStyle.lineHeightMultiple = lineHeightMultiple
-        attrib.updateValue(paragraphStyle, forKey: NSAttributedStringKey.paragraphStyle)
+        attrib.updateValue(paragraphStyle, forKey: NSAttributedString.Key.paragraphStyle)
         
         let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
         return ceil((self as NSString).boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes:attrib, context: nil).height)
@@ -30,7 +30,7 @@ extension String
     /// From Sai: Calculate String width dynamically
     func width(_ height: CGFloat, font: UIFont) -> CGFloat
     {
-        let attrib: [NSAttributedStringKey: AnyObject] = [NSAttributedStringKey.font: font]
+        let attrib: [NSAttributedString.Key: AnyObject] = [NSAttributedString.Key.font: font]
         let size = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
         
         return ceil((self as NSString).boundingRect(with: size, attributes: attrib, context: nil).width)

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/EZSwiftExtensions-Swift.h</key>
 		<data>
-		6WBmKeO23qvaU8QeBbSfIi3h3Dk=
+		ouqVY9KE4e5AGkEgrJiJ+aY+j60=
 		</data>
 		<key>Headers/EZSwiftExtensions.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		v5AIYsgWIYMNe5YjXqMoTHzOYzI=
+		f8wul8j7Zd5utJNz5+eP8Y3coyQ=
 		</data>
 		<key>Modules/EZSwiftExtensions.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		eivPaXdkSnj/bVxgkM68C7daPSE=
+		SwO7/fYxNRJpM9PajYxigARTqU8=
 		</data>
 		<key>Modules/EZSwiftExtensions.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		9ML1E4st/9Zmd/mON2UEEt9F0IA=
+		qraf3H+bDradYi32K/QaUO0ptRY=
 		</data>
 		<key>Modules/EZSwiftExtensions.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/EZSwiftExtensions.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MfKybzuMAdbwHWQBOvXqdmoyg1g=
+		IeahyYNRFtcoGoHgH9LxZWKOEJM=
 		</data>
 		<key>Modules/EZSwiftExtensions.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		sAQsQGWra2qpi/cfCz8qxeYX/Ck=
+		5y4CI6x9qvxkSo3tk1GY1fh5Hh8=
 		</data>
 		<key>Modules/EZSwiftExtensions.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/EZSwiftExtensions.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		KBpJMpWPA+UXxYY5Bvk3clBenp8=
+		uMrTJFqxg5IC+oYQn4b4CjdD1xM=
 		</data>
 		<key>Modules/EZSwiftExtensions.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LDNIyXxZD8fw0yNKKMJvgn/jrNA=
+		BfHJXtlWvENp20SPAaRdSGcJeJE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,21 +61,13 @@
 	<dict>
 		<key>Headers/EZSwiftExtensions-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			6WBmKeO23qvaU8QeBbSfIi3h3Dk=
-			</data>
 			<key>hash2</key>
 			<data>
-			68ZBiuTVJarOhUOIAOM2OZNNUMXqafrGWJBrek47/78=
+			x7RhjQn1NS19CHWXGNAO6BzhA+oAfcaPnf3HlaVztZ0=
 			</data>
 		</dict>
 		<key>Headers/EZSwiftExtensions.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Nw08bvMoUmbLx6vWbHhS4/vcUe0=
-			</data>
 			<key>hash2</key>
 			<data>
 			SlkbJ4G7EO5ZizlB9PIGOuXm4k+/5xmlex49W/WDz70=
@@ -83,32 +75,20 @@
 		</dict>
 		<key>Modules/EZSwiftExtensions.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			eivPaXdkSnj/bVxgkM68C7daPSE=
-			</data>
 			<key>hash2</key>
 			<data>
-			zijPWFaHpfvX7xvwvoLEhVrfEaC9JIfa0hg7vs8LqCE=
+			YUjyO6H0EABjVZnywljKuv3dbx++l4/i4f3E6HJMJa4=
 			</data>
 		</dict>
 		<key>Modules/EZSwiftExtensions.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9ML1E4st/9Zmd/mON2UEEt9F0IA=
-			</data>
 			<key>hash2</key>
 			<data>
-			MYHxVFOpTS2I0tYdRnYGNHNXwz8nXx7BBNyBXl0h/QM=
+			qIbGV+q9Oyq4+6G9r1FQdlZRxFHmJkBOJBFJ7PF2d18=
 			</data>
 		</dict>
 		<key>Modules/EZSwiftExtensions.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FSPnLbho3G+LL9smI3XgVOqBIQ4=
-			</data>
 			<key>hash2</key>
 			<data>
 			KnRdWE4y6t4QM5zi5JDptPdHFgJy1Tku+7GLkZS2aNM=
@@ -116,32 +96,20 @@
 		</dict>
 		<key>Modules/EZSwiftExtensions.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			MfKybzuMAdbwHWQBOvXqdmoyg1g=
-			</data>
 			<key>hash2</key>
 			<data>
-			z4yvWpjsBClGnxzHls4+ObGFCX0QEBeiC3/Lle/XDBQ=
+			gZ1vXauJZvBpQRua25M6m/u7HTQbyzd+bRiwCluD3GM=
 			</data>
 		</dict>
 		<key>Modules/EZSwiftExtensions.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			sAQsQGWra2qpi/cfCz8qxeYX/Ck=
-			</data>
 			<key>hash2</key>
 			<data>
-			jUYvxePlWXmVzieTE+qZQ/hTJVphDG3uFUKp494ehmY=
+			pmmlTbg5tTbXwAiZjTZCk5fqjM7yHWhjgnhr+FKPcZ4=
 			</data>
 		</dict>
 		<key>Modules/EZSwiftExtensions.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FSPnLbho3G+LL9smI3XgVOqBIQ4=
-			</data>
 			<key>hash2</key>
 			<data>
 			KnRdWE4y6t4QM5zi5JDptPdHFgJy1Tku+7GLkZS2aNM=
@@ -149,32 +117,20 @@
 		</dict>
 		<key>Modules/EZSwiftExtensions.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			KBpJMpWPA+UXxYY5Bvk3clBenp8=
-			</data>
 			<key>hash2</key>
 			<data>
-			ahqd9XzZhUMvrbApFqWiDvP9ayQD2wQVoc9yT+Xf/1Y=
+			Mdp7gnLBmVCuOO1nG7Jt7Yrd3ThFoxkwvBzcDSNQP1Y=
 			</data>
 		</dict>
 		<key>Modules/EZSwiftExtensions.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			LDNIyXxZD8fw0yNKKMJvgn/jrNA=
-			</data>
 			<key>hash2</key>
 			<data>
-			Nw2FlHSm5rwlwtPaVQu4AqN+RrYLHE7PqO0JukhovhE=
+			RuFE9dtXFFI8XRYogZohnQcJeO9NXIVAaunrA3DxtA0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			NFh5e5cnYRlUtTUknsNDtbVvzEI=
-			</data>
 			<key>hash2</key>
 			<data>
 			xjIT2yeXALhuk3w5hj/A+g1O5c1VkQyhz3oze9uYOBc=
@@ -182,10 +138,6 @@
 		</dict>
 		<key>charizard.jpg</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			9oVwz3NZszeZeKz7B6CPC+mr0xM=
-			</data>
 			<key>hash2</key>
 			<data>
 			/qDsCfUMiFlV1QuR+Ecv5bZJ+12x6OzL6g3Ytf3Ce8A=

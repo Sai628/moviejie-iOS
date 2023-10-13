@@ -34,7 +34,7 @@ class NewMovieCell: UITableViewCell
     }
     
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?)
     {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     
@@ -148,7 +148,7 @@ class NewMovieCell: UITableViewCell
             for char in keyword
             {
                 let range = title.range(of: String(char), options: .caseInsensitive)
-                attrTitle.addAttributes([NSAttributedStringKey.foregroundColor: Colors.searchKeyword], range: range)
+                attrTitle.addAttributes([NSAttributedString.Key.foregroundColor: Colors.searchKeyword], range: range)
             }
         }
         

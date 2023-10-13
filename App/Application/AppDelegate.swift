@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     
     
     //MARK:- LIFE CYCLE
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         initLogger()
         initKeyboardManager()
@@ -91,7 +91,7 @@ extension AppDelegate
     
     fileprivate func changeRootVC(to viewController: UIViewController)
     {
-        navigationController?.removeFromParentViewController()
+        navigationController?.removeFromParent()
         navigationController = nil
         
         let rootNavController = AppNavigationController(rootViewController: viewController)

@@ -14,7 +14,7 @@ import Kingfisher
 
 extension UIButton
 {
-    convenience init(fontSize: CGFloat, textColor: UIColor, type buttonType: UIButtonType = .custom)
+    convenience init(fontSize: CGFloat, textColor: UIColor, type buttonType: UIButton.ButtonType = .custom)
     {
         self.init(type: buttonType)
         self.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
@@ -22,13 +22,13 @@ extension UIButton
     }
     
     
-    func app_setImage(with urlString: String, forState state: UIControlState, placeholderName: String)
+    func app_setImage(with urlString: String, forState state: UIControl.State, placeholderName: String)
     {
         app_setImage(with: urlString, forState: state, placeholder: UIImage(named: placeholderName))
     }
     
     
-    func app_setImage(with urlString: String, forState state: UIControlState, placeholder: UIImage? = nil, options: KingfisherOptionsInfo? = nil, progressBlock: DownloadProgressBlock? = nil, completionHandler: CompletionHandler? = nil)
+    func app_setImage(with urlString: String, forState state: UIControl.State, placeholder: UIImage? = nil, options: KingfisherOptionsInfo? = nil, progressBlock: DownloadProgressBlock? = nil, completionHandler: CompletionHandler? = nil)
     {
         if let url = URL(string: urlString)
         {

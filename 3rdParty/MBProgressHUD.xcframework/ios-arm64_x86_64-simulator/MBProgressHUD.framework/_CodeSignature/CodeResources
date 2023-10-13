@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xrau6+0sr+HfBuQmZz8DRtamWrE=
+		APDfv9FUWPXBghnHBcmNy1/qIiI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -21,10 +21,6 @@
 	<dict>
 		<key>Headers/MBProgressHUD.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			U7GGnOqQKy/cdsUck7B0YMvG80M=
-			</data>
 			<key>hash2</key>
 			<data>
 			3EYAhOKxypN4D5AFSOAMpsFD25euT5ebew1rTGW2AZs=
@@ -32,10 +28,6 @@
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/+LNLbNNM6YoF0Bz+VZm3Irv6eg=
-			</data>
 			<key>hash2</key>
 			<data>
 			T5XM3yoD6SShv73mqWyOO+L6zAq2JydmWm36ZpcV358=
